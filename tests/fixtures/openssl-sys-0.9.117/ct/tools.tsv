@@ -1,0 +1,8 @@
+libc	0.2.191	cc	-	-m64 /work/probe/target/debug/build/libc-624299357015c6a9/rustcBsFRKg/symbols.o /work/probe/target/debug/build/libc-624299
+openssl-sys	0.9.117	cc	-	-m64 /work/probe/target/debug/build/openssl-sys-37c7fe66ee34dc79/rustcNqQ10l/symbols.o /work/probe/target/debug/build/open
+openssl-sys	0.9.117	pkg-config	-	--libs --cflags openssl
+openssl-sys	0.9.117	pkg-config	-	--modversion openssl
+openssl-sys	0.9.117	cc	-	-E /work/probe/target/debug/build/openssl-sys-c326141ad8a4002f/out/9292825952092627529detect_compiler_family.c
+openssl-sys	0.9.117	cc	-	-?
+openssl-sys	0.9.117	cc	compile	-O0 -ffunction-sections -fdata-sections -fPIC -m64 -Wall -Wextra -mno-omit-leaf-frame-pointer -o /work/probe/target/debug/build/openssl-sys-c326141ad8a4002f/out/flag_check -c /work/probe/target
+openssl-sys	0.9.117	cc	-	-O0 -ffunction-sections -fdata-sections -fPIC -g -gdwarf-4 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -m64 -I /usr/include -Wall -Wextra -E build/expando.c

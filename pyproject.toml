@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crate-tracing"
+version = "0.1.0"
+description = "Measure where a Cargo crate's native code comes from, using BuildWarden ledgers as evidence"
+requires-python = ">=3.11"
+dependencies = ["rich>=13"]
+license = { text = "Apache-2.0" }
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "jsonschema>=4"]
+
+[project.scripts]
+crate-tracing = "crate_tracing.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+crate_tracing = ["guest/*.sh"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,60 @@
+[zstd-sys 2.1.2+zstd.1.5.7] CFLAGS_x86_64-unknown-linux-gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] CRATE_CC_NO_DEFAULTS = None
+[zstd-sys 2.1.2+zstd.1.5.7] CFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] HOST_CFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] CFLAGS_x86_64_unknown_linux_gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] CFLAGS_x86_64-unknown-linux-gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] CRATE_CC_NO_DEFAULTS = None
+[zstd-sys 2.1.2+zstd.1.5.7] CFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] HOST_CFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] CFLAGS_x86_64_unknown_linux_gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] CFLAGS_x86_64-unknown-linux-gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] CC_FORCE_DISABLE = None
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:rerun-if-env-changed=AR_x86_64-unknown-linux-gnu
+[zstd-sys 2.1.2+zstd.1.5.7] AR_x86_64-unknown-linux-gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:rerun-if-env-changed=AR_x86_64_unknown_linux_gnu
+[zstd-sys 2.1.2+zstd.1.5.7] AR_x86_64_unknown_linux_gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:rerun-if-env-changed=HOST_AR
+[zstd-sys 2.1.2+zstd.1.5.7] HOST_AR = None
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:rerun-if-env-changed=AR
+[zstd-sys 2.1.2+zstd.1.5.7] AR = None
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:rerun-if-env-changed=ARFLAGS
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:rerun-if-env-changed=HOST_ARFLAGS
+[zstd-sys 2.1.2+zstd.1.5.7] HOST_ARFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:rerun-if-env-changed=ARFLAGS_x86_64_unknown_linux_gnu
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS_x86_64_unknown_linux_gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:rerun-if-env-changed=ARFLAGS_x86_64-unknown-linux-gnu
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS_x86_64-unknown-linux-gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] AR_x86_64-unknown-linux-gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] AR_x86_64_unknown_linux_gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] HOST_AR = None
+[zstd-sys 2.1.2+zstd.1.5.7] AR = None
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] HOST_ARFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS_x86_64_unknown_linux_gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS_x86_64-unknown-linux-gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] AR_x86_64-unknown-linux-gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] AR_x86_64_unknown_linux_gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] HOST_AR = None
+[zstd-sys 2.1.2+zstd.1.5.7] AR = None
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] HOST_ARFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS_x86_64_unknown_linux_gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS_x86_64-unknown-linux-gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] AR_x86_64-unknown-linux-gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] AR_x86_64_unknown_linux_gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] HOST_AR = None
+[zstd-sys 2.1.2+zstd.1.5.7] AR = None
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] HOST_ARFLAGS = None
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS_x86_64_unknown_linux_gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] ARFLAGS_x86_64-unknown-linux-gnu = None
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:rustc-link-lib=static=zstd
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:rustc-link-search=native=/work/probe/target/debug/build/zstd-sys-da42d737f62a52fe/out
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:root=/work/probe/target/debug/build/zstd-sys-da42d737f62a52fe/out
+[zstd-sys 2.1.2+zstd.1.5.7] cargo:include=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zstd-sys-2.1.2+zstd.1.5.7/zstd/lib
+     Running `CARGO=/usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=zstd_sys CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zstd-sys-2.1.2+zstd.1.5.7 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zstd-sys-2.1.2+zstd.1.5.7/Cargo.toml CARGO_PKG_AUTHORS='Alexandre Bury <alexandre.bury@gmail.com>' CARGO_PKG_DESCRIPTION='Low-level bindings for the zstd compression library.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE=BSD-3-Clause CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=zstd-sys CARGO_PKG_README=Readme.md CARGO_PKG_REPOSITORY='https://github.com/gyscos/zstd-rs' CARGO_PKG_RUST_VERSION=1.64 CARGO_PKG_VERSION=2.1.2+zstd.1.5.7 CARGO_PKG_VERSION_MAJOR=2 CARGO_PKG_VERSION_MINOR=1 CARGO_PKG_VERSION_PATCH=2 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib' OUT_DIR=/work/probe/target/debug/build/zstd-sys-da42d737f62a52fe/out /usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustc --crate-name zstd_sys --edition=2018 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zstd-sys-2.1.2+zstd.1.5.7/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --allow=non_upper_case_globals --cfg 'feature="default"' --cfg 'feature="legacy"' --cfg 'feature="zdict_builder"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("bindgen", "cmake", "debug", "default", "experimental", "fat-lto", "legacy", "no_asm", "no_wasm_shim", "non-cargo", "pkg-config", "seekable", "std", "thin", "thin-lto", "vendored", "zdict_builder", "zstdmt"))' -C metadata=2f595c6b698538a1 -C extra-filename=-789c45e0fa3d8820 --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --cap-lints warn -L native=/work/probe/target/debug/build/zstd-sys-da42d737f62a52fe/out -l static=zstd`
+   Compiling ct-probe v0.0.0 (/work/probe)
+     Running `CARGO=/usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=ct_probe CARGO_MANIFEST_DIR=/work/probe CARGO_MANIFEST_PATH=/work/probe/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=ct-probe CARGO_PKG_README='' CARGO_PKG_REPOSITORY='' CARGO_PKG_RUST_VERSION='' CARGO_PKG_VERSION=0.0.0 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=0 CARGO_PKG_VERSION_PATCH=0 CARGO_PKG_VERSION_PRE='' CARGO_PRIMARY_PACKAGE=1 LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustc --crate-name ct_probe --edition=2021 src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values())' -C metadata=bd3e41ff657af379 -C extra-filename=-b8dfbd50c8b27ad5 --out-dir /work/probe/target/debug/deps -C incremental=/work/probe/target/debug/incremental -L dependency=/work/probe/target/debug/deps --extern zstd_sys=/work/probe/target/debug/deps/libzstd_sys-789c45e0fa3d8820.rmeta -L native=/work/probe/target/debug/build/zstd-sys-da42d737f62a52fe/out`
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 11.68s

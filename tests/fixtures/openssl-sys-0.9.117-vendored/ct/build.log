@@ -1,0 +1,60 @@
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=OBJC_INCLUDE_PATH
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=OBJCPLUS_INCLUDE_PATH
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=COMPILER_PATH
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=SOURCE_DATE_EPOCH
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=GCC_EXEC_PREFIX
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+[openssl-sys 0.9.117] CRATE_CC_NO_DEFAULTS = None
+[openssl-sys 0.9.117] CRATE_CC_NO_DEFAULTS = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CFLAGS
+[openssl-sys 0.9.117] CFLAGS = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=HOST_CFLAGS
+[openssl-sys 0.9.117] HOST_CFLAGS = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CFLAGS_x86_64_unknown_linux_gnu
+[openssl-sys 0.9.117] CFLAGS_x86_64_unknown_linux_gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CFLAGS_x86_64-unknown-linux-gnu
+[openssl-sys 0.9.117] CFLAGS_x86_64-unknown-linux-gnu = None
+[openssl-sys 0.9.117] CFLAGS = None
+[openssl-sys 0.9.117] HOST_CFLAGS = None
+[openssl-sys 0.9.117] CFLAGS_x86_64_unknown_linux_gnu = None
+[openssl-sys 0.9.117] CFLAGS_x86_64-unknown-linux-gnu = None
+[openssl-sys 0.9.117] version: 3_6_3
+[openssl-sys 0.9.117] cargo:rustc-cfg=osslconf="OPENSSL_NO_IDEA"
+[openssl-sys 0.9.117] cargo:rustc-cfg=osslconf="OPENSSL_NO_CAMELLIA"
+[openssl-sys 0.9.117] cargo:rustc-cfg=osslconf="OPENSSL_NO_COMP"
+[openssl-sys 0.9.117] cargo:rustc-cfg=osslconf="OPENSSL_NO_SSL3_METHOD"
+[openssl-sys 0.9.117] cargo:rustc-cfg=osslconf="OPENSSL_NO_SEED"
+[openssl-sys 0.9.117] cargo:conf=OPENSSL_NO_IDEA,OPENSSL_NO_CAMELLIA,OPENSSL_NO_COMP,OPENSSL_NO_SSL3_METHOD,OPENSSL_NO_SEED
+[openssl-sys 0.9.117] cargo:rustc-cfg=openssl
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl101
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl102
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl102f
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl102h
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl110
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl110f
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl110g
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl110h
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl111
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl111b
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl111c
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl111d
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl300
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl320
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl330
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl340
+[openssl-sys 0.9.117] cargo:rustc-cfg=ossl350
+[openssl-sys 0.9.117] cargo:version_number=30600030
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=X86_64_UNKNOWN_LINUX_GNU_OPENSSL_LIBS
+[openssl-sys 0.9.117] X86_64_UNKNOWN_LINUX_GNU_OPENSSL_LIBS unset
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=OPENSSL_LIBS
+[openssl-sys 0.9.117] OPENSSL_LIBS unset
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=X86_64_UNKNOWN_LINUX_GNU_OPENSSL_STATIC
+[openssl-sys 0.9.117] X86_64_UNKNOWN_LINUX_GNU_OPENSSL_STATIC unset
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=OPENSSL_STATIC
+[openssl-sys 0.9.117] OPENSSL_STATIC unset
+[openssl-sys 0.9.117] cargo:rustc-link-lib=static=ssl
+[openssl-sys 0.9.117] cargo:rustc-link-lib=static=crypto
+     Running `CARGO=/usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=openssl_sys CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-sys-0.9.117 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-sys-0.9.117/Cargo.toml CARGO_PKG_AUTHORS='Alex Crichton <alex@alexcrichton.com>:Steven Fackler <sfackler@gmail.com>' CARGO_PKG_DESCRIPTION='FFI bindings to OpenSSL' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE=MIT CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=openssl-sys CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-openssl/rust-openssl' CARGO_PKG_RUST_VERSION=1.80.0 CARGO_PKG_VERSION=0.9.117 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=9 CARGO_PKG_VERSION_PATCH=117 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib' OUT_DIR=/work/probe/target/debug/build/openssl-sys-39f203a603040f3c/out /usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustc --crate-name openssl_sys --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-sys-0.9.117/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --cfg 'feature="openssl-src"' --cfg 'feature="vendored"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("aws-lc", "aws-lc-fips", "bindgen", "bssl-sys", "openssl-src", "unstable_boringssl", "vendored"))' -C metadata=aac943e5ad9b6904 -C extra-filename=-6d96f13fca248615 --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --extern libc=/work/probe/target/debug/deps/liblibc-ba57841a93caeb9f.rmeta --cap-lints warn -L native=/work/probe/target/debug/build/openssl-sys-39f203a603040f3c/out/openssl-build/install/lib -l static=ssl -l static=crypto --cfg 'osslconf="OPENSSL_NO_IDEA"' --cfg 'osslconf="OPENSSL_NO_CAMELLIA"' --cfg 'osslconf="OPENSSL_NO_COMP"' --cfg 'osslconf="OPENSSL_NO_SSL3_METHOD"' --cfg 'osslconf="OPENSSL_NO_SEED"' --cfg openssl --cfg ossl101 --cfg ossl102 --cfg ossl102f --cfg ossl102h --cfg ossl110 --cfg ossl110f --cfg ossl110g --cfg ossl110h --cfg ossl111 --cfg ossl111b --cfg ossl111c --cfg ossl111d --cfg ossl300 --cfg ossl320 --cfg ossl330 --cfg ossl340 --cfg ossl350 --check-cfg 'cfg(osslconf, values("OPENSSL_NO_OCB", "OPENSSL_NO_SM4", "OPENSSL_NO_SEED", "OPENSSL_NO_CHACHA", "OPENSSL_NO_CAST", "OPENSSL_NO_IDEA", "OPENSSL_NO_CAMELLIA", "OPENSSL_NO_RC4", "OPENSSL_NO_BF", "OPENSSL_NO_PSK", "OPENSSL_NO_DEPRECATED_3_0", "OPENSSL_NO_SCRYPT", "OPENSSL_NO_SM3", "OPENSSL_NO_RMD160", "OPENSSL_NO_EC2M", "OPENSSL_NO_OCSP", "OPENSSL_NO_CMS", "OPENSSL_NO_COMP", "OPENSSL_NO_SOCK", "OPENSSL_NO_STDIO", "OPENSSL_NO_EC", "OPENSSL_NO_SSL3_METHOD", "OPENSSL_NO_KRB5", "OPENSSL_NO_TLSEXT", "OPENSSL_NO_SRP", "OPENSSL_NO_SRTP", "OPENSSL_NO_RFC3779", "OPENSSL_NO_SHA", "OPENSSL_NO_NEXTPROTONEG", "OPENSSL_NO_ENGINE", "OPENSSL_NO_BUF_FREELISTS", "OPENSSL_NO_RC2"))' --check-cfg 'cfg(openssl)' --check-cfg 'cfg(libressl)' --check-cfg 'cfg(boringssl)' --check-cfg 'cfg(awslc)' --check-cfg 'cfg(awslc_pregenerated)' --check-cfg 'cfg(libressl250)' --check-cfg 'cfg(libressl251)' --check-cfg 'cfg(libressl252)' --check-cfg 'cfg(libressl261)' --check-cfg 'cfg(libressl270)' --check-cfg 'cfg(libressl271)' --check-cfg 'cfg(libressl273)' --check-cfg 'cfg(libressl280)' --check-cfg 'cfg(libressl281)' --check-cfg 'cfg(libressl291)' --check-cfg 'cfg(libressl310)' --check-cfg 'cfg(libressl321)' --check-cfg 'cfg(libressl332)' --check-cfg 'cfg(libressl340)' --check-cfg 'cfg(libressl350)' --check-cfg 'cfg(libressl360)' --check-cfg 'cfg(libressl361)' --check-cfg 'cfg(libressl370)' --check-cfg 'cfg(libressl380)' --check-cfg 'cfg(libressl381)' --check-cfg 'cfg(libressl382)' --check-cfg 'cfg(libressl390)' --check-cfg 'cfg(libressl400)' --check-cfg 'cfg(libressl410)' --check-cfg 'cfg(libressl420)' --check-cfg 'cfg(libressl430)' --check-cfg 'cfg(ossl101)' --check-cfg 'cfg(ossl102)' --check-cfg 'cfg(ossl102f)' --check-cfg 'cfg(ossl102h)' --check-cfg 'cfg(ossl110)' --check-cfg 'cfg(ossl110f)' --check-cfg 'cfg(ossl110g)' --check-cfg 'cfg(ossl110h)' --check-cfg 'cfg(ossl111)' --check-cfg 'cfg(ossl111b)' --check-cfg 'cfg(ossl111c)' --check-cfg 'cfg(ossl111d)' --check-cfg 'cfg(ossl300)' --check-cfg 'cfg(ossl310)' --check-cfg 'cfg(ossl320)' --check-cfg 'cfg(ossl330)' --check-cfg 'cfg(ossl340)' --check-cfg 'cfg(ossl400)'`
+   Compiling ct-probe v0.0.0 (/work/probe)
+     Running `CARGO=/usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=ct_probe CARGO_MANIFEST_DIR=/work/probe CARGO_MANIFEST_PATH=/work/probe/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=ct-probe CARGO_PKG_README='' CARGO_PKG_REPOSITORY='' CARGO_PKG_RUST_VERSION='' CARGO_PKG_VERSION=0.0.0 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=0 CARGO_PKG_VERSION_PATCH=0 CARGO_PKG_VERSION_PRE='' CARGO_PRIMARY_PACKAGE=1 LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustc --crate-name ct_probe --edition=2021 src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values())' -C metadata=62d8b213b8d5213d -C extra-filename=-3f9c37a3808e7a67 --out-dir /work/probe/target/debug/deps -C incremental=/work/probe/target/debug/incremental -L dependency=/work/probe/target/debug/deps --extern openssl_sys=/work/probe/target/debug/deps/libopenssl_sys-6d96f13fca248615.rmeta -L native=/work/probe/target/debug/build/openssl-sys-39f203a603040f3c/out/openssl-build/install/lib`
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1m 20s

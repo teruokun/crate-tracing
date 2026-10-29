@@ -1,0 +1,7 @@
+    Blocking waiting for file lock on package cache
+    Updating crates.io index
+    Blocking waiting for file lock on package cache
+     Locking 6 packages to latest compatible versions
+    Blocking waiting for file lock on package cache
+ Downloading crates ...
+  Downloaded libsqlite3-sys v0.39.1

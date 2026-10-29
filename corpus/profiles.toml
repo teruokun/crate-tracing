@@ -1,0 +1,41 @@
+# Environment profiles: the build environment a measurement runs in.
+#
+# The same crate can take a different route to its native code depending on
+# what the environment already provides, so every measurement runs in more than
+# one profile and the difference between them is itself a finding.
+#
+# `image` is pinned by its multi-arch index digest, so the same profile runs on
+# x86_64 and aarch64 hosts; the ledger's environment record signs the platform
+# manifest the runtime actually pulled.
+
+[profiles.bare]
+description = "The official Rust slim image as published: a C compiler and libc headers, no -dev libraries, no cmake, no pkg-config."
+image = "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7"
+apt_packages = []
+
+[profiles.rich]
+description = "bare plus the -dev libraries and build tools a typical CI image carries, so build scripts can find system copies."
+image = "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7"
+apt_packages = [
+    "pkg-config",
+    "make",
+    "cmake",
+    "perl",
+    "python3",
+    "git",
+    "curl",
+    "clang",
+    "libclang-dev",
+    "nasm",
+    "protobuf-compiler",
+    "libssl-dev",
+    "zlib1g-dev",
+    "libzstd-dev",
+    "liblz4-dev",
+    "libsqlite3-dev",
+    "libgit2-dev",
+    "libssh2-1-dev",
+    "libcurl4-openssl-dev",
+    "libsasl2-dev",
+    "librdkafka-dev",
+]

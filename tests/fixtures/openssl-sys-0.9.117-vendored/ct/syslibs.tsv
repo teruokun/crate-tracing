@@ -1,0 +1,2 @@
+openssl-sys-39f203a603040f3c	static	ssl	/work/probe/target/debug/build/openssl-sys-39f203a603040f3c/out/openssl-build/install/lib/libssl.a		/work/probe/target/debug/build/openssl-sys-39f203a603040f3c/out/openssl-build/install/lib/libssl.a	
+openssl-sys-39f203a603040f3c	static	crypto	/work/probe/target/debug/build/openssl-sys-39f203a603040f3c/out/openssl-build/install/lib/libcrypto.a		/work/probe/target/debug/build/openssl-sys-39f203a603040f3c/out/openssl-build/install/lib/libcrypto.a	

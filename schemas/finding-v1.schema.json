@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/teruokun/crate-tracing/schemas/finding-v1.schema.json",
+  "title": "crate-tracing finding",
+  "description": "What one measurement (crate, version, features, profile) showed about where the crate's native code comes from, with pointers into the BuildWarden ledger that is its evidence. Keyed by purl so it can populate package records (e.g. ecosyste.ms).",
+  "type": "object",
+  "required": ["schema", "subject", "measurement", "outcome", "routes", "downloads", "packages", "crates", "traffic", "evidence", "anomalies"],
+  "properties": {
+    "schema": { "const": "https://github.com/teruokun/crate-tracing/schemas/finding-v1.schema.json" },
+    "subject": {
+      "description": "The crate the measurement depends on.",
+      "type": "object",
+      "required": ["purl", "name", "version", "features", "default_features"],
+      "properties": {
+        "purl": { "type": "string", "pattern": "^pkg:cargo/" },
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "features": { "type": "array", "items": { "type": "string" } },
+        "default_features": { "type": "boolean" }
+      }
+    },
+    "measurement": {
+      "type": "object",
+      "required": ["id", "profile"],
+      "properties": {
+        "id": { "type": "string" },
+        "profile": {
+          "type": "object",
+          "required": ["name", "image"],
+          "properties": {
+            "name": { "type": "string" },
+            "image": { "type": "string", "description": "Base image, pinned by digest." },
+            "apt_packages": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "arch": { "type": ["string", "null"] },
+        "host_triple": { "type": ["string", "null"] },
+        "rustc": { "type": ["string", "null"] },
+        "cargo": { "type": ["string", "null"] },
+        "os": { "type": ["string", "null"] },
+        "measured_at": { "type": "string", "format": "date-time" },
+        "warden_exit": { "type": "integer" },
+        "tool": { "type": "object" }
+      }
+    },
+    "outcome": {
+      "type": "object",
+      "required": ["status", "built"],
+      "properties": {
+        "status": { "enum": ["measured", "incomplete"], "description": "incomplete: the ledger failed verification or a phase marker is missing, so phase attribution is unreliable." },
+        "fetch_exit": { "type": ["integer", "null"] },
+        "build_exit": { "type": ["integer", "null"] },
+        "built": { "type": ["boolean", "null"], "description": "null when the build did not run." },
+        "failure": {
+          "type": ["object", "null"],
+          "properties": {
+            "package": { "type": "string" },
+            "version": { "type": "string" },
+            "excerpt": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "routes": {
+      "type": "object",
+      "required": ["taken", "A_downloads", "B_bundled", "C_system", "D_tools"],
+      "properties": {
+        "taken": { "type": "array", "items": { "enum": ["A", "B", "C", "D", "none", "fail"] } },
+        "A_downloads": { "type": "array", "items": { "type": "integer" }, "description": "Ledger sequence numbers of the downloads (entries in `downloads`), redirects excluded." },
+        "B_bundled": { "type": "array", "items": { "$ref": "#/$defs/bundled" } },
+        "C_system": { "type": "array", "items": { "$ref": "#/$defs/link_lib" } },
+        "D_tools": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["purl", "tools"],
+            "properties": {
+              "purl": { "type": "string" },
+              "tools": { "type": "object", "additionalProperties": { "type": "integer" } }
+            }
+          }
+        }
+      }
+    },
+    "downloads": { "type": "array", "items": { "$ref": "#/$defs/download" } },
+    "packages": { "type": "array", "items": { "$ref": "#/$defs/package" } },
+    "crates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["purl", "ledger_seq"],
+        "properties": {
+          "purl": { "type": "string" },
+          "phase": { "type": "string" },
+          "ledger_seq": { "type": "integer" },
+          "sha256": { "type": ["string", "null"] },
+          "lock_checksum_match": { "type": ["boolean", "null"] },
+          "links": { "type": ["string", "null"] },
+          "has_build_script": { "type": ["boolean", "null"] }
+        }
+      }
+    },
+    "traffic": { "type": "object", "description": "phase -> request class -> {requests, bytes, hosts}." },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "ledger_valid": { "type": "boolean" },
+        "ledger_records": { "type": ["integer", "null"] },
+        "environment_type": { "type": ["string", "null"] },
+        "environment_digest": { "type": ["string", "null"] },
+        "artifacts_verified": { "type": "boolean" }
+      }
+    },
+    "anomalies": { "type": "array", "items": { "type": "string" } },
+    "expect": { "type": "array", "items": { "type": "string" } },
+    "matches_expectation": { "type": ["boolean", "null"] }
+  },
+  "$defs": {
+    "identity": {
+      "type": "object",
+      "required": ["method", "confidence"],
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "method": { "type": "string", "description": "semver-build-metadata, github-release-tag, github-archive-tag, url-filename, url-name@version, url-path-version, archive-root-dir, or redirect-from:<method>." },
+        "confidence": { "enum": ["high", "medium", "low"] },
+        "source_crate": { "type": "string" }
+      }
+    },
+    "download": {
+      "type": "object",
+      "required": ["ledger_seq", "method", "url", "hashes"],
+      "properties": {
+        "ledger_seq": { "type": "integer" },
+        "method": { "type": "string" },
+        "url": { "type": "string" },
+        "status": { "type": ["integer", "null"] },
+        "bytes": { "type": "integer" },
+        "hashes": { "type": "object", "additionalProperties": { "type": "string" } },
+        "complete": { "type": "boolean" },
+        "redirect_to": { "type": "string" },
+        "user_agent": { "type": "string" },
+        "capture": { "type": "string" },
+        "archive_root": { "type": "string" },
+        "identified": { "$ref": "#/$defs/identity" }
+      }
+    },
+    "link_lib": {
+      "type": "object",
+      "required": ["name", "kind", "origin"],
+      "properties": {
+        "purl": { "type": "string" },
+        "name": { "type": "string" },
+        "kind": { "type": "string" },
+        "origin": { "enum": ["in-tree", "system", "unresolved"] },
+        "path": { "type": "string" },
+        "os_package": { "type": "object", "properties": { "name": { "type": "string" }, "version": { "type": ["string", "null"] } } },
+        "os_runtime_package": { "type": "object", "properties": { "name": { "type": "string" }, "version": { "type": ["string", "null"] } } },
+        "baseline": { "type": "boolean" }
+      }
+    },
+    "bundled": {
+      "type": "object",
+      "required": ["purl", "c_compilations", "libs"],
+      "properties": {
+        "purl": { "type": "string" },
+        "c_compilations": { "type": "integer" },
+        "libs": { "type": "array", "items": { "type": "string" } },
+        "native": { "$ref": "#/$defs/identity" }
+      }
+    },
+    "package": {
+      "type": "object",
+      "required": ["purl", "c_compilations", "link_libs", "tools"],
+      "properties": {
+        "purl": { "type": "string" },
+        "links": { "type": ["string", "null"] },
+        "build_script_ran": { "type": "boolean" },
+        "c_compilations": { "type": "integer" },
+        "link_libs": { "type": "array", "items": { "$ref": "#/$defs/link_lib" } },
+        "tools": { "type": "object", "additionalProperties": { "type": "integer" } },
+        "pkg_config_probes": { "type": "array", "items": { "type": "string" } },
+        "declared": { "type": "object", "additionalProperties": { "type": "string" } },
+        "bundled_native": { "$ref": "#/$defs/identity" },
+        "built_in_tree": { "type": "boolean" },
+        "prebuilt_in_tree": { "type": "boolean" },
+        "ambiguous_version": { "type": "boolean" }
+      }
+    }
+  }
+}

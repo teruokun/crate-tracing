@@ -1,0 +1,2 @@
+openssl-sys-c326141ad8a4002f	dylib	ssl	/usr/lib/x86_64-linux-gnu/libssl.so	libssl-dev	/usr/lib/x86_64-linux-gnu/libssl.so.3	libssl3t64
+openssl-sys-c326141ad8a4002f	dylib	crypto	/usr/lib/x86_64-linux-gnu/libcrypto.so	libssl-dev	/usr/lib/x86_64-linux-gnu/libcrypto.so.3	libssl3t64

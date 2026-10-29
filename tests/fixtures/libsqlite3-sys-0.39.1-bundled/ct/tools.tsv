@@ -1,0 +1,5 @@
+libsqlite3-sys	0.39.1	cc	-	-m64 /work/probe/target/debug/build/libsqlite3-sys-526c5f1bff682a11/rustcooDK4W/symbols.o /work/probe/
+libsqlite3-sys	0.39.1	cc	-	-E /work/probe/target/debug/build/libsqlite3-sys-fd1b082834ee2076/out/17034136028527347205detect_compiler_family.c
+libsqlite3-sys	0.39.1	cc	-	-?
+libsqlite3-sys	0.39.1	cc	compile	-O0 -ffunction-sections -fdata-sections -fPIC -m64 -Wall -Wextra -mno-omit-leaf-frame-pointer -o /work/probe/target/debug/build/libsqlite3-sys-fd1b082834ee2076/out/flag_check -c /work/probe/target
+libsqlite3-sys	0.39.1	cc	compile	-O0 -ffunction-sections -fdata-sections -fPIC -g -gdwarf-4 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -m64 -w -DSQLITE_CORE -DSQLITE_DEFAULT_FOREIGN_KEYS=1 -DSQLITE_ENABLE_API_ARMOR -DSQLITE_ENABLE

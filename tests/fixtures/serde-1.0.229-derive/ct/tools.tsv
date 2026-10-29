@@ -1,0 +1,5 @@
+serde_core	1.0.229	cc	-	-m64 /work/probe/target/debug/build/serde_core-e734026bc5655a81/rustcnOxzCF/symbols.o /work/probe/target/debug/build/ser
+quote	1.0.47	cc	-	-m64 /work/probe/target/debug/build/quote-0a6d5bba4942202c/rustci9eIpQ/symbols.o /work/probe/target/debug/build/quote-0a
+proc-macro2	1.0.107	cc	-	-m64 /work/probe/target/debug/build/proc-macro2-d2dd955a50733d3b/rustccMdANV/symbols.o /work/probe/target/debug/build/pr
+serde	1.0.229	cc	-	-m64 /work/probe/target/debug/build/serde-4ba7f39dbd583cac/rustcKW30UJ/symbols.o /work/probe/target/debug/build/serde-4b
+serde_derive	1.0.229	cc	-	-Wl,--version-script=/work/probe/target/debug/deps/rustcBWqqT1/list -Wl,--no-undefined-version -m64 /work/probe/target/d

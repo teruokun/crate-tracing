@@ -1,0 +1,114 @@
+# The proof-of-concept corpus: each entry is one crate at an exact version with
+# an exact feature set. Every entry runs in every profile listed in
+# `profiles` (default: all of them).
+#
+# `expect` records the route(s) we believe each profile takes before measuring.
+# It is a hypothesis to check, never an input to the analysis: the finding
+# reports what the ledger shows, and `crate-tracing summary` flags entries
+# whose finding disagrees with `expect`.
+#
+# Routes:
+#   A  build-time download        (network traffic during the build phase)
+#   B  source bundled in a crate  (native code compiled from a crate's contents)
+#   C  system library linked      (a library the environment already had)
+#   D  build-time tool use        (cmake, perl, protoc, ... run by a build script)
+#   none                          (a build script with no native effect)
+#   fail                          (the build fails in this profile)
+#
+# Versions were the latest non-prerelease on crates.io on 2026-10-29, except
+# ort, which has only release candidates.
+
+[[measurement]]
+id = "openssl-sys-0.9.117"
+crate = "openssl-sys"
+version = "0.9.117"
+notes = "The motivating example. Without `vendored` it can only link a system OpenSSL."
+expect = { bare = ["fail"], rich = ["C"] }
+
+[[measurement]]
+id = "openssl-sys-0.9.117-vendored"
+crate = "openssl-sys"
+version = "0.9.117"
+features = ["vendored"]
+notes = "`vendored` pulls openssl-src, whose .crate carries the OpenSSL source; its +build metadata names the OpenSSL version. Building it needs perl and make."
+expect = { bare = ["B", "D"], rich = ["B", "D"] }
+
+[[measurement]]
+id = "libgit2-sys-0.18.8"
+crate = "libgit2-sys"
+version = "0.18.8+1.9.7"
+notes = "Uses a system libgit2 1.9 when pkg-config finds one, else compiles the bundled copy."
+expect = { bare = ["B"], rich = ["C"] }
+
+[[measurement]]
+id = "libsqlite3-sys-0.39.1"
+crate = "libsqlite3-sys"
+version = "0.39.1"
+notes = "Default features link the system SQLite."
+expect = { bare = ["fail"], rich = ["C"] }
+
+[[measurement]]
+id = "libsqlite3-sys-0.39.1-bundled"
+crate = "libsqlite3-sys"
+version = "0.39.1"
+features = ["bundled"]
+notes = "`bundled` compiles the amalgamation shipped in the crate."
+expect = { bare = ["B"], rich = ["B"] }
+
+[[measurement]]
+id = "zstd-sys-2.1.2"
+crate = "zstd-sys"
+version = "2.1.2+zstd.1.5.7"
+notes = "Compiles the bundled zstd unless the pkg-config feature asks for the system one."
+expect = { bare = ["B"], rich = ["B"] }
+
+[[measurement]]
+id = "ring-0.17.14"
+crate = "ring"
+version = "0.17.14"
+notes = "Compiles its own C and assembly; no system library, no download."
+expect = { bare = ["B"], rich = ["B"] }
+
+[[measurement]]
+id = "aws-lc-sys-0.47.0"
+crate = "aws-lc-sys"
+version = "0.47.0"
+notes = "Compiles the bundled AWS-LC; may run cmake when it is present."
+expect = { bare = ["B"], rich = ["B", "D"] }
+
+[[measurement]]
+id = "rdkafka-sys-4.10.0"
+crate = "rdkafka-sys"
+version = "4.10.0+2.12.1"
+notes = "Default build compiles the bundled librdkafka with its own configure/make."
+expect = { bare = ["fail"], rich = ["B", "D"] }
+
+[[measurement]]
+id = "rdkafka-sys-4.10.0-cmake"
+crate = "rdkafka-sys"
+version = "4.10.0+2.12.1"
+features = ["cmake-build"]
+notes = "The same bundled source, built with cmake."
+expect = { bare = ["fail"], rich = ["B", "D"] }
+
+[[measurement]]
+id = "v8-152.2.0"
+crate = "v8"
+version = "152.2.0"
+notes = "Downloads a prebuilt rusty_v8 static library from GitHub releases unless V8_FROM_SOURCE is set."
+expect = { bare = ["A"], rich = ["A"] }
+
+[[measurement]]
+id = "ort-2.0.0-rc.15"
+crate = "ort"
+version = "2.0.0-rc.15"
+notes = "The default `download-binaries` feature makes ort-sys's build script fetch ONNX Runtime binaries."
+expect = { bare = ["A"], rich = ["A"] }
+
+[[measurement]]
+id = "serde-1.0.229-derive"
+crate = "serde"
+version = "1.0.229"
+features = ["derive"]
+notes = "Control: serde's build script only probes the compiler. Only crates.io traffic is expected."
+expect = { bare = ["none"], rich = ["none"] }
