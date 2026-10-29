@@ -84,7 +84,7 @@ def cmd_context(args) -> int:
 
 def cmd_measure(args) -> int:
     console = Console()
-    version = runner.warden_version(args.warden)
+    warden = runner.warden_info(args.warden)
     failures = 0
     for m, p in _select(args):
         run_dir = Path(args.runs) / m.id / p.name
@@ -106,7 +106,7 @@ def cmd_measure(args) -> int:
             )
             failures += 1
             continue
-        f = finding_mod.build(m, p, ledger_mod.load(r.inspect_json), r.output, version)
+        f = finding_mod.build(m, p, ledger_mod.load(r.inspect_json), r.output, warden)
         f["measurement"]["warden_exit"] = r.build_exit
         (run_dir / "finding.json").write_text(_dump(f))
         render.finding(f, console)
@@ -127,7 +127,12 @@ def cmd_analyze(args) -> int:
         if not inspect.is_file():
             console.print(f"[dim]{m.id} · {p.name}: no run[/]")
             continue
-        f = finding_mod.build(m, p, ledger_mod.load(inspect), run_dir / "warden-output")
+        previous = run_dir / "finding.json"
+        warden = None
+        if previous.is_file():
+            # The ledger was made by the warden recorded at measure time.
+            warden = json.loads(previous.read_text())["measurement"]["tool"].get("warden")
+        f = finding_mod.build(m, p, ledger_mod.load(inspect), run_dir / "warden-output", warden)
         (run_dir / "finding.json").write_text(_dump(f))
         if args.json:
             sys.stdout.write(_dump(f))

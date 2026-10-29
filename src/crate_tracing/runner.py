@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import hashlib
+import os
 import shutil
 import subprocess
 import sys
@@ -21,12 +23,55 @@ class Run:
     inspect_exit: int
 
 
-def warden_version(warden: str) -> str | None:
-    try:
-        out = subprocess.run([warden, "--version"], capture_output=True, text=True, check=False)
-    except OSError:
+def warden_info(warden: str) -> dict | None:
+    """Which BuildWarden produced a ledger, precisely enough to rebuild it.
+
+    Release builds embed only `main.version`; the commit comes from the VCS
+    stamp Go writes into every binary built from a git checkout (`go version
+    -m`). The binary's SHA-256 identifies it even when neither is present.
+    The relay, holder and netns images are pinned inside the binary, so this
+    pins them too.
+    """
+    path = shutil.which(warden) or (warden if Path(warden).is_file() else None)
+    if path is None:
         return None
-    return out.stdout.strip().removeprefix("warden version ").strip() or None
+    path = os.path.realpath(path)
+    info: dict = {"path": path, "binary_sha256": _sha256(Path(path))}
+    try:
+        out = subprocess.run([path, "--version"], capture_output=True, text=True, check=False).stdout
+        info["version"] = out.strip().removeprefix("warden version ").strip() or None
+    except OSError:
+        info["version"] = None
+    info.update(_go_buildinfo(path))
+    return info
+
+
+def _go_buildinfo(path: str) -> dict:
+    if shutil.which("go") is None:
+        return {}
+    out = subprocess.run(["go", "version", "-m", path], capture_output=True, text=True, check=False).stdout
+    keys = {"vcs.revision": "revision", "vcs.time": "revision_time", "vcs.modified": "modified"}
+    info: dict = {}
+    for line in out.splitlines():
+        cols = line.split("\t")
+        if len(cols) >= 3 and cols[1] == "mod":
+            info["module"] = cols[2]
+            info["module_version"] = cols[3] if len(cols) > 3 else None
+        elif len(cols) >= 3 and cols[1] == "build" and "=" in cols[2]:
+            k, v = cols[2].split("=", 1)
+            if k in keys:
+                info[keys[k]] = v == "true" if k == "vcs.modified" else v
+        elif line.startswith(path + ": "):
+            info["go"] = line.split(": ", 1)[1]
+    return info
+
+
+def _sha256(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
 
 
 def run(

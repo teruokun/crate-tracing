@@ -22,11 +22,20 @@ what the environment already has.
 
 ## Quick start
 
-Needs Python 3.11+, plus `warden` and a container runtime for `measure`.
+Needs Python 3.11+, plus Go and a container runtime for `measure`.
 
 ```bash
 make setup test
 ```
+
+```bash
+make warden
+```
+
+The `make warden` step installs the BuildWarden commit the published findings
+were measured with into `.tools/`. Every finding records the warden version and
+commit it ran with, and keeps the original ledger, so you can rebuild the same
+warden and check the evidence yourself.
 
 ```bash
 .venv/bin/crate-tracing list
@@ -37,7 +46,7 @@ make setup test
 ```
 
 ```bash
-make poc
+make poc WARDEN=$PWD/.tools/warden
 ```
 
 ```bash

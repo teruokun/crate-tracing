@@ -40,7 +40,28 @@
         "os": { "type": ["string", "null"] },
         "measured_at": { "type": "string", "format": "date-time" },
         "warden_exit": { "type": "integer" },
-        "tool": { "type": "object" }
+        "tool": {
+          "type": "object",
+          "required": ["crate_tracing", "warden"],
+          "properties": {
+            "crate_tracing": { "type": "string" },
+            "warden": {
+              "description": "The BuildWarden that produced the ledger. Rebuild with: go install github.com/buildwarden/buildwarden/cmd/warden@<revision>.",
+              "type": ["object", "null"],
+              "properties": {
+                "version": { "type": ["string", "null"] },
+                "revision": { "type": "string", "description": "git commit (vcs.revision from Go build info)" },
+                "revision_time": { "type": "string" },
+                "modified": { "type": "boolean", "description": "true when built from a dirty tree: not reproducible" },
+                "module": { "type": "string" },
+                "module_version": { "type": ["string", "null"] },
+                "go": { "type": "string" },
+                "binary_sha256": { "type": "string" },
+                "path": { "type": "string" }
+              }
+            }
+          }
+        }
       }
     },
     "outcome": {

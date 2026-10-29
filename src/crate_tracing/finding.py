@@ -288,7 +288,7 @@ def build(
     p: Profile,
     ledger: Ledger,
     output_dir: Path,
-    warden_version: str | None = None,
+    warden: dict | None = None,
 ) -> dict:
     ev = evidence.load(output_dir, ledger)
     build_exit = ev.status.get("build_exit")
@@ -296,6 +296,10 @@ def build(
     dl = downloads(ledger, output_dir)
     pkgs = packages(ev)
     issues = anomalies(ledger, ev)
+    if not (warden or {}).get("revision"):
+        issues.append("BuildWarden commit unknown: the measurement cannot be pinned to a warden build")
+    elif warden.get("modified"):
+        issues.append(f"BuildWarden {warden['revision'][:12]} was built from a modified tree: not reproducible")
     complete = ledger.valid and "end" in ledger.markers
 
     env = ledger.environment or {}
@@ -321,7 +325,7 @@ def build(
             "cargo": ev.env.get("cargo"),
             "os": ev.env.get("os.PRETTY_NAME"),
             "measured_at": dt.datetime.now(dt.UTC).replace(microsecond=0).isoformat(),
-            "tool": {"crate_tracing": __version__, "warden": warden_version},
+            "tool": {"crate_tracing": __version__, "warden": warden},
         },
         "outcome": {
             "status": "measured" if complete else "incomplete",

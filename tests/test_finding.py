@@ -18,6 +18,7 @@ from crate_tracing import finding, ledger, render
 from crate_tracing.corpus import Measurement, Profile
 
 FIXTURES = Path(__file__).parent / "fixtures"
+WARDEN = {"version": "0.0.0-test", "revision": "0" * 40, "modified": False}
 BARE = Profile(name="bare", image="rust@sha256:" + "0" * 64)
 
 
@@ -26,7 +27,7 @@ def analyze(tmp_path, fixture, m, build_requests=(), mutate=None):
     report = measured_run(out, FIXTURES / fixture, build_requests)
     if mutate:
         mutate(out)
-    return finding.build(m, BARE, ledger.parse(report), out, "test")
+    return finding.build(m, BARE, ledger.parse(report), out, WARDEN)
 
 
 def test_zstd_sys_compiles_its_bundled_source(tmp_path):
@@ -47,6 +48,7 @@ def test_zstd_sys_compiles_its_bundled_source(tmp_path):
         "confidence": "high",
     }
     assert all(c["lock_checksum_match"] for c in f["crates"])
+    assert f["measurement"]["tool"]["warden"]["revision"] == "0" * 40
     assert f["evidence"]["artifacts_verified"] is True
     assert f["anomalies"] == []
 
@@ -222,3 +224,13 @@ def test_findings_match_the_schema(tmp_path, fixture, crate, version):
     m = Measurement(id=fixture, crate=crate, version=version)
     f = analyze(tmp_path, fixture, m, build_requests=[dict(url="https://example.org/a-1.0.tar.gz", body=b"x")])
     jsonschema.validate(json.loads(json.dumps(f)), schema)
+
+
+def test_unpinned_warden_is_an_anomaly(tmp_path):
+    out = tmp_path / "o"
+    report = measured_run(out, FIXTURES / "serde-1.0.229-derive")
+    m = Measurement(id="serde", crate="serde", version="1.0.229")
+    f = finding.build(m, BARE, ledger.parse(report), out, {"version": "dev"})
+    assert any("commit unknown" in a for a in f["anomalies"])
+    f = finding.build(m, BARE, ledger.parse(report), out, {"revision": "ab" * 20, "modified": True})
+    assert any("modified tree" in a for a in f["anomalies"])

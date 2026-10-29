@@ -183,13 +183,21 @@ agreed with ecosyste.ms before freezing a v2 of the schema.
   same `.crate` hashes. Without it, resolution picks the newest compatible
   versions at the time of the run (the vendored OpenSSL version changes with
   `openssl-src` releases).
+- The BuildWarden that measured is pinned. Each finding records the warden
+  binary's version, its git commit and dirty flag (from Go's VCS build stamp),
+  and the binary's SHA-256 (`measurement.tool.warden`). An unknown commit or a
+  dirty build is reported as an anomaly. The Makefile pins the commit used for
+  the published findings (`BUILDWARDEN_REV`), and `make warden` installs that
+  build. The relay, holder and netns images are fixed by that commit: either
+  pinned inside a release binary or built from the same source.
 - Build-time downloads are not pinned by anything we control. A re-run that
   downloads different bytes shows up as different hashes.
 
 ## Evidence kept in the repository
 
 `findings/<id>/<profile>/` keeps `finding.json` plus `evidence/`: the
-compressed ledger, its CA certificate, `environment.json`, and the posted
+original ledger exactly as warden wrote it (`ledger.zst`, never re-encoded),
+its CA certificate, `environment.json`, and the posted
 artifacts. That is enough to re-verify every claim with `warden inspect
 evidence/`, and to check each artifact against its ledger hash. Payload captures
 (the downloaded bytes themselves) stay in `runs/`, which is gitignored: they can

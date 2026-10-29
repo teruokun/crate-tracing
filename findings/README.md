@@ -8,10 +8,18 @@ findings/<measurement-id>/
 └── <profile>/
     ├── finding.json           # schemas/finding-v1.schema.json
     └── evidence/
-        ├── ledger.zst         # the signed ledger
+        ├── ledger.zst         # the original signed ledger, byte for byte as warden wrote it
         ├── ca.cert.pem.zst    # the build's ephemeral CA
         ├── environment.json   # the base image manifest the ledger signs
         └── artifacts/ct/...   # the files measure.sh posted (hashed in the ledger)
+```
+
+`finding.json` names the BuildWarden that produced the ledger under
+`measurement.tool.warden` (version, git `revision`, `modified`, binary
+SHA-256). To rebuild that warden:
+
+```bash
+go install github.com/buildwarden/buildwarden/cmd/warden@<revision>
 ```
 
 To verify a finding's evidence:

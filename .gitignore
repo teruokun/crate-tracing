@@ -6,3 +6,4 @@ __pycache__/
 # Working directories of measurements: contexts, full warden output (payload
 # captures included), logs. Promote what should be kept into findings/.
 runs/
+.tools/

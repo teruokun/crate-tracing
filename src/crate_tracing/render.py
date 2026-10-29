@@ -168,6 +168,11 @@ def finding(f: dict, console: Console | None = None) -> None:
         ("verified" if ev["artifacts_verified"] else "MISMATCH", "green" if ev["artifacts_verified"] else "bold red"),
     )
     parts.append(foot)
+    w = m.get("tool", {}).get("warden") or {}
+    if w:
+        rev = (w.get("revision") or "unknown commit")[:12]
+        dirty = " (modified)" if w.get("modified") else ""
+        parts.append(Text(f"warden {w.get('version') or '?'} @ {rev}{dirty}", style="dim"))
     for a in f["anomalies"]:
         parts.append(Text(f"⚠ {a}", style="yellow"))
 

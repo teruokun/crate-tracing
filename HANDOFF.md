@@ -23,7 +23,11 @@ picks it up. Read [DESIGN.md](DESIGN.md) first for the approach.
   (`tests/ledgerkit.py`).
 - The terminal views (`show`, `summary`), the JSON output, and its JSON Schema
   (validated in tests).
-- `make test` (32 tests) and `make lint` pass.
+- `make test` and `make lint` pass.
+
+- The finding records the BuildWarden version, commit and binary SHA-256.
+  This was checked against a warden built here from `main` at `137feae2f8b0`,
+  which is the Makefile's `BUILDWARDEN_REV`.
 
 **Not done, because this machine had no Docker daemon or KVM:**
 
@@ -39,8 +43,19 @@ fine; the bare profile in a real run should fail instead.
 
 ## Test pass: steps
 
-Prerequisites: `warden` on PATH, a container runtime `warden build` already
-works with, Python 3.11+.
+Prerequisites: a container runtime `warden build` already works with, Go, and
+Python 3.11+. Install the pinned BuildWarden build, so the published findings
+come from a known commit:
+
+```bash
+make warden
+```
+
+Then pass `WARDEN=$PWD/.tools/warden` to `make poc` and `make measure`, or
+`--warden` to the CLI. If you deliberately measure with a newer BuildWarden,
+bump `BUILDWARDEN_REV` in the Makefile in the same commit as the findings. A
+finding whose warden commit is unknown or dirty carries an anomaly, so a
+locally modified warden is not fine for published findings.
 
 ```bash
 make setup test lint
@@ -111,7 +126,11 @@ make summary
       entry's `notes`.
 - [ ] Record wall time and output size per run (add to the finding if useful)
       for the throughput estimate in DESIGN.md.
-- [ ] Commit `findings/` (finding + evidence + `Cargo.lock` per measurement).
+- [ ] Every finding has `measurement.tool.warden.revision` equal to
+      `BUILDWARDEN_REV` and `modified: false`.
+- [ ] Commit `findings/`: for each measurement, the finding, the original
+      ledger and the rest of `evidence/`, plus its `Cargo.lock`. The ledgers are
+      the transparency record, so commit them unmodified.
 
 ### 4. Fold the results back
 
@@ -127,9 +146,10 @@ make summary
 - **Debug vs release.** Debug only for now (DESIGN limitation 5). If v8's debug
   download is unreasonable, consider a `release` profile dimension rather than
   switching the default.
-- **Evidence size.** If committed evidence grows large (build logs from `-vv`),
-  compress `artifacts/ct/build.log` in `--promote`, or keep only the ledger.
-  The artifact hashes stay in the ledger either way.
+- **Evidence size.** The original ledgers are always kept. If the posted
+  artifacts grow large (build logs from `-vv`), it is acceptable to drop or
+  compress copies of them in `--promote`, since their hashes stay in the
+  ledger. Never alter the ledger itself.
 
 ## Risks to watch
 
@@ -164,3 +184,18 @@ To capture new guest evidence without BuildWarden, for a quick analyzer
 iteration: run `measure.sh` with `CT_OUT`, `CT_PROBE` and `CT_SHIMS` set, a
 stub `warden-io` on PATH that copies `post <file> <name>` into a directory,
 then use `tests/fixtures/trim.py`.
+
+## Getting this repository onto GitHub
+
+The first pass could not create `teruokun/crate-tracing`: the cloud session's
+GitHub app has no permission to create repositories. It was handed over as a
+git bundle instead. Create the repository as **public** and empty (no README),
+then push from the bundle:
+
+```bash
+git clone crate-tracing.bundle crate-tracing
+```
+
+```bash
+cd crate-tracing && git remote set-url origin git@github.com:teruokun/crate-tracing.git && git push -u origin main
+```
