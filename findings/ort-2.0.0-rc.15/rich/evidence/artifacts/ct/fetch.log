@@ -2,15 +2,15 @@
  Downloading crates ...
   Downloaded ort v2.0.0-rc.15
   Downloaded ureq v3.5.0
-  Downloaded utf8-zero v0.8.1
   Downloaded webpki-root-certs v1.0.11
+  Downloaded utf8-zero v0.8.1
   Downloaded httparse v1.10.1
   Downloaded bytes v1.12.1
   Downloaded native-tls v0.2.18
   Downloaded windows-link v0.2.1
-  Downloaded libc v0.2.191
   Downloaded once_cell v1.21.4
   Downloaded cfg-if v1.0.5
+  Downloaded libc v0.2.191
   Downloaded core-foundation-sys v0.8.7
   Downloaded schannel v0.1.30
   Downloaded pkg-config v0.3.34
@@ -21,22 +21,22 @@
   Downloaded base64ct v1.8.3
   Downloaded pin-project-lite v0.2.17
   Downloaded lzma-rust2 v0.15.8
+  Downloaded rawpointer v0.2.1
   Downloaded num-traits v0.2.19
   Downloaded num-complex v0.4.6
-  Downloaded rawpointer v0.2.1
   Downloaded zeroize v1.9.1
   Downloaded percent-encoding v2.3.2
   Downloaded http v1.5.0
-  Downloaded rustix v1.1.6
   Downloaded bitflags v2.13.2
-  Downloaded core-foundation v0.10.1
+  Downloaded rustix v1.1.6
   Downloaded fastrand v2.5.0
+  Downloaded core-foundation v0.10.1
   Downloaded cc v1.10.0
   Downloaded openssl v0.10.81
   Downloaded proc-macro2 v1.0.107
+  Downloaded smallvec v1.16.4
   Downloaded pem-rfc7468 v1.0.0
   Downloaded ndarray v0.17.2
-  Downloaded smallvec v1.16.4
   Downloaded autocfg v1.5.1
   Downloaded rustls-pki-types v1.15.1
   Downloaded itoa v1.0.18
@@ -52,9 +52,9 @@
   Downloaded security-framework-sys v2.17.0
   Downloaded openssl-probe v0.2.2
   Downloaded der v0.8.3
+  Downloaded linux-raw-sys v0.12.1
   Downloaded portable-atomic-util v0.2.8
   Downloaded ureq-proto v0.6.5
-  Downloaded linux-raw-sys v0.12.1
   Downloaded errno v0.3.14
   Downloaded vcpkg v0.2.15
   Downloaded tracing-core v0.1.36

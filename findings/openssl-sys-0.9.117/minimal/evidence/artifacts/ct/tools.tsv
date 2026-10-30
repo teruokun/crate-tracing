@@ -1,0 +1,4 @@
+libc	0.2.191	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/libc-2946c5d050133518/rustc7q2AK4/symbols.o /work/probe/target/debug/build/libc-2946c5d050133518/build_script_build-2946c5d050133518.build_script_build.7a91d40ece75ada3-cgu.0.rcgu.o /work/probe/target/debug/build/libc-2946c5d050133518/build_
+openssl-sys	0.9.117	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/openssl-sys-77251ee9dd99b2c5/rustcio7G2f/symbols.o /work/probe/target/debug/build/openssl-sys-77251ee9dd99b2c5/build_script_main-77251ee9dd99b2c5.build_script_main.5a4c0d48261f770-cgu.0.rcgu.o /work/probe/target/debug/build/openssl-sys-77251
+openssl-sys	0.9.117	pkg-config	-	--libs --cflags openssl
+openssl-sys	0.9.117	pkg-config	-	

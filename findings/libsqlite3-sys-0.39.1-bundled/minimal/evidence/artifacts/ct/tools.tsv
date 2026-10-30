@@ -1,0 +1,5 @@
+libsqlite3-sys	0.39.1	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/libsqlite3-sys-7135ec1be6389f2c/rustcruBVzt/symbols.o /work/probe/target/debug/build/libsqlite3-sys-7135ec1be6389f2c/build_script_build-7135ec1be6389f2c.build_script_build.a78655b62d2c7a0c-cgu.0.rcgu.o /work/probe/target/debug/build/libsqlit
+libsqlite3-sys	0.39.1	cc	-	-E /work/probe/target/debug/build/libsqlite3-sys-b83bb57baa768006/out/7385057909544963903detect_compiler_family.c
+libsqlite3-sys	0.39.1	cc	-	-?
+libsqlite3-sys	0.39.1	cc	compile	-O0 -ffunction-sections -fdata-sections -fPIC -Wall -Wextra -mno-omit-leaf-frame-pointer -o /work/probe/target/debug/build/libsqlite3-sys-b83bb57baa768006/out/flag_check -c /work/probe/target/debug/build/libsqlite3-sys-b83bb57baa768006/out/flag_check.c
+libsqlite3-sys	0.39.1	cc	compile	-O0 -ffunction-sections -fdata-sections -fPIC -g -gdwarf-4 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -w -DSQLITE_CORE -DSQLITE_DEFAULT_FOREIGN_KEYS=1 -DSQLITE_ENABLE_API_ARMOR -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_DBSTAT_VTAB -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS

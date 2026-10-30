@@ -18,6 +18,9 @@
 #   none                          (a build script with no native effect)
 #   fail                          (the build fails in this profile)
 #
+# `minimal` expectations were written before its first measurement
+# (2026-10-30); the one it got wrong says so in `notes`.
+#
 # Versions were the latest non-prerelease on crates.io on 2026-10-29, except
 # ort, which has only release candidates.
 #
@@ -30,7 +33,7 @@ id = "openssl-sys-0.9.117"
 crate = "openssl-sys"
 version = "0.9.117"
 notes = "The motivating example. Without `vendored` it can only link a system OpenSSL."
-expect = { bare = ["fail"], rich = ["C"] }
+expect = { bare = ["fail"], minimal = ["fail"], rich = ["C"] }
 
 [[measurement]]
 id = "openssl-sys-0.9.117-vendored"
@@ -39,7 +42,7 @@ version = "0.9.117"
 features = ["vendored"]
 notes = """`vendored` pulls openssl-src, whose .crate carries the OpenSSL source; its +build metadata names the OpenSSL version. Building it needs perl and make. \
 Was expected B D in bare. Measured: the slim image has only perl-base, so OpenSSL's Configure dies with "Can't locate FindBin.pm" before compiling anything."""
-expect = { bare = ["D", "fail"], rich = ["B", "D"] }
+expect = { bare = ["D", "fail"], minimal = ["B", "D"], rich = ["B", "D"] }
 
 [[measurement]]
 id = "libgit2-sys-0.18.8"
@@ -47,7 +50,7 @@ crate = "libgit2-sys"
 version = "0.18.8+1.9.7"
 notes = """Uses a system libgit2 1.9 when pkg-config finds one, else compiles the bundled copy. \
 Was expected C in rich. Measured: trixie's libgit2-dev is 1.9.0 and the crate asks pkg-config for >= 1.9.7, so it compiles the bundled copy; C is libz-sys linking the system zlib."""
-expect = { bare = ["B"], rich = ["B", "C"] }
+expect = { bare = ["B"], minimal = ["B"], rich = ["B", "C"] }
 
 [[measurement]]
 id = "libsqlite3-sys-0.39.1"
@@ -55,7 +58,7 @@ crate = "libsqlite3-sys"
 version = "0.39.1"
 notes = """Default features link the system SQLite. \
 Was expected to fail in bare. Measured: the build script declares sqlite3 without checking for it, and nothing links the probe library, so the build succeeds with sqlite3 unresolved."""
-expect = { bare = ["unresolved"], rich = ["C"] }
+expect = { bare = ["unresolved"], minimal = ["unresolved"], rich = ["C"] }
 
 [[measurement]]
 id = "libsqlite3-sys-0.39.1-bundled"
@@ -63,21 +66,21 @@ crate = "libsqlite3-sys"
 version = "0.39.1"
 features = ["bundled"]
 notes = "`bundled` compiles the amalgamation shipped in the crate."
-expect = { bare = ["B"], rich = ["B"] }
+expect = { bare = ["B"], minimal = ["B"], rich = ["B"] }
 
 [[measurement]]
 id = "zstd-sys-2.1.2"
 crate = "zstd-sys"
 version = "2.1.2+zstd.1.5.7"
 notes = "Compiles the bundled zstd unless the pkg-config feature asks for the system one."
-expect = { bare = ["B"], rich = ["B"] }
+expect = { bare = ["B"], minimal = ["B"], rich = ["B"] }
 
 [[measurement]]
 id = "ring-0.17.14"
 crate = "ring"
 version = "0.17.14"
 notes = "Compiles its own C and assembly; no system library, no download."
-expect = { bare = ["B"], rich = ["B"] }
+expect = { bare = ["B"], minimal = ["B"], rich = ["B"] }
 
 [[measurement]]
 id = "aws-lc-sys-0.47.0"
@@ -85,7 +88,7 @@ crate = "aws-lc-sys"
 version = "0.47.0"
 notes = """Compiles the bundled AWS-LC; may run cmake when it is present. \
 Was expected B D in rich. Measured: its cc-based builder compiles everything (408 cc calls) and never runs cmake, even with cmake installed."""
-expect = { bare = ["B"], rich = ["B"] }
+expect = { bare = ["B"], minimal = ["B"], rich = ["B"] }
 
 [[measurement]]
 id = "rdkafka-sys-4.10.0"
@@ -93,7 +96,7 @@ crate = "rdkafka-sys"
 version = "4.10.0+2.12.1"
 notes = """Default build compiles the bundled librdkafka with its own configure/make. \
 Was expected fail in bare and B D in rich. Measured: bare fails because librdkafka's configure needs c++, which the slim image lacks; B there is libz-sys compiling its bundled zlib (no zlib.h). In rich, C is libz-sys linking the system zlib."""
-expect = { bare = ["B", "fail"], rich = ["B", "C", "D"] }
+expect = { bare = ["B", "fail"], minimal = ["B", "D"], rich = ["B", "C", "D"] }
 
 [[measurement]]
 id = "rdkafka-sys-4.10.0-cmake"
@@ -101,8 +104,9 @@ crate = "rdkafka-sys"
 version = "4.10.0+2.12.1"
 features = ["cmake-build"]
 notes = """The same bundled source, built with cmake. \
-Was expected fail in bare and B D in rich. Measured: bare fails for want of c++ and cmake, with libz-sys compiling its bundled zlib (B); in rich, C is libz-sys linking the system zlib."""
-expect = { bare = ["B", "fail"], rich = ["B", "C", "D"] }
+Was expected fail in bare and B D in rich. Measured: bare fails for want of c++ and cmake, with libz-sys compiling its bundled zlib (B); in rich, C is libz-sys linking the system zlib. \
+Was expected B D in minimal. Measured: it fails for want of curl/curl.h even though rdkafka-sys passes -DWITH_CURL=0. librdkafka's cmake config.h uses `#cmakedefine01 WITH_OAUTHBEARER_OIDC`, which always defines the macro, and rdkafka_conf.c tests it with #ifdef, so the cmake build always needs libcurl headers. The configure build is unaffected."""
+expect = { bare = ["B", "fail"], minimal = ["B", "D", "fail"], rich = ["B", "C", "D"] }
 
 [[measurement]]
 id = "v8-152.2.0"
@@ -110,7 +114,7 @@ crate = "v8"
 version = "152.2.0"
 notes = """Downloads a prebuilt rusty_v8 static library from GitHub releases unless V8_FROM_SOURCE is set. \
 Was expected A in both. Measured: the build script downloads with python3 or curl, not a Rust HTTP client. Bare has neither, so it fails without a single request; rich downloads with Python-urllib (A) by running python3 (D)."""
-expect = { bare = ["fail"], rich = ["A", "D"] }
+expect = { bare = ["fail"], minimal = ["A", "D"], rich = ["A", "D"] }
 
 [[measurement]]
 id = "ort-2.0.0-rc.15"
@@ -118,7 +122,7 @@ crate = "ort"
 version = "2.0.0-rc.15"
 notes = """The default `download-binaries` feature makes ort-sys's build script fetch ONNX Runtime binaries. \
 Was expected A in both. Measured: ort's default features also pull openssl-sys, so bare fails on the missing OpenSSL before ort-sys runs; rich downloads ONNX Runtime (A) and links the system OpenSSL (C)."""
-expect = { bare = ["fail"], rich = ["A", "C"] }
+expect = { bare = ["fail"], minimal = ["fail"], rich = ["A", "C"] }
 
 [[measurement]]
 id = "serde-1.0.229-derive"
@@ -126,4 +130,4 @@ crate = "serde"
 version = "1.0.229"
 features = ["derive"]
 notes = "Control: serde's build script only probes the compiler. Only crates.io traffic is expected."
-expect = { bare = ["none"], rich = ["none"] }
+expect = { bare = ["none"], minimal = ["none"], rich = ["none"] }

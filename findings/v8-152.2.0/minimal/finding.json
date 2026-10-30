@@ -1,0 +1,1362 @@
+{
+  "schema": "https://github.com/teruokun/crate-tracing/schemas/finding-v1.schema.json",
+  "subject": {
+    "purl": "pkg:cargo/v8@152.2.0",
+    "name": "v8",
+    "version": "152.2.0",
+    "features": [],
+    "default_features": true
+  },
+  "measurement": {
+    "id": "v8-152.2.0",
+    "profile": {
+      "name": "minimal",
+      "image": "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+      "apt_packages": [
+        "build-essential",
+        "pkg-config",
+        "cmake",
+        "perl",
+        "python3",
+        "git",
+        "curl"
+      ]
+    },
+    "arch": "aarch64",
+    "host_triple": "aarch64-unknown-linux-gnu",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "measured_at": "2026-10-30T17:31:18+00:00",
+    "tool": {
+      "crate_tracing": "0.1.0",
+      "warden": {
+        "path": "/Users/jeff/crate-tracing/.tools/buildwarden/dist/warden",
+        "binary_sha256": "7eb4119b85a04f3f1d4e61179e1254117bd14516a2e57bceee26a11421320b27",
+        "version": "dev",
+        "go": "go1.26.5",
+        "module": "github.com/buildwarden/buildwarden",
+        "module_version": "v0.5.1-0.20261029195147-137feae2f8b0",
+        "revision": "137feae2f8b07e19e21b0893cc4ec9e96f97d42f",
+        "revision_time": "2026-10-29T19:51:47Z",
+        "modified": false
+      }
+    },
+    "warden_exit": 0,
+    "wall_seconds": 33.6,
+    "output_bytes": 357900361
+  },
+  "outcome": {
+    "status": "measured",
+    "fetch_exit": 0,
+    "build_exit": 0,
+    "built": true,
+    "failure": null
+  },
+  "routes": {
+    "taken": [
+      "A",
+      "D"
+    ],
+    "A_downloads": [
+      1075
+    ],
+    "B_bundled": [],
+    "C_system": [],
+    "D_tools": [
+      {
+        "purl": "pkg:cargo/v8@152.2.0",
+        "tools": {
+          "python3": 1
+        }
+      }
+    ],
+    "C_unresolved": []
+  },
+  "downloads": [
+    {
+      "ledger_seq": 1071,
+      "method": "GET",
+      "url": "https://github.com/denoland/rusty_v8/releases/download/v152.2.0/librusty_v8_release_aarch64-unknown-linux-gnu.a.gz",
+      "status": 302,
+      "bytes": 0,
+      "hashes": {},
+      "complete": true,
+      "redirect_to": "https://release-assets.githubusercontent.com/github-production-release-asset/218872560/dd56ad30-b7c7-44db-bb20-d4ab717f9615?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-30T18%3A04%3A13Z&rscd=attachment%3B+filename%3Dlibrusty_v8_release_aarch64-unknown-linux-gnu.a.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-30T17%3A04%3A11Z&ske=2026-10-30T18%3A04%3A13Z&sks=b&skv=2018-11-09&sig=tTIZWEpTJoI%2BbXZULnCq2075bVaLZJRZXUgsTKIGsq4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MzM4MzA3MiwibmJmIjoxNzkzMzgxMjcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YCuBBvUKwF36A_rYsJ3fm9QKRKgl99zkYRO-EfUKVvA&response-content-disposition=attachment%3B%20filename%3Dlibrusty_v8_release_aarch64-unknown-linux-gnu.a.gz&response-content-type=application%2Foctet-stream",
+      "user_agent": "Python-urllib/3.13",
+      "capture": "captures/263-GET-github.com-denoland-rusty_v8-releases-download-v152.2.0-librusty_v8_release_aarch64-unknown",
+      "identified": {
+        "name": "github.com/denoland/rusty_v8",
+        "version": "152.2.0",
+        "method": "github-release-tag",
+        "confidence": "high"
+      }
+    },
+    {
+      "ledger_seq": 1075,
+      "method": "GET",
+      "url": "https://release-assets.githubusercontent.com/github-production-release-asset/218872560/dd56ad30-b7c7-44db-bb20-d4ab717f9615?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-30T18%3A04%3A13Z&rscd=attachment%3B+filename%3Dlibrusty_v8_release_aarch64-unknown-linux-gnu.a.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-30T17%3A04%3A11Z&ske=2026-10-30T18%3A04%3A13Z&sks=b&skv=2018-11-09&sig=tTIZWEpTJoI%2BbXZULnCq2075bVaLZJRZXUgsTKIGsq4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MzM4MzA3MiwibmJmIjoxNzkzMzgxMjcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YCuBBvUKwF36A_rYsJ3fm9QKRKgl99zkYRO-EfUKVvA&response-content-disposition=attachment%3B%20filename%3Dlibrusty_v8_release_aarch64-unknown-linux-gnu.a.gz&response-content-type=application%2Foctet-stream",
+      "status": 200,
+      "bytes": 38513465,
+      "hashes": {
+        "blake2b_256": "beac85f777fbf9139b2b3d7c0b76e2e692673bc0c3ccc11f27094cb2acd32eff",
+        "sha256": "c40196bbf182532e583f65b7daf0196fdbb3354e6fac59b31d0539c20f931f3d",
+        "sha1": "1cf99141c91019b6ff36b6e31e0b64fbd2179c98",
+        "md5": "6f5afc2800bef680d1adb7288c80182d"
+      },
+      "complete": true,
+      "user_agent": "Python-urllib/3.13",
+      "capture": "captures/264-GET-release-assets.githubusercontent.com-github-production-release-asset-218872560-dd56ad30-b7c7-44db-bb20-d4ab717f9615",
+      "identified": {
+        "name": "github.com/denoland/rusty_v8",
+        "version": "152.2.0",
+        "method": "redirect-from:github-release-tag",
+        "confidence": "high"
+      }
+    }
+  ],
+  "packages": [
+    {
+      "purl": "pkg:cargo/bindgen@0.72.1",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/clang-sys@1.9.1",
+      "links": "clang",
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/crc32fast@1.5.3",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/icu_calendar_data@2.4.0",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/icu_locale_fallback_data@2.4.0",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/libc@0.2.191",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/libm@0.2.16",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/num-traits@0.2.19",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/paste@1.0.15",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/prettyplease@0.2.37",
+      "links": "prettyplease02",
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {
+        "VERSION": "0.2.37"
+      }
+    },
+    {
+      "purl": "pkg:cargo/proc-macro2@1.0.107",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/quote@1.0.47",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/rustix@0.38.44",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/serde@1.0.229",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/serde_core@1.0.229",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/v8@152.2.0",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [
+        {
+          "name": "rusty_v8",
+          "kind": "static",
+          "origin": "in-tree",
+          "path": "/work/probe/target/debug/gn_out/obj/librusty_v8.a"
+        }
+      ],
+      "tools": {
+        "python3": 1
+      },
+      "pkg_config_probes": [],
+      "declared": {},
+      "built_in_tree": false,
+      "prebuilt_in_tree": true
+    }
+  ],
+  "crates": [
+    {
+      "purl": "pkg:cargo/v8@152.2.0",
+      "name": "v8",
+      "version": "152.2.0",
+      "phase": "fetch",
+      "ledger_seq": 696,
+      "sha256": "a10fe1a92da5c32c7c7f838ce36c0ccfcfd5edf0865b58bdde820aa64cea9888",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/which@6.0.3",
+      "name": "which",
+      "version": "6.0.3",
+      "phase": "fetch",
+      "ledger_seq": 700,
+      "sha256": "b4ee928febd44d98f2f459a4a79bd4d928591333a494a10a868418ac1b39cf1f",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/winsafe@0.0.19",
+      "name": "winsafe",
+      "version": "0.0.19",
+      "phase": "fetch",
+      "ledger_seq": 702,
+      "sha256": "d135d17ab770252ad95e9a872d365cf3090e3be864a34ab46f48555993efc904",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/windows-targets@0.52.6",
+      "name": "windows-targets",
+      "version": "0.52.6",
+      "phase": "fetch",
+      "ledger_seq": 706,
+      "sha256": "9b724f72796e036ab90c1021d4780d4d3d648aca59e491e6b98e725b84e99973",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/windows_x86_64_gnu@0.52.6",
+      "name": "windows_x86_64_gnu",
+      "version": "0.52.6",
+      "phase": "fetch",
+      "ledger_seq": 711,
+      "sha256": "147a5c80aabfbf0c7d901cb5895d1de30ef2907eb21fbbab29ca94c5b08b1a78",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/windows_i686_gnu@0.52.6",
+      "name": "windows_i686_gnu",
+      "version": "0.52.6",
+      "phase": "fetch",
+      "ledger_seq": 714,
+      "sha256": "8e9b5ad5ab802e97eb8e295ac6720e509ee4c243f69d781394014ebfe8bbfa0b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/linux-raw-sys@0.4.15",
+      "name": "linux-raw-sys",
+      "version": "0.4.15",
+      "phase": "fetch",
+      "ledger_seq": 719,
+      "sha256": "d26c52dbd32dccf2d10cac7725f8eae5296885fb5703b261f7d0a0739ec807ab",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/windows-sys@0.61.2",
+      "name": "windows-sys",
+      "version": "0.61.2",
+      "phase": "fetch",
+      "ledger_seq": 723,
+      "sha256": "ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/home@0.5.12",
+      "name": "home",
+      "version": "0.5.12",
+      "phase": "fetch",
+      "ledger_seq": 727,
+      "sha256": "cc627f471c528ff0c4a49e1d5e60450c8f6461dd6d10ba9dcd3a61d3dff7728d",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/zoneinfo64@0.3.0",
+      "name": "zoneinfo64",
+      "version": "0.3.0",
+      "phase": "fetch",
+      "ledger_seq": 731,
+      "sha256": "ed6eb2607e906160c457fd573e9297e65029669906b9ac8fb1b5cd5e055f0705",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/syn@3.0.9",
+      "name": "syn",
+      "version": "3.0.9",
+      "phase": "fetch",
+      "ledger_seq": 735,
+      "sha256": "d78c8dee4c7bf0e14673097256fed6142ce9d3b85a408189d07482442145823b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/proc-macro2@1.0.107",
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "phase": "fetch",
+      "ledger_seq": 739,
+      "sha256": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/potential_utf@0.1.6",
+      "name": "potential_utf",
+      "version": "0.1.6",
+      "phase": "fetch",
+      "ledger_seq": 743,
+      "sha256": "d83eb9bc6d8e5cf568e7a1101d60ee05e81ed50ea106026f3d18deeb046d7661",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/zerofrom@0.1.8",
+      "name": "zerofrom",
+      "version": "0.1.8",
+      "phase": "fetch",
+      "ledger_seq": 746,
+      "sha256": "0ec05a11813ea801ff6d75110ad09cd0824ddba17dfe17128ea0d5f68e6c5272",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/yoke@0.8.4",
+      "name": "yoke",
+      "version": "0.8.4",
+      "phase": "fetch",
+      "ledger_seq": 750,
+      "sha256": "417ef3fcf6c300b7dbd25c85531a746931c02ad536f3cf4786ed1e88223340b3",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/writeable@0.6.4",
+      "name": "writeable",
+      "version": "0.6.4",
+      "phase": "fetch",
+      "ledger_seq": 754,
+      "sha256": "3ad82d2a33cdc9674dc7465672f271e096168fcdbe0f799d9e6db8c5892679dc",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/displaydoc@0.2.7",
+      "name": "displaydoc",
+      "version": "0.2.7",
+      "phase": "fetch",
+      "ledger_seq": 759,
+      "sha256": "c6232dd377dcc64799954cbd3a9bb882e9cdc1308ccd87b1c098f1fb2eaf82a8",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/core_maths@0.1.1",
+      "name": "core_maths",
+      "version": "0.1.1",
+      "phase": "fetch",
+      "ledger_seq": 762,
+      "sha256": "77745e017f5edba1a9c1d854f6f3a52dac8a12dd5af5d2f54aecf61e43d80d30",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/zerotrie@0.2.5",
+      "name": "zerotrie",
+      "version": "0.2.5",
+      "phase": "fetch",
+      "ledger_seq": 766,
+      "sha256": "4ea269c3bd32f0a32c321907a2ae912ba6f4649bb0fc764a15627e99a7095a3f",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/autocfg@1.5.1",
+      "name": "autocfg",
+      "version": "1.5.1",
+      "phase": "fetch",
+      "ledger_seq": 770,
+      "sha256": "f2032f911046de80f0a198e0901378627c33f59ea0ac00e363d481118bd70a53",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/icu_provider@2.4.0",
+      "name": "icu_provider",
+      "version": "2.4.0",
+      "phase": "fetch",
+      "ledger_seq": 775,
+      "sha256": "413099315636c588ee8f011190b329b971a09a8fae9d157e01dcae8379468514",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/icu_calendar_data@2.4.0",
+      "name": "icu_calendar_data",
+      "version": "2.4.0",
+      "phase": "fetch",
+      "ledger_seq": 778,
+      "sha256": "514da54e79efa36b5976232d5b3d1d8ee1b47b19ab658f1b1ebe39221696c2d8",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/diplomat_core@0.16.1",
+      "name": "diplomat_core",
+      "version": "0.16.1",
+      "phase": "fetch",
+      "ledger_seq": 782,
+      "sha256": "73b18e806f9ecb92df828d080efe47984ae1193958295d4a84fb8b32c9a1aa1b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/paste@1.0.15",
+      "name": "paste",
+      "version": "1.0.15",
+      "phase": "fetch",
+      "ledger_seq": 786,
+      "sha256": "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/gzip-header@1.1.0",
+      "name": "gzip-header",
+      "version": "1.1.0",
+      "phase": "fetch",
+      "ledger_seq": 790,
+      "sha256": "86848f4fd157d91041a62c78046fb7b248bcc2dce78376d436a1756e9a038577",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/fslock@0.2.1",
+      "name": "fslock",
+      "version": "0.2.1",
+      "phase": "fetch",
+      "ledger_seq": 794,
+      "sha256": "04412b8935272e3a9bae6f48c7bfff74c2911f60525404edfdd28e49884c3bfb",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/winapi-i686-pc-windows-gnu@0.4.0",
+      "name": "winapi-i686-pc-windows-gnu",
+      "version": "0.4.0",
+      "phase": "fetch",
+      "ledger_seq": 798,
+      "sha256": "ac3b87c63620426dd9b991e5ce0329eff545bccbbb34f3be09ff6fb6ab51b7b6",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/shlex@1.3.0",
+      "name": "shlex",
+      "version": "1.3.0",
+      "phase": "fetch",
+      "ledger_seq": 802,
+      "sha256": "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/regex-syntax@0.8.11",
+      "name": "regex-syntax",
+      "version": "0.8.11",
+      "phase": "fetch",
+      "ledger_seq": 807,
+      "sha256": "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/aho-corasick@1.1.5",
+      "name": "aho-corasick",
+      "version": "1.1.5",
+      "phase": "fetch",
+      "ledger_seq": 811,
+      "sha256": "c982642fa9e8606056828ee9a8505737230110bb1099153c79efe865c59d12ba",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/itertools@0.13.0",
+      "name": "itertools",
+      "version": "0.13.0",
+      "phase": "fetch",
+      "ledger_seq": 815,
+      "sha256": "413ee7dfc52ee1a4949ceeb7dbc8a33f2d6c088194d9f922fb8318faf1f01186",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/glob@0.3.4",
+      "name": "glob",
+      "version": "0.3.4",
+      "phase": "fetch",
+      "ledger_seq": 818,
+      "sha256": "e4eba85ea1d0a966a983acd07deee566e67395d2d96b6fb39e62b5a833f1eb0b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/minimal-lexical@0.2.1",
+      "name": "minimal-lexical",
+      "version": "0.2.1",
+      "phase": "fetch",
+      "ledger_seq": 823,
+      "sha256": "68354c5c6bd36d73ff3feceb05efa59b6acb7626617f4962be322a825e61f79a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/windows_x86_64_msvc@0.52.6",
+      "name": "windows_x86_64_msvc",
+      "version": "0.52.6",
+      "phase": "fetch",
+      "ledger_seq": 826,
+      "sha256": "589f6da84c646204747d1270a2a5661ea66ed1cced2631d546fdfb155959f9ec",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/windows_i686_gnullvm@0.52.6",
+      "name": "windows_i686_gnullvm",
+      "version": "0.52.6",
+      "phase": "fetch",
+      "ledger_seq": 831,
+      "sha256": "0eee52d38c090b3caa76c563b86c3a4bd71ef1a819287c19d586d7334ae8ed66",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/libc@0.2.191",
+      "name": "libc",
+      "version": "0.2.191",
+      "phase": "fetch",
+      "ledger_seq": 834,
+      "sha256": "65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/bitflags@2.13.2",
+      "name": "bitflags",
+      "version": "2.13.2",
+      "phase": "fetch",
+      "ledger_seq": 839,
+      "sha256": "3ded4057c258ba199e2d26386d3af3780957ecaee6c4ef4041c6b4b8b97c0b06",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/serde@1.0.229",
+      "name": "serde",
+      "version": "1.0.229",
+      "phase": "fetch",
+      "ledger_seq": 843,
+      "sha256": "4148590afebada386688f18773da617792bf2ef03ffc1e4cbd2b1d45b023e0ba",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/quote@1.0.47",
+      "name": "quote",
+      "version": "1.0.47",
+      "phase": "fetch",
+      "ledger_seq": 846,
+      "sha256": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/zerovec@0.11.9",
+      "name": "zerovec",
+      "version": "0.11.9",
+      "phase": "fetch",
+      "ledger_seq": 850,
+      "sha256": "f58a2799cfe9a1670c7ea8edbd52ef8edb93cb37a7f83bf31ba9e35d9dae6a40",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/synstructure@0.14.0",
+      "name": "synstructure",
+      "version": "0.14.0",
+      "phase": "fetch",
+      "ledger_seq": 854,
+      "sha256": "901704edd0dfe137f1987838ee4f259e4e063c31371bdb423f7ae38ec6f77f02",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/icu_locale_core@2.4.0",
+      "name": "icu_locale_core",
+      "version": "2.4.0",
+      "phase": "fetch",
+      "ledger_seq": 858,
+      "sha256": "25d29b57c17c6528d0dc4c2141cfa2d08200465acb537a3909c8b9b8a4a984c0",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/calendrical_calculations@0.2.4",
+      "name": "calendrical_calculations",
+      "version": "0.2.4",
+      "phase": "fetch",
+      "ledger_seq": 862,
+      "sha256": "5abbd6eeda6885048d357edc66748eea6e0268e3dd11f326fff5bd248d779c26",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/temporal_rs@0.2.6",
+      "name": "temporal_rs",
+      "version": "0.2.6",
+      "phase": "fetch",
+      "ledger_seq": 866,
+      "sha256": "1a978fef907a27736827d336c0bfaab14fb8a7509dd6dc2b43c44e51d59aca5b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/icu_calendar@2.4.0",
+      "name": "icu_calendar",
+      "version": "2.4.0",
+      "phase": "fetch",
+      "ledger_seq": 870,
+      "sha256": "a68ffb801cc7acb8dcae62da7c692c47934698d2dd4f479ddee1eb442763dea1",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/diplomat-runtime@0.16.1",
+      "name": "diplomat-runtime",
+      "version": "0.16.1",
+      "phase": "fetch",
+      "ledger_seq": 874,
+      "sha256": "d9d981121ba76150987fda68185b37853c0b928a55dfdc28897348cd068440be",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/smallvec@1.16.4",
+      "name": "smallvec",
+      "version": "1.16.4",
+      "phase": "fetch",
+      "ledger_seq": 879,
+      "sha256": "d0d5d4b1981b8bbbb7aed204cae5726d683d5d6ac7e74ec54122ea28f315e7c8",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/crc32fast@1.5.3",
+      "name": "crc32fast",
+      "version": "1.5.3",
+      "phase": "fetch",
+      "ledger_seq": 883,
+      "sha256": "0ba106e844045ddc02c20768ac4b0b7cb45f2cc2ecbd833ac9f5dacb183c2055",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/winapi-x86_64-pc-windows-gnu@0.4.0",
+      "name": "winapi-x86_64-pc-windows-gnu",
+      "version": "0.4.0",
+      "phase": "fetch",
+      "ledger_seq": 887,
+      "sha256": "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/rustc-hash@2.1.3",
+      "name": "rustc-hash",
+      "version": "2.1.3",
+      "phase": "fetch",
+      "ledger_seq": 891,
+      "sha256": "6b1e7f9a428571be2dc5bc0505c13fb6bf936822b894ec87abf8a08a4e51742d",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/memchr@2.8.3",
+      "name": "memchr",
+      "version": "2.8.3",
+      "phase": "fetch",
+      "ledger_seq": 895,
+      "sha256": "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/clang-sys@1.9.1",
+      "name": "clang-sys",
+      "version": "1.9.1",
+      "phase": "fetch",
+      "ledger_seq": 899,
+      "sha256": "157a8ba7b480713b56f4c09fd13fc3e0a22a5dfab8097ba61cbc5feef950788a",
+      "lock_checksum_match": true,
+      "links": "clang",
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/nom@7.1.3",
+      "name": "nom",
+      "version": "7.1.3",
+      "phase": "fetch",
+      "ledger_seq": 903,
+      "sha256": "d273983c5a657a70a3e8f2a01329822f3b8c8172b73826411a55751e404a0a4a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/windows_x86_64_gnullvm@0.52.6",
+      "name": "windows_x86_64_gnullvm",
+      "version": "0.52.6",
+      "phase": "fetch",
+      "ledger_seq": 906,
+      "sha256": "24d5b23dc417412679681396f2b49f3de8c1473deb516bd34410872eff51ed0d",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/windows_aarch64_gnullvm@0.52.6",
+      "name": "windows_aarch64_gnullvm",
+      "version": "0.52.6",
+      "phase": "fetch",
+      "ledger_seq": 911,
+      "sha256": "32a4622180e7a0ec044bb555404c800bc9fd9ec262ec147edd5989ccd0c02cd3",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/either@1.19.0",
+      "name": "either",
+      "version": "1.19.0",
+      "phase": "fetch",
+      "ledger_seq": 915,
+      "sha256": "0e9c71c2167ca323c882b99918929403426e2373ea17242ff5653e0d5e1058be",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/unicode-ident@1.0.27",
+      "name": "unicode-ident",
+      "version": "1.0.27",
+      "phase": "fetch",
+      "ledger_seq": 918,
+      "sha256": "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/zerovec-derive@0.11.7",
+      "name": "zerovec-derive",
+      "version": "0.11.7",
+      "phase": "fetch",
+      "ledger_seq": 922,
+      "sha256": "c3743ddbf47738d929cd1ae2e199d40d0162979dfe31aef8ae646d2bf00bf97a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/stable_deref_trait@1.2.1",
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "phase": "fetch",
+      "ledger_seq": 927,
+      "sha256": "6ce2be8dc25455e1f91df71bfa12ad37d7af1092ae736f3a6cd0e37bc7810596",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/libm@0.2.16",
+      "name": "libm",
+      "version": "0.2.16",
+      "phase": "fetch",
+      "ledger_seq": 930,
+      "sha256": "b6d2cec3eae94f9f509c767b45932f1ada8350c4bdb85af2fcab4a3c14807981",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/ixdtf@0.6.7",
+      "name": "ixdtf",
+      "version": "0.6.7",
+      "phase": "fetch",
+      "ledger_seq": 935,
+      "sha256": "4754a1731458af0443709c9667302793d3f63cc90ec4ba4c8259f2b9515478e5",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/diplomat@0.16.1",
+      "name": "diplomat",
+      "version": "0.16.1",
+      "phase": "fetch",
+      "ledger_seq": 938,
+      "sha256": "f8b37a6cea72eb6df5143d3e091d4c34cb0cf4046dd1ddcc082988886fe1f809",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/adler2@2.0.1",
+      "name": "adler2",
+      "version": "2.0.1",
+      "phase": "fetch",
+      "ledger_seq": 942,
+      "sha256": "320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/bindgen@0.72.1",
+      "name": "bindgen",
+      "version": "0.72.1",
+      "phase": "fetch",
+      "ledger_seq": 946,
+      "sha256": "993776b509cfb49c750f11b8f07a46fa23e0a1386ffc01fb1e7d343efc387895",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/regex-automata@0.4.18",
+      "name": "regex-automata",
+      "version": "0.4.18",
+      "phase": "fetch",
+      "ledger_seq": 950,
+      "sha256": "ad8553b9b26413251cbf30e620595c7a41b3887f03da04579c0e6b0d6a06b4b2",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/libloading@0.8.9",
+      "name": "libloading",
+      "version": "0.8.9",
+      "phase": "fetch",
+      "ledger_seq": 955,
+      "sha256": "d7c4b02199fee7c5d21a5ae7d8cfa79a6ef5bb2fc834d6e9058e89c825efdc55",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/windows-sys@0.59.0",
+      "name": "windows-sys",
+      "version": "0.59.0",
+      "phase": "fetch",
+      "ledger_seq": 958,
+      "sha256": "1e38bc4d79ed67fd075bcc251a1c39b32a1776bbe92e5bef1f0bf1f8c531853b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/errno@0.3.14",
+      "name": "errno",
+      "version": "0.3.14",
+      "phase": "fetch",
+      "ledger_seq": 962,
+      "sha256": "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/serde_derive@1.0.229",
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "phase": "fetch",
+      "ledger_seq": 967,
+      "sha256": "e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/zerofrom-derive@0.1.8",
+      "name": "zerofrom-derive",
+      "version": "0.1.8",
+      "phase": "fetch",
+      "ledger_seq": 971,
+      "sha256": "f75b4683f6c7f45248d4d64056a24298c6281e0993356d7d1b4a1a962ef10d4a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/litemap@0.8.3",
+      "name": "litemap",
+      "version": "0.8.3",
+      "phase": "fetch",
+      "ledger_seq": 975,
+      "sha256": "47d9d19d1d6efa0109d2f65ff4c85cddd50bd572e5a00127ab10987290bcefae",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/icu_locale_fallback@2.4.0",
+      "name": "icu_locale_fallback",
+      "version": "2.4.0",
+      "phase": "fetch",
+      "ledger_seq": 979,
+      "sha256": "406e9ae5b95d8aa37db6293405931b766a6172d1848daee22d70eb44aa78a43c",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/miniz_oxide@0.8.9",
+      "name": "miniz_oxide",
+      "version": "0.8.9",
+      "phase": "fetch",
+      "ledger_seq": 983,
+      "sha256": "1fa76a2c86f704bdb222d66965fb3d63269ce38518b83cb0575fca855ebb6316",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/syn@2.0.119",
+      "name": "syn",
+      "version": "2.0.119",
+      "phase": "fetch",
+      "ledger_seq": 987,
+      "sha256": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/log@0.4.34",
+      "name": "log",
+      "version": "0.4.34",
+      "phase": "fetch",
+      "ledger_seq": 991,
+      "sha256": "f9f8bd3e56ce4dfc153cf470fffbfa98c7620958b312ca5c3a4b8d5181fd13c6",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/windows_i686_msvc@0.52.6",
+      "name": "windows_i686_msvc",
+      "version": "0.52.6",
+      "phase": "fetch",
+      "ledger_seq": 995,
+      "sha256": "240948bc05c5e7c6dabba28bf89d89ffce3e303022809e73deaefe4f6ec56c66",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/temporal_capi@0.2.6",
+      "name": "temporal_capi",
+      "version": "0.2.6",
+      "phase": "fetch",
+      "ledger_seq": 999,
+      "sha256": "f48eb9ca4ca22caaa48d1e7a534ad3fd598a23d1a71945e8ad5ac0be501fa5f2",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/yoke-derive@0.8.4",
+      "name": "yoke-derive",
+      "version": "0.8.4",
+      "phase": "fetch",
+      "ledger_seq": 1003,
+      "sha256": "ec8ebde2db3681e8c9980cc27822030e68752690ddfa9473e739aeb4dbde6d71",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/num-traits@0.2.19",
+      "name": "num-traits",
+      "version": "0.2.19",
+      "phase": "fetch",
+      "ledger_seq": 1008,
+      "sha256": "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/icu_locale_fallback_data@2.4.0",
+      "name": "icu_locale_fallback_data",
+      "version": "2.4.0",
+      "phase": "fetch",
+      "ledger_seq": 1009,
+      "sha256": "3632ebbd0c5c3637ba1a40bdf8288f2cb9d2268e73441a69d5fc73d7cfbaa87c",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/prettyplease@0.2.37",
+      "name": "prettyplease",
+      "version": "0.2.37",
+      "phase": "fetch",
+      "ledger_seq": 1015,
+      "sha256": "479ca8adacdd7ce8f1fb39ce9ecccbfe93a3f1344b3d0d97f20bc0196208f62b",
+      "lock_checksum_match": true,
+      "links": "prettyplease02",
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/windows_aarch64_msvc@0.52.6",
+      "name": "windows_aarch64_msvc",
+      "version": "0.52.6",
+      "phase": "fetch",
+      "ledger_seq": 1018,
+      "sha256": "09ec2a7bb152e2252b53fa7803150007879548bc709c039df7627cabbd05d469",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/resb@0.1.2",
+      "name": "resb",
+      "version": "0.1.2",
+      "phase": "fetch",
+      "ledger_seq": 1023,
+      "sha256": "22d392791f3c6802a1905a509e9d1a6039cbbcb5e9e00e5a6d3661f7c874f390",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/strck@1.0.0",
+      "name": "strck",
+      "version": "1.0.0",
+      "phase": "fetch",
+      "ledger_seq": 1026,
+      "sha256": "42316e70da376f3d113a68d138a60d8a9883c604fe97942721ec2068dab13a9f",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/regex@1.13.1",
+      "name": "regex",
+      "version": "1.13.1",
+      "phase": "fetch",
+      "ledger_seq": 1031,
+      "sha256": "f020237b6c8eed93db2e2cb53c00c60a8e1bc73da7d073199a1180401450218d",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/windows-link@0.2.1",
+      "name": "windows-link",
+      "version": "0.2.1",
+      "phase": "fetch",
+      "ledger_seq": 1034,
+      "sha256": "f0805222e57f7521d6a62e36fa9163bc891acd422f971defe97d64e70d0a4fe5",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/timezone_provider@0.2.6",
+      "name": "timezone_provider",
+      "version": "0.2.6",
+      "phase": "fetch",
+      "ledger_seq": 1039,
+      "sha256": "89ec4f4eebb4817fde02a411aedc7ac5f66c89c68c49e5d4b17a8139f077af52",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/cexpr@0.6.0",
+      "name": "cexpr",
+      "version": "0.6.0",
+      "phase": "fetch",
+      "ledger_seq": 1042,
+      "sha256": "6fac387a98bb7c37292057cffc56d62ecb629900026402633ae9160df93a8766",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/tinystr@0.8.5",
+      "name": "tinystr",
+      "version": "0.8.5",
+      "phase": "fetch",
+      "ledger_seq": 1047,
+      "sha256": "abc840c238154d58f9e86b2792261edfde565a17696e1cda1a449de27979801a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/rustix@0.38.44",
+      "name": "rustix",
+      "version": "0.38.44",
+      "phase": "fetch",
+      "ledger_seq": 1050,
+      "sha256": "fdb5bc1ae2baa591800df16c9ca78619bf65c0488b41b96ccec5d11220d8c154",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/winapi@0.3.9",
+      "name": "winapi",
+      "version": "0.3.9",
+      "phase": "fetch",
+      "ledger_seq": 1054,
+      "sha256": "5c839a674fcd7a98952e593242ea400abe93992746761e38641405d28b00f419",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/serde_core@1.0.229",
+      "name": "serde_core",
+      "version": "1.0.229",
+      "phase": "fetch",
+      "ledger_seq": 1059,
+      "sha256": "67dca2c9c51e58a4791a4b1ed58308b39c64224d349a935ab5039aa360942a48",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/cfg-if@1.0.5",
+      "name": "cfg-if",
+      "version": "1.0.5",
+      "phase": "fetch",
+      "ledger_seq": 1062,
+      "sha256": "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    }
+  ],
+  "traffic": {
+    "setup": {
+      "os-packages": {
+        "requests": 77,
+        "bytes": 69743858,
+        "hosts": [
+          "deb.debian.org"
+        ]
+      }
+    },
+    "fetch": {
+      "crates-registry": {
+        "requests": 185,
+        "bytes": 69956123,
+        "hosts": [
+          "index.crates.io",
+          "static.crates.io"
+        ]
+      }
+    },
+    "build": {
+      "external": {
+        "requests": 2,
+        "bytes": 38513465,
+        "hosts": [
+          "github.com",
+          "release-assets.githubusercontent.com"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "ledger_valid": true,
+    "ledger_records": 1162,
+    "environment_type": "oci-image/v1",
+    "environment_digest": "sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+    "artifacts_verified": true
+  },
+  "anomalies": [],
+  "expect": [
+    "A",
+    "D"
+  ],
+  "matches_expectation": true
+}

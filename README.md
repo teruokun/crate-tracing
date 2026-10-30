@@ -13,9 +13,10 @@ code by route, with the ledger as evidence:
 | **C** | linked from the system | `openssl-sys` links the image's `libssl-dev` |
 | **D** | build tools run | cmake, make, perl, protoc invoked by a build script |
 
-Each measurement is a crate at an exact version and feature set, built in two
-environment profiles, `bare` and `rich`, because the route usually depends on
-what the environment already has.
+Each measurement is a crate at an exact version and feature set, built in three
+environment profiles, because the route usually depends on what the environment
+already has: `bare` (the Rust slim image as published), `minimal` (plus the
+build tools a developer machine usually has) and `rich` (plus `-dev` libraries).
 
 **Status:** proof of concept. See [DESIGN.md](DESIGN.md) for the approach and
 [HANDOFF.md](HANDOFF.md) for what is verified and what comes next.

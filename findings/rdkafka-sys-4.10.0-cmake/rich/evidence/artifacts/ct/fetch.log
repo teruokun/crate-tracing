@@ -5,13 +5,13 @@
   Downloaded num_enum v0.7.6
   Downloaded proc-macro2 v1.0.107
   Downloaded syn v2.0.119
-  Downloaded winnow v1.0.4
   Downloaded toml_datetime v1.1.2+spec-1.1.0
-  Downloaded equivalent v1.0.3
+  Downloaded winnow v1.0.4
   Downloaded syn v3.0.9
+  Downloaded equivalent v1.0.3
   Downloaded find-msvc-tools v0.1.15
-  Downloaded num_enum_derive v0.7.6
   Downloaded libc v0.2.191
+  Downloaded num_enum_derive v0.7.6
   Downloaded proc-macro-crate v3.5.0
   Downloaded toml_parser v1.1.5+spec-1.1.0
   Downloaded indexmap v2.14.2
@@ -20,8 +20,8 @@
   Downloaded quote v1.0.47
   Downloaded serde_core v1.0.229
   Downloaded rustversion v1.0.23
-  Downloaded memchr v2.8.3
   Downloaded libz-sys v1.1.31
+  Downloaded memchr v2.8.3
   Downloaded cc v1.10.0
   Downloaded toml_edit v0.25.17+spec-1.1.0
   Downloaded shlex v2.0.1

@@ -1,0 +1,962 @@
+{
+  "schema": "https://github.com/teruokun/crate-tracing/schemas/finding-v1.schema.json",
+  "subject": {
+    "purl": "pkg:cargo/ort@2.0.0-rc.15",
+    "name": "ort",
+    "version": "2.0.0-rc.15",
+    "features": [],
+    "default_features": true
+  },
+  "measurement": {
+    "id": "ort-2.0.0-rc.15",
+    "profile": {
+      "name": "minimal",
+      "image": "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+      "apt_packages": [
+        "build-essential",
+        "pkg-config",
+        "cmake",
+        "perl",
+        "python3",
+        "git",
+        "curl"
+      ]
+    },
+    "arch": "aarch64",
+    "host_triple": "aarch64-unknown-linux-gnu",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "measured_at": "2026-10-30T17:31:18+00:00",
+    "tool": {
+      "crate_tracing": "0.1.0",
+      "warden": {
+        "path": "/Users/jeff/crate-tracing/.tools/buildwarden/dist/warden",
+        "binary_sha256": "7eb4119b85a04f3f1d4e61179e1254117bd14516a2e57bceee26a11421320b27",
+        "version": "dev",
+        "go": "go1.26.5",
+        "module": "github.com/buildwarden/buildwarden",
+        "module_version": "v0.5.1-0.20261029195147-137feae2f8b0",
+        "revision": "137feae2f8b07e19e21b0893cc4ec9e96f97d42f",
+        "revision_time": "2026-10-29T19:51:47Z",
+        "modified": false
+      }
+    },
+    "warden_exit": 0,
+    "wall_seconds": 20.4,
+    "output_bytes": 173788498
+  },
+  "outcome": {
+    "status": "measured",
+    "fetch_exit": 0,
+    "build_exit": 101,
+    "built": false,
+    "failure": {
+      "package": "openssl-sys",
+      "version": "0.9.117",
+      "excerpt": [
+        "  Could not find directory of OpenSSL installation, and this `-sys` crate cannot",
+        "  proceed without this knowledge. If OpenSSL is installed and this crate had",
+        "  trouble finding it,  you can set the `OPENSSL_DIR` environment variable for the",
+        "  compilation process.",
+        "  Make sure you also have the development packages of openssl installed.",
+        "  For example, `libssl-dev` on Ubuntu or `openssl-devel` on Fedora.",
+        "  If you're in a situation where you think the directory *should* be found",
+        "  automatically, please open a bug at https://github.com/rust-openssl/rust-openssl",
+        "  and include information about your system as well as this message.",
+        "  $HOST = aarch64-unknown-linux-gnu",
+        "  $TARGET = aarch64-unknown-linux-gnu",
+        "  openssl-sys = 0.9.117",
+        "warning: build failed, waiting for other jobs to finish..."
+      ]
+    }
+  },
+  "routes": {
+    "taken": [
+      "fail"
+    ],
+    "A_downloads": [],
+    "B_bundled": [],
+    "C_system": [],
+    "D_tools": [],
+    "C_unresolved": []
+  },
+  "downloads": [],
+  "packages": [
+    {
+      "purl": "pkg:cargo/httparse@1.10.1",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/libc@0.2.191",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/matrixmultiply@0.3.11",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/native-tls@0.2.18",
+      "links": null,
+      "build_script_ran": false,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/num-traits@0.2.19",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/openssl@0.10.81",
+      "links": null,
+      "build_script_ran": false,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/openssl-sys@0.9.117",
+      "links": "openssl",
+      "build_script_ran": false,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [
+        "",
+        "--libs --cflags openssl"
+      ],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/ort-sys@2.0.0-rc.15",
+      "links": "onnxruntime",
+      "build_script_ran": false,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/proc-macro2@1.0.107",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/quote@1.0.47",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    }
+  ],
+  "crates": [
+    {
+      "purl": "pkg:cargo/ort@2.0.0-rc.15",
+      "name": "ort",
+      "version": "2.0.0-rc.15",
+      "phase": "fetch",
+      "ledger_seq": 600,
+      "sha256": "37c87aa7a90b7ff3e0fe36cccd475df8d67f15f07f4d6c370c4b38464232813c",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/ureq@3.5.0",
+      "name": "ureq",
+      "version": "3.5.0",
+      "phase": "fetch",
+      "ledger_seq": 604,
+      "sha256": "cde93ff05758a36a851a398a772b0b79a82fbe3c186a46f2696baaeaf84c966b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/webpki-root-certs@1.0.11",
+      "name": "webpki-root-certs",
+      "version": "1.0.11",
+      "phase": "fetch",
+      "ledger_seq": 606,
+      "sha256": "e49d0e65abc00c142e8f9428da991da9f1a250c39be97459901eb12b9b49f62a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/utf8-zero@0.8.1",
+      "name": "utf8-zero",
+      "version": "0.8.1",
+      "phase": "fetch",
+      "ledger_seq": 610,
+      "sha256": "b8c0a043c9540bae7c578c88f91dda8bd82e59ae27c21baca69c8b191aaf5a6e",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/httparse@1.10.1",
+      "name": "httparse",
+      "version": "1.10.1",
+      "phase": "fetch",
+      "ledger_seq": 615,
+      "sha256": "6dbf3de79e51f3d586ab4cb9d5c3e2c14aa28ed23d180cf89b4df0454a69cc87",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/bytes@1.12.1",
+      "name": "bytes",
+      "version": "1.12.1",
+      "phase": "fetch",
+      "ledger_seq": 618,
+      "sha256": "fc652a48c352aef3ea3aed32080501cf3ef6ed5da78602a020c991775b0aff04",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/native-tls@0.2.18",
+      "name": "native-tls",
+      "version": "0.2.18",
+      "phase": "fetch",
+      "ledger_seq": 623,
+      "sha256": "465500e14ea162429d264d44189adc38b199b62b1c21eea9f69e4b73cb03bbf2",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/windows-link@0.2.1",
+      "name": "windows-link",
+      "version": "0.2.1",
+      "phase": "fetch",
+      "ledger_seq": 626,
+      "sha256": "f0805222e57f7521d6a62e36fa9163bc891acd422f971defe97d64e70d0a4fe5",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/libc@0.2.191",
+      "name": "libc",
+      "version": "0.2.191",
+      "phase": "fetch",
+      "ledger_seq": 630,
+      "sha256": "65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/once_cell@1.21.4",
+      "name": "once_cell",
+      "version": "1.21.4",
+      "phase": "fetch",
+      "ledger_seq": 634,
+      "sha256": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/cfg-if@1.0.5",
+      "name": "cfg-if",
+      "version": "1.0.5",
+      "phase": "fetch",
+      "ledger_seq": 639,
+      "sha256": "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/core-foundation-sys@0.8.7",
+      "name": "core-foundation-sys",
+      "version": "0.8.7",
+      "phase": "fetch",
+      "ledger_seq": 642,
+      "sha256": "773648b94d0e5d620f64f280777445740e61fe701025087ec8b57f45c791888b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/schannel@0.1.30",
+      "name": "schannel",
+      "version": "0.1.30",
+      "phase": "fetch",
+      "ledger_seq": 647,
+      "sha256": "9cb23c424d8ee841bb4d813677ca237e2a610067d594fec130f87d6093495ab5",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/pkg-config@0.3.34",
+      "name": "pkg-config",
+      "version": "0.3.34",
+      "phase": "fetch",
+      "ledger_seq": 650,
+      "sha256": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/find-msvc-tools@0.1.15",
+      "name": "find-msvc-tools",
+      "version": "0.1.15",
+      "phase": "fetch",
+      "ledger_seq": 654,
+      "sha256": "1c66915cc5391097de7a2b0b972e8505aa33c0df401fd3a6811dbdb32881ba48",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/openssl-macros@0.1.1",
+      "name": "openssl-macros",
+      "version": "0.1.1",
+      "phase": "fetch",
+      "ledger_seq": 658,
+      "sha256": "a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/quote@1.0.47",
+      "name": "quote",
+      "version": "1.0.47",
+      "phase": "fetch",
+      "ledger_seq": 663,
+      "sha256": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/foreign-types-shared@0.1.1",
+      "name": "foreign-types-shared",
+      "version": "0.1.1",
+      "phase": "fetch",
+      "ledger_seq": 666,
+      "sha256": "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/base64ct@1.8.3",
+      "name": "base64ct",
+      "version": "1.8.3",
+      "phase": "fetch",
+      "ledger_seq": 671,
+      "sha256": "2af50177e190e07a26ab74f8b1efbfe2ef87da2116221318cb1c2e82baf7de06",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/pin-project-lite@0.2.17",
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "phase": "fetch",
+      "ledger_seq": 674,
+      "sha256": "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/lzma-rust2@0.15.8",
+      "name": "lzma-rust2",
+      "version": "0.15.8",
+      "phase": "fetch",
+      "ledger_seq": 679,
+      "sha256": "e20f57f9918e5bd7bc58c22cdd70a6afc7375d4dd9683af5f2b34bd3d2bba619",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/rawpointer@0.2.1",
+      "name": "rawpointer",
+      "version": "0.2.1",
+      "phase": "fetch",
+      "ledger_seq": 682,
+      "sha256": "60a357793950651c4ed0f3f52338f53b2f809f32d83a07f72909fa13e4c6c1e3",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/num-traits@0.2.19",
+      "name": "num-traits",
+      "version": "0.2.19",
+      "phase": "fetch",
+      "ledger_seq": 687,
+      "sha256": "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/num-complex@0.4.6",
+      "name": "num-complex",
+      "version": "0.4.6",
+      "phase": "fetch",
+      "ledger_seq": 691,
+      "sha256": "73f88a1307638156682bada9d7604135552957b7818057dcef22705b4d509495",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/zeroize@1.9.1",
+      "name": "zeroize",
+      "version": "1.9.1",
+      "phase": "fetch",
+      "ledger_seq": 694,
+      "sha256": "e13084392c5e4bc371903e2935a5eaeed24905a7511356b883835e18a78f6879",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/http@1.5.0",
+      "name": "http",
+      "version": "1.5.0",
+      "phase": "fetch",
+      "ledger_seq": 699,
+      "sha256": "918d3568bebf352712bc2ef3d46a8bcf1a75b373be6539de198e9105cbbf9ce0",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/percent-encoding@2.3.2",
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "phase": "fetch",
+      "ledger_seq": 702,
+      "sha256": "9b4f627cb1b25917193a259e49bdad08f671f8d9708acfd5fe0a8c1455d87220",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/rustix@1.1.6",
+      "name": "rustix",
+      "version": "1.1.6",
+      "phase": "fetch",
+      "ledger_seq": 708,
+      "sha256": "e5e76742e5294153d4dde1207dbec5bdd81eef6fabdc0d2118babadabfd858aa",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/linux-raw-sys@0.12.1",
+      "name": "linux-raw-sys",
+      "version": "0.12.1",
+      "phase": "fetch",
+      "ledger_seq": 709,
+      "sha256": "32a66949e030da00e8c7d4434b251670a91556f4144941d37452769c25d58a53",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/fastrand@2.5.0",
+      "name": "fastrand",
+      "version": "2.5.0",
+      "phase": "fetch",
+      "ledger_seq": 715,
+      "sha256": "da7c62ceae207dd37ea5b845da6a0696c799f85e97da1ab5b7910be3c1c80223",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/core-foundation@0.10.1",
+      "name": "core-foundation",
+      "version": "0.10.1",
+      "phase": "fetch",
+      "ledger_seq": 719,
+      "sha256": "b2a6cd9ae233e7f62ba4e9353e81a88df7fc8a5987b8d445b4d90c879bd156f6",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/cc@1.10.0",
+      "name": "cc",
+      "version": "1.10.0",
+      "phase": "fetch",
+      "ledger_seq": 723,
+      "sha256": "86e055fa6e3e40ad6187ba25b6855eeb635d5271f8e0f0e1e9a5826b8d75bea0",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/openssl@0.10.81",
+      "name": "openssl",
+      "version": "0.10.81",
+      "phase": "fetch",
+      "ledger_seq": 727,
+      "sha256": "77823a27f0babb03091cb9ed9ef80af3b39dbc82f97e8fa530374b7dafd87a45",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/proc-macro2@1.0.107",
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "phase": "fetch",
+      "ledger_seq": 731,
+      "sha256": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/pem-rfc7468@1.0.0",
+      "name": "pem-rfc7468",
+      "version": "1.0.0",
+      "phase": "fetch",
+      "ledger_seq": 734,
+      "sha256": "a6305423e0e7738146434843d1694d621cce767262b2a86910beab705e4493d9",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/smallvec@1.16.4",
+      "name": "smallvec",
+      "version": "1.16.4",
+      "phase": "fetch",
+      "ledger_seq": 738,
+      "sha256": "d0d5d4b1981b8bbbb7aed204cae5726d683d5d6ac7e74ec54122ea28f315e7c8",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/ndarray@0.17.2",
+      "name": "ndarray",
+      "version": "0.17.2",
+      "phase": "fetch",
+      "ledger_seq": 742,
+      "sha256": "520080814a7a6b4a6e9070823bb24b4531daac8c4627e08ba5de8c5ef2f2752d",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/autocfg@1.5.1",
+      "name": "autocfg",
+      "version": "1.5.1",
+      "phase": "fetch",
+      "ledger_seq": 746,
+      "sha256": "f2032f911046de80f0a198e0901378627c33f59ea0ac00e363d481118bd70a53",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/rustls-pki-types@1.15.1",
+      "name": "rustls-pki-types",
+      "version": "1.15.1",
+      "phase": "fetch",
+      "ledger_seq": 750,
+      "sha256": "2f4925028c7eb5d1fcdaf196971378ed9d2c1c4efc7dc5d011256f76c99c0a96",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/itoa@1.0.18",
+      "name": "itoa",
+      "version": "1.0.18",
+      "phase": "fetch",
+      "ledger_seq": 754,
+      "sha256": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/windows-sys@0.61.2",
+      "name": "windows-sys",
+      "version": "0.61.2",
+      "phase": "fetch",
+      "ledger_seq": 758,
+      "sha256": "ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/getrandom@0.4.3",
+      "name": "getrandom",
+      "version": "0.4.3",
+      "phase": "fetch",
+      "ledger_seq": 762,
+      "sha256": "300e883d756b2e4ec94e02791f39b04b522276138852cfc41d9fb7e904106099",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/security-framework@3.7.0",
+      "name": "security-framework",
+      "version": "3.7.0",
+      "phase": "fetch",
+      "ledger_seq": 767,
+      "sha256": "b7f4bc775c73d9a02cde8bf7b2ec4c9d12743edf609006c7facc23998404cd1d",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/shlex@2.0.1",
+      "name": "shlex",
+      "version": "2.0.1",
+      "phase": "fetch",
+      "ledger_seq": 771,
+      "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/unicode-ident@1.0.27",
+      "name": "unicode-ident",
+      "version": "1.0.27",
+      "phase": "fetch",
+      "ledger_seq": 775,
+      "sha256": "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/tracing@0.1.44",
+      "name": "tracing",
+      "version": "0.1.44",
+      "phase": "fetch",
+      "ledger_seq": 779,
+      "sha256": "63e71662fa4b2a2c3a26f570f037eb95bb1f85397f3cd8076caed2f026a6d100",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/hmac-sha256@1.1.15",
+      "name": "hmac-sha256",
+      "version": "1.1.15",
+      "phase": "fetch",
+      "ledger_seq": 783,
+      "sha256": "1ad320b3b96fb2a455a0726d16efe0a5afdbd34b71dea5bc53b05ea057714d4e",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/num-integer@0.1.47",
+      "name": "num-integer",
+      "version": "0.1.47",
+      "phase": "fetch",
+      "ledger_seq": 787,
+      "sha256": "7ce2d95d4b3734dc35aa2f45e1aa22cd416814592a4f9d9205e11affd5b8e10b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/log@0.4.34",
+      "name": "log",
+      "version": "0.4.34",
+      "phase": "fetch",
+      "ledger_seq": 791,
+      "sha256": "f9f8bd3e56ce4dfc153cf470fffbfa98c7620958b312ca5c3a4b8d5181fd13c6",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/errno@0.3.14",
+      "name": "errno",
+      "version": "0.3.14",
+      "phase": "fetch",
+      "ledger_seq": 794,
+      "sha256": "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/security-framework-sys@2.17.0",
+      "name": "security-framework-sys",
+      "version": "2.17.0",
+      "phase": "fetch",
+      "ledger_seq": 799,
+      "sha256": "6ce2691df843ecc5d231c0b14ece2acc3efb62c0a398c7e1d875f3983ce020e3",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/openssl-probe@0.2.2",
+      "name": "openssl-probe",
+      "version": "0.2.2",
+      "phase": "fetch",
+      "ledger_seq": 802,
+      "sha256": "7e036b411754132fd6b74e94b74e9a13c5cf606fa93d1885c35860d3060820b1",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/der@0.8.3",
+      "name": "der",
+      "version": "0.8.3",
+      "phase": "fetch",
+      "ledger_seq": 807,
+      "sha256": "6a996a108feb8b427a6e12fcf6af4aa83409b79d72c15337d7741368131ee004",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/portable-atomic-util@0.2.8",
+      "name": "portable-atomic-util",
+      "version": "0.2.8",
+      "phase": "fetch",
+      "ledger_seq": 810,
+      "sha256": "10ab3eb7f3becc3a1cbc4f2c6f20267996cfc1a6467a873763411b136a122715",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/ureq-proto@0.6.5",
+      "name": "ureq-proto",
+      "version": "0.6.5",
+      "phase": "fetch",
+      "ledger_seq": 815,
+      "sha256": "841583fc36089d7d59419568ae157f43a5a03a2e5a81ba87c77d1596ef46e922",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/bitflags@2.13.2",
+      "name": "bitflags",
+      "version": "2.13.2",
+      "phase": "fetch",
+      "ledger_seq": 818,
+      "sha256": "3ded4057c258ba199e2d26386d3af3780957ecaee6c4ef4041c6b4b8b97c0b06",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/vcpkg@0.2.15",
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "phase": "fetch",
+      "ledger_seq": 823,
+      "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/tracing-core@0.1.36",
+      "name": "tracing-core",
+      "version": "0.1.36",
+      "phase": "fetch",
+      "ledger_seq": 826,
+      "sha256": "db97caf9d906fbde555dd62fa95ddba9eecfd14cb388e4f491a66d74cd5fb79a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/matrixmultiply@0.3.11",
+      "name": "matrixmultiply",
+      "version": "0.3.11",
+      "phase": "fetch",
+      "ledger_seq": 831,
+      "sha256": "3f607c237553f086e7043417a51df26b2eb899d3caff94e6a67592ff992fedc7",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/r-efi@6.0.0",
+      "name": "r-efi",
+      "version": "6.0.0",
+      "phase": "fetch",
+      "ledger_seq": 834,
+      "sha256": "f8dcc9c7d52a811697d2151c701e0d08956f92b0e24136cf4cf27b57a6a0d9bf",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/foreign-types@0.3.2",
+      "name": "foreign-types",
+      "version": "0.3.2",
+      "phase": "fetch",
+      "ledger_seq": 840,
+      "sha256": "f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/base64@0.23.1",
+      "name": "base64",
+      "version": "0.23.1",
+      "phase": "fetch",
+      "ledger_seq": 841,
+      "sha256": "ac07cdecf99051d9a5238b80f35af32cdeba5b336e55d957b318b50137e18da5",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/syn@2.0.119",
+      "name": "syn",
+      "version": "2.0.119",
+      "phase": "fetch",
+      "ledger_seq": 847,
+      "sha256": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/tempfile@3.27.0",
+      "name": "tempfile",
+      "version": "3.27.0",
+      "phase": "fetch",
+      "ledger_seq": 850,
+      "sha256": "32497e9a4c7b38532efcdebeef879707aa9f794296a4f0244f6f69e9bc8574bd",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/portable-atomic@1.15.0",
+      "name": "portable-atomic",
+      "version": "1.15.0",
+      "phase": "fetch",
+      "ledger_seq": 855,
+      "sha256": "05c8b63e8d9609db387f0324918f81d68fe27748f084ef092fb35954d0539a85",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/openssl-sys@0.9.117",
+      "name": "openssl-sys",
+      "version": "0.9.117",
+      "phase": "fetch",
+      "ledger_seq": 858,
+      "sha256": "b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695",
+      "lock_checksum_match": true,
+      "links": "openssl",
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/ort-sys@2.0.0-rc.15",
+      "name": "ort-sys",
+      "version": "2.0.0-rc.15",
+      "phase": "fetch",
+      "ledger_seq": 863,
+      "sha256": "8d22b0417f1838db5a3ac0b3f98dfe39f6fb73624aa0a27c6bbb5040b9c7db2b",
+      "lock_checksum_match": true,
+      "links": "onnxruntime",
+      "has_build_script": true
+    }
+  ],
+  "traffic": {
+    "setup": {
+      "os-packages": {
+        "requests": 77,
+        "bytes": 69743858,
+        "hosts": [
+          "deb.debian.org"
+        ]
+      }
+    },
+    "fetch": {
+      "crates-registry": {
+        "requests": 135,
+        "bytes": 16658998,
+        "hosts": [
+          "index.crates.io",
+          "static.crates.io"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "ledger_valid": true,
+    "ledger_records": 921,
+    "environment_type": "oci-image/v1",
+    "environment_digest": "sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+    "artifacts_verified": true
+  },
+  "anomalies": [],
+  "expect": [
+    "fail"
+  ],
+  "matches_expectation": true
+}

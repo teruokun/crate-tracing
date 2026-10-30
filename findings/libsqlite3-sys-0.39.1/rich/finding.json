@@ -13,6 +13,7 @@
       "name": "rich",
       "image": "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
       "apt_packages": [
+        "build-essential",
         "pkg-config",
         "make",
         "cmake",
@@ -41,7 +42,7 @@
     "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
     "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
     "os": "Debian GNU/Linux 13 (trixie)",
-    "measured_at": "2026-10-30T17:14:39+00:00",
+    "measured_at": "2026-10-30T17:56:16+00:00",
     "tool": {
       "crate_tracing": "0.1.0",
       "warden": {
@@ -57,8 +58,8 @@
       }
     },
     "warden_exit": 0,
-    "wall_seconds": 23.3,
-    "output_bytes": 333474767
+    "wall_seconds": 27.6,
+    "output_bytes": 359968677
   },
   "outcome": {
     "status": "measured",
@@ -130,7 +131,7 @@
       "name": "libsqlite3-sys",
       "version": "0.39.1",
       "phase": "fetch",
-      "ledger_seq": 580,
+      "ledger_seq": 624,
       "sha256": "14a5f01b87b92705d07b433c06f96cbc764637d81a0bffb5734ce17cf0f9a2b3",
       "lock_checksum_match": true,
       "links": "sqlite3",
@@ -141,7 +142,7 @@
       "name": "vcpkg",
       "version": "0.2.15",
       "phase": "fetch",
-      "ledger_seq": 584,
+      "ledger_seq": 628,
       "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
       "lock_checksum_match": true,
       "links": null,
@@ -152,7 +153,7 @@
       "name": "pkg-config",
       "version": "0.3.34",
       "phase": "fetch",
-      "ledger_seq": 586,
+      "ledger_seq": 630,
       "sha256": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
       "lock_checksum_match": true,
       "links": null,
@@ -162,8 +163,8 @@
   "traffic": {
     "setup": {
       "os-packages": {
-        "requests": 136,
-        "bytes": 163358318,
+        "requests": 147,
+        "bytes": 176585162,
         "hosts": [
           "deb.debian.org"
         ]
@@ -182,7 +183,7 @@
   },
   "evidence": {
     "ledger_valid": true,
-    "ledger_records": 630,
+    "ledger_records": 674,
     "environment_type": "oci-image/v1",
     "environment_digest": "sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
     "artifacts_verified": true
