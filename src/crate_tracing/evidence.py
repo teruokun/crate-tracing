@@ -17,7 +17,7 @@ from .ledger import Ledger
 
 UNIT_DIR = re.compile(r"^(?P<name>.+)-[0-9a-f]{16}$")
 _CARGO_DIRECTIVE = re.compile(r"^cargo::?(?P<key>[A-Za-z0-9_-]+)=(?P<value>.*)$")
-_FAILED_BUILD = re.compile(r"failed to run custom build command for `(?P<name>\S+) v(?P<version>\S+)")
+_FAILED_BUILD = re.compile(r"failed to run custom build command for `(?P<name>\S+) v(?P<version>[^\s`]+)`")
 
 # Tools that only probe or link; see tool_runs.
 COMPILERS = {"cc", "gcc", "g++", "c++", "clang", "clang++"}
@@ -70,11 +70,17 @@ def _sha256(path: Path) -> str:
 
 
 def verify(output_dir: Path, ledger: Ledger) -> list[str]:
-    """Artifact names whose file on disk does not match the ledger's sha256."""
+    """Artifact names whose file on disk does not match the ledger's sha256.
+
+    The relay leaves out the hash block of an empty artifact, so a record with
+    no hashes and zero bytes must match an empty file.
+    """
     bad = []
     for a in ledger.artifacts:
         want = a.hashes.get("sha256")
         path = output_dir / "artifacts" / a.name
+        if want is None and a.size == 0 and not a.hashes:
+            want = hashlib.sha256().hexdigest()
         if want is None or not path.is_file() or _sha256(path) != want:
             bad.append(a.name)
     return bad
@@ -172,8 +178,10 @@ def failure(ev: Evidence) -> dict | None:
         out["package"] = m.group("name")
         out["version"] = m.group("version")
     lines = log.splitlines()
-    if "--- stderr" in lines:
-        start = len(lines) - 1 - lines[::-1].index("--- stderr")
+    # cargo indents the failed script's output under "Caused by:".
+    stderr = [i for i, ln in enumerate(lines) if ln.strip() == "--- stderr"]
+    if stderr:
+        start = stderr[-1]
         tail = [ln for ln in lines[start + 1 :] if ln.strip()][:20]
     else:
         tail = [ln for ln in lines if ln.strip()][-20:]

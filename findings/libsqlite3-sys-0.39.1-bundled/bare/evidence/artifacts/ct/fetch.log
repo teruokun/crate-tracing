@@ -1,0 +1,9 @@
+    Updating crates.io index
+     Locking 6 packages to latest compatible versions
+ Downloading crates ...
+  Downloaded libsqlite3-sys v0.39.1
+  Downloaded pkg-config v0.3.34
+  Downloaded vcpkg v0.2.15
+  Downloaded find-msvc-tools v0.1.15
+  Downloaded cc v1.10.0
+  Downloaded shlex v2.0.1

@@ -1,155 +1,83 @@
-# Handoff: first pass → test pass
+# Handoff: after the test pass
 
-This is where the first pass (a cloud session with no container runtime)
-stopped, and how the next session, on a machine where `warden build` works,
-picks it up. Read [DESIGN.md](DESIGN.md) first for the approach.
+The first pass (a cloud session with no container runtime) built the tool from
+BuildWarden's source alone. The test pass ran it against real `warden build`
+runs and published the PoC findings. Read [DESIGN.md](DESIGN.md) first for the
+approach.
 
 ## Where things stand
 
-**Built and tested here:**
+- **The whole PoC corpus is measured.** 13 measurements × 2 profiles, all
+  `measured`, ledgers valid, artifacts verified, lock checksums matching, no
+  anomalies. Every finding is pinned to BuildWarden `137feae2f8b0`, built
+  clean (`BUILDWARDEN_REV`). They are in `findings/` with their original
+  ledgers. `make summary` shows the matrix.
+- **Environment:** aarch64, an Apple silicon Mac with Finch as the container
+  runtime (`warden doctor` passes; the container driver, not `vz`). 26 runs
+  took 8m22s sequentially. Per-run wall time and output size are in each
+  finding and summarized in DESIGN.md (Scaling, item 4).
+- **Expectations that were wrong** are corrected in `corpus/poc.toml`. Each
+  keeps the original hypothesis in `notes` and says what the evidence showed.
+  The surprises: slim's perl lacks FindBin (vendored OpenSSL can't configure),
+  slim has no `c++`, `cmake`, python3 or curl, trixie's libgit2 is too old for
+  libgit2-sys, aws-lc-sys never runs cmake, ort pulls openssl-sys, and v8
+  downloads with python3 rather than a Rust client.
+- **Tests run over real output.** `tests/fixtures/real/` holds seven packed
+  runs (ledger, artifacts, build-phase capture headers), one or more per
+  route; `tests/test_real.py` checks them. `tests/fixtures/pack_real.py` packs
+  more from `runs/`.
 
-- The corpus (13 measurements, pinned versions and features, a route
-  hypothesis per profile) and the two profiles. The image is pinned to the
-  multi-arch digest of `rust:1.98.1-slim-trixie`.
-- Build context generation (`crate-tracing context`).
-- The guest script `measure.sh`. It was exercised **outside BuildWarden**, with
-  a stub `warden-io` that copies posted files, against real cargo builds of
-  zstd-sys, openssl-sys (default and `vendored`), libsqlite3-sys `bundled` and
-  serde. Their real evidence, trimmed, is in `tests/fixtures/`.
-- The analyzer. It parses ledgers, assigns phases by marker, matches captures,
-  verifies artifacts against ledger hashes, detects routes A–D, identifies
-  versions, and checks fetched crates against `Cargo.lock`. Tests run it over
-  the real fixtures wrapped in relay-shaped synthetic ledgers
-  (`tests/ledgerkit.py`).
-- The terminal views (`show`, `summary`), the JSON output, and its JSON Schema
-  (validated in tests).
-- `make test` and `make lint` pass.
+What the real runs changed in the tool:
 
-- The finding records the BuildWarden version, commit and binary SHA-256.
-  This was checked against a warden built here from `main` at `137feae2f8b0`,
-  which is the Makefile's `BUILDWARDEN_REV`.
+- `make warden` builds from a checkout in `.tools/buildwarden`. A `go install`
+  binary cannot work: warden builds its in-guest helpers from the source tree
+  it finds beside its own binary, and only a checkout build has the VCS stamp
+  that pins the finding. Use `WARDEN=$PWD/.tools/buildwarden/dist/warden`.
+- The relay omits the hash block of an empty artifact; verification accepts
+  that for zero-byte records.
+- cargo indents `--- stderr` under "Caused by:"; the failure excerpt now finds
+  it, and the failure's version no longer keeps cargo's closing backtick.
+- Link libraries: `system` now requires an owning OS package. A file outside
+  the build tree that no package owns is `external` (ort's downloaded ONNX
+  Runtime). A declared library nothing provides is `unresolved`, which is also
+  a route outcome when the build succeeds (DESIGN limitation 8).
+- `analyze` keeps measure-time facts (`warden_exit`, `wall_seconds`,
+  `output_bytes`) when it rebuilds a finding.
+- Terminal views name crates as `name version` instead of purls, keep other
+  URLs whole, and print downloads and paths as records under the table rows
+  rather than in narrow columns. The summary lists identified components below
+  the matrix.
 
-**Not done, because this machine had no Docker daemon or KVM:**
+## What's next
 
-- No `warden build` has run. Every assumption about the real ledger shape comes
-  from reading BuildWarden's source (`relay/relay.go`, `cmd/warden/inspect_impl.go`,
-  `relay/capture.go`), not from an observed run.
-- `findings/` is empty. The example findings come from the test pass.
+In rough order of value:
 
-The local evidence differs from what a real run will show: the guest ran on
-Ubuntu with libssl-dev installed, so "openssl-sys default" linked system
-OpenSSL even in a "bare" run. The tests use that evidence for route C, which is
-fine; the bare profile in a real run should fail instead.
+1. **x86_64.** Run `make poc` on an x86_64 Linux host (KVM or Docker). Prebuilt
+   downloads are per target, so v8 and ort may differ. Profiles name the
+   image by a multi-arch digest, so nothing else changes.
+2. **Binary linkage** (DESIGN expansion). It would turn `unresolved` into a
+   confirmed link failure and confirm which dynamic libraries really end up
+   linked.
+3. **Per-crate network attribution** (DESIGN expansion), before measuring
+   larger dependency trees.
+4. **A pinned rich image.** Rich spends about 15 s and 156 MiB on apt per run.
+   Building it once and pinning it by digest makes rich runs cheap enough to
+   scale.
+5. **Scale the corpus** (DESIGN, Scaling to crates.io).
 
-## Test pass: steps
+## Decisions so far
 
-Prerequisites: a container runtime `warden build` already works with, Go, and
-Python 3.11+. Install the pinned BuildWarden build, so the published findings
-come from a known commit:
-
-```bash
-make warden
-```
-
-Then pass `WARDEN=$PWD/.tools/warden` to `make poc` and `make measure`, or
-`--warden` to the CLI. If you deliberately measure with a newer BuildWarden,
-bump `BUILDWARDEN_REV` in the Makefile in the same commit as the findings. A
-finding whose warden commit is unknown or dirty carries an anomaly, so a
-locally modified warden is not fine for published findings.
-
-```bash
-make setup test lint
-```
-
-### 1. Smoke test: the control
-
-```bash
-.venv/bin/crate-tracing measure --only serde-1.0.229-derive --profile bare --echo
-```
-
-Check, in `runs/serde-1.0.229-derive/bare/`:
-
-- [ ] `warden.log` shows the build ran, and `inspect.json` is non-empty.
-- [ ] The finding renders, and status is `measured`: the four markers were
-      found, which means artifact records carry `metadata.name` exactly as
-      `ledger.py` expects.
-- [ ] `traffic` shows only `crates-registry` in `fetch` and no `build` phase
-      traffic, and `routes.taken == ["none"]`.
-- [ ] `crates[].lock_checksum_match` is all true. This confirms that
-      static.crates.io bodies are hashed as the `.crate` bytes and that the
-      hash-block layout splits as `blake2b_256|sha256|sha1|md5`.
-- [ ] `evidence.artifacts_verified` is true. This confirms that warden stores
-      artifacts at `warden-output/artifacts/<name>`.
-- [ ] `captures/` exists, and capture names follow `NNN-METHOD-host-path`.
-
-If any of these fail, fix the parser against the real `inspect.json` first:
-`ledger.py` and `captures.py` are where the assumptions live. Then turn the
-real `inspect.json` into a test fixture.
-
-### 2. One per route
-
-```bash
-.venv/bin/crate-tracing measure --only openssl-sys-0.9.117 --only openssl-sys-0.9.117-vendored --echo
-```
-
-```bash
-.venv/bin/crate-tracing measure --only v8-152.2.0 --profile bare --echo
-```
-
-- [ ] openssl-sys default: **bare fails** with a failure excerpt naming
-      openssl-sys; **rich** shows route C with libssl-dev's version.
-- [ ] Vendored: route B names OpenSSL from `openssl-src`'s build metadata,
-      and route D shows make and perl. In **bare** this may fail if the slim
-      image lacks `make` or perl modules. If so, that is a real finding: record
-      it, and don't add packages to bare.
-- [ ] v8: route A, with the rusty_v8 GitHub release URL identified at
-      `152.2.0`, its redirect target carrying the bytes, and a `ureq` (or
-      similar) User-Agent. The debug archive is large; check
-      `--timeout` and disk space.
-- [ ] The rich profile's `apt-get install` succeeds. All its package names
-      exist on trixie as far as I know, but none was installed in a real
-      run. Fix the list in `corpus/profiles.toml` if not.
-
-### 3. The full corpus
-
-```bash
-make poc
-```
-
-```bash
-make summary
-```
-
-- [ ] Every run is `measured`. For each `≠` (finding differs from `expect`),
-      decide whether the expectation or the analyzer is wrong. Update `expect`
-      only when the evidence shows the hypothesis was wrong, and say why in the
-      entry's `notes`.
-- [ ] Record wall time and output size per run (add to the finding if useful)
-      for the throughput estimate in DESIGN.md.
-- [ ] Every finding has `measurement.tool.warden.revision` equal to
-      `BUILDWARDEN_REV` and `modified: false`.
-- [ ] Commit `findings/`: for each measurement, the finding, the original
-      ledger and the rest of `evidence/`, plus its `Cargo.lock`. The ledgers are
-      the transparency record, so commit them unmodified.
-
-### 4. Fold the results back
-
-- [ ] Turn one real output per route into fixtures, and replace the synthetic
-      ledgers in `tests/test_finding.py` where a real one exists.
-- [ ] Update DESIGN.md's limitations with anything the real runs showed.
-- [ ] Remove the "Not done" section above, and update "Where things stand".
-
-## Decisions for the test pass
-
-- **Profile contents.** Bare is the image exactly as published. If it cannot
-  even build `cc`-based crates, keep it anyway: it is the measurement.
-- **Debug vs release.** Debug only for now (DESIGN limitation 5). If v8's debug
-  download is unreasonable, consider a `release` profile dimension rather than
-  switching the default.
-- **Evidence size.** The original ledgers are always kept. If the posted
-  artifacts grow large (build logs from `-vv`), it is acceptable to drop or
-  compress copies of them in `--promote`, since their hashes stay in the
-  ledger. Never alter the ledger itself.
+- **Bare is the image exactly as published.** Its failures are findings
+  (DESIGN limitation 10); never add packages to it.
+- **Debug only** (DESIGN limitation 5). v8's download was 37 MiB, fine.
+- **Ledgers are never altered.** Promoted evidence keeps them unmodified.
+  Posted artifacts are small so far (the largest promoted measurement is
+  2.9 MiB, mostly vendored OpenSSL's build log), so `--promote` copies them
+  whole.
+- **Signed URLs stay in the record.** v8's GitHub release redirects to a
+  `release-assets.githubusercontent.com` URL carrying a short-lived signed
+  token (expired an hour after the run). It is in the ledger and the finding
+  as received.
 
 ## Risks to watch
 
@@ -161,6 +89,8 @@ make summary
 - **`cargo fetch` without a lock** resolves against the live index. The first
   run's lock is promoted and reused (`--locked`), so later runs are
   reproducible.
+- **A missing tool hides an attempted route** (DESIGN limitation 9): read the
+  failure excerpt of a bare failure before concluding a crate has no route A.
 
 ## Map
 
@@ -177,25 +107,13 @@ make summary
 | `src/crate_tracing/identify.py` | version identification heuristics |
 | `src/crate_tracing/render.py` | terminal views |
 | `schemas/finding-v1.schema.json` | finding format |
-| `tests/fixtures/` | real guest evidence, plus `trim.py` to make more |
+| `findings/` | the published findings and their evidence |
+| `tests/fixtures/real/` | packed real runs, plus `pack_real.py` to make more |
+| `tests/fixtures/<id>/` | guest evidence from local builds, plus `trim.py` |
 | `tests/ledgerkit.py` | relay-shaped synthetic ledgers for tests |
 
-To capture new guest evidence without BuildWarden, for a quick analyzer
-iteration: run `measure.sh` with `CT_OUT`, `CT_PROBE` and `CT_SHIMS` set, a
-stub `warden-io` on PATH that copies `post <file> <name>` into a directory,
-then use `tests/fixtures/trim.py`.
-
-## Getting this repository onto GitHub
-
-The first pass could not create `teruokun/crate-tracing`: the cloud session's
-GitHub app has no permission to create repositories. It was handed over as a
-git bundle instead. Create the repository as **public** and empty (no README),
-then push from the bundle:
-
-```bash
-git clone crate-tracing.bundle crate-tracing
-```
-
-```bash
-cd crate-tracing && git remote set-url origin git@github.com:teruokun/crate-tracing.git && git push -u origin main
-```
+To iterate on the analyzer without rebuilding, change it and run
+`crate-tracing analyze` over `runs/` (add `--promote` to update `findings/`).
+To capture guest evidence without BuildWarden: run `measure.sh` with `CT_OUT`,
+`CT_PROBE` and `CT_SHIMS` set and a stub `warden-io` on PATH that copies
+`post <file> <name>` into a directory, then use `tests/fixtures/trim.py`.

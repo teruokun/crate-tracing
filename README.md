@@ -32,8 +32,8 @@ make setup test
 make warden
 ```
 
-The `make warden` step installs the BuildWarden commit the published findings
-were measured with into `.tools/`. Every finding records the warden version and
+The `make warden` step builds the BuildWarden commit the published findings
+were measured with, from a checkout in `.tools/buildwarden`. Every finding records the warden version and
 commit it ran with, and keeps the original ledger, so you can rebuild the same
 warden and check the evidence yourself.
 
@@ -46,7 +46,7 @@ warden and check the evidence yourself.
 ```
 
 ```bash
-make poc WARDEN=$PWD/.tools/warden
+make poc WARDEN=$PWD/.tools/buildwarden/dist/warden
 ```
 
 ```bash

@@ -1,0 +1,350 @@
+   Compiling shlex v2.0.1
+   Compiling find-msvc-tools v0.1.15
+   Compiling libc v0.2.191
+   Compiling pkg-config v0.3.34
+   Compiling vcpkg v0.2.15
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=shlex CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-2.0.1 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-2.0.1/Cargo.toml CARGO_PKG_AUTHORS='comex <comexk@gmail.com>:Fenhl <fenhl@fenhl.net>:Adrian Taylor <adetaylor@chromium.org>:Alex Touchet <alextouchet@outlook.com>:Daniel Parks <dp+git@oxidized.org>:Garrett Berg <googberg@gmail.com>' CARGO_PKG_DESCRIPTION='Split a string into shell words, like Python'\''s shlex.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=shlex CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/comex/rust-shlex' CARGO_PKG_RUST_VERSION=1.46.0 CARGO_PKG_VERSION=2.0.1 CARGO_PKG_VERSION_MAJOR=2 CARGO_PKG_VERSION_MINOR=0 CARGO_PKG_VERSION_PATCH=1 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name shlex --edition=2018 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-2.0.1/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no --warn=unexpected_cfgs --check-cfg 'cfg(manual_codegen_check)' --cfg 'feature="default"' --cfg 'feature="std"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("default", "std"))' -C metadata=2d5331fc87e6d2a8 -C extra-filename=-5ca74b1d3ebc9f2a --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --cap-lints warn`
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=find_msvc_tools CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/find-msvc-tools-0.1.15 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/find-msvc-tools-0.1.15/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='Find windows-specific tools, read MSVC versions from the registry and from COM interfaces' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=find-msvc-tools CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/cc-rs' CARGO_PKG_RUST_VERSION=1.65.0 CARGO_PKG_VERSION=0.1.15 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=1 CARGO_PKG_VERSION_PATCH=15 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name find_msvc_tools --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/find-msvc-tools-0.1.15/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no --allow=unexpected_cfgs '--warn=clippy::ptr_cast_constness' '--warn=clippy::ptr_as_ptr' --warn=missing_docs '--warn=clippy::manual_let_else' '--warn=clippy::doc_markdown' '--warn=clippy::disallowed_methods' '--warn=clippy::borrow_as_ptr' --check-cfg 'cfg(disable_clang_cl_tests)' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values())' -C metadata=335b96724d8c57db -C extra-filename=-7b97c6e4807c45ac --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --cap-lints warn`
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=build_script_build CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='Raw FFI bindings to platform libraries like libc.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=libc CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/libc' CARGO_PKG_RUST_VERSION=1.65 CARGO_PKG_VERSION=0.2.191 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=2 CARGO_PKG_VERSION_PATCH=191 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name build_script_build --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no --allow=unused_qualifications '--warn=clippy::unnecessary_semicolon' '--allow=clippy::unnecessary_cast' '--warn=clippy::ptr_as_ptr' '--allow=clippy::non_minimal_cfg' '--allow=clippy::missing_safety_doc' '--warn=clippy::map_unwrap_or' '--warn=clippy::manual_assert' '--allow=clippy::identity_op' '--warn=clippy::explicit_iter_loop' --cfg 'feature="default"' --cfg 'feature="std"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("align", "const-extern-fn", "default", "extra_traits", "rustc-dep-of-std", "rustc-std-workspace-core", "std", "use_std"))' -C metadata=408457290348be3c -C extra-filename=-2946c5d050133518 --out-dir /work/probe/target/debug/build/libc-2946c5d050133518 -L dependency=/work/probe/target/debug/deps --cap-lints warn`
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=pkg_config CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pkg-config-0.3.34 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pkg-config-0.3.34/Cargo.toml CARGO_PKG_AUTHORS='Alex Crichton <alex@alexcrichton.com>' CARGO_PKG_DESCRIPTION='A library to run the pkg-config system tool at build time in order to be used in
+Cargo build scripts.
+' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=pkg-config CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/pkg-config-rs' CARGO_PKG_RUST_VERSION=1.63 CARGO_PKG_VERSION=0.3.34 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=3 CARGO_PKG_VERSION_PATCH=34 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name pkg_config --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pkg-config-0.3.34/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values())' -C metadata=f426e1961eecacad -C extra-filename=-6cab8de4c405c4ee --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --cap-lints warn`
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=vcpkg CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/vcpkg-0.2.15 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/vcpkg-0.2.15/Cargo.toml CARGO_PKG_AUTHORS='Jim McGrath <jimmc2@gmail.com>' CARGO_PKG_DESCRIPTION='A library to find native dependencies in a vcpkg tree at build
+time in order to be used in Cargo build scripts.
+' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE=MIT/Apache-2.0 CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=vcpkg CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/mcgoo/vcpkg-rs' CARGO_PKG_RUST_VERSION='' CARGO_PKG_VERSION=0.2.15 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=2 CARGO_PKG_VERSION_PATCH=15 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name vcpkg --edition=2015 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/vcpkg-0.2.15/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values())' -C metadata=a378674b012ebbd2 -C extra-filename=-b27777c4d81aa7bb --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --cap-lints warn`
+   Compiling cc v1.10.0
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=cc CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cc-1.10.0 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cc-1.10.0/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='A build-time dependency for Cargo build scripts to assist in invoking the native
+C compiler to compile native C code into a static archive to be linked into Rust
+code.
+' CARGO_PKG_HOMEPAGE='https://github.com/rust-lang/cc-rs' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=cc CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/cc-rs' CARGO_PKG_RUST_VERSION=1.65.0 CARGO_PKG_VERSION=1.10.0 CARGO_PKG_VERSION_MAJOR=1 CARGO_PKG_VERSION_MINOR=10 CARGO_PKG_VERSION_PATCH=0 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name cc --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cc-1.10.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no --allow=unexpected_cfgs '--warn=clippy::ptr_cast_constness' '--warn=clippy::ptr_as_ptr' --warn=missing_docs '--warn=clippy::manual_let_else' '--warn=clippy::doc_markdown' '--warn=clippy::disallowed_methods' '--warn=clippy::borrow_as_ptr' --check-cfg 'cfg(disable_clang_cl_tests)' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("compile-commands", "jobserver", "parallel"))' -C metadata=b451b72fcc4eb25b -C extra-filename=-d94142bd62a771d9 --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --extern find_msvc_tools=/work/probe/target/debug/deps/libfind_msvc_tools-7b97c6e4807c45ac.rmeta --extern shlex=/work/probe/target/debug/deps/libshlex-5ca74b1d3ebc9f2a.rmeta --cap-lints warn`
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CFG_DEBUG_ASSERTIONS='' CARGO_CFG_FEATURE=default,std CARGO_CFG_PANIC=unwind CARGO_CFG_TARGET_ABI='' CARGO_CFG_TARGET_ARCH=aarch64 CARGO_CFG_TARGET_ENDIAN=little CARGO_CFG_TARGET_ENV=gnu CARGO_CFG_TARGET_FAMILY=unix CARGO_CFG_TARGET_FEATURE=neon CARGO_CFG_TARGET_HAS_ATOMIC=128,16,32,64,8,ptr CARGO_CFG_TARGET_HAS_ATOMIC_PRIMITIVE_ALIGNMENT=128,16,32,64,8,ptr CARGO_CFG_TARGET_OS=linux CARGO_CFG_TARGET_POINTER_WIDTH=64 CARGO_CFG_TARGET_VENDOR=unknown CARGO_CFG_UNIX='' CARGO_ENCODED_RUSTFLAGS='' CARGO_FEATURE_DEFAULT=1 CARGO_FEATURE_STD=1 CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='Raw FFI bindings to platform libraries like libc.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=libc CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/libc' CARGO_PKG_RUST_VERSION=1.65 CARGO_PKG_VERSION=0.2.191 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=2 CARGO_PKG_VERSION_PATCH=191 CARGO_PKG_VERSION_PRE='' DEBUG=true HOST=aarch64-unknown-linux-gnu LD_LIBRARY_PATH='/work/probe/target/debug:/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib/rustlib/aarch64-unknown-linux-gnu/lib:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' NUM_JOBS=9 OPT_LEVEL=0 OUT_DIR=/work/probe/target/debug/build/libc-dd2b6c7b4035ddad/out PROFILE=debug RUSTC=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc RUSTDOC=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustdoc TARGET=aarch64-unknown-linux-gnu /work/probe/target/debug/build/libc-2946c5d050133518/build-script-build`
+[libc 0.2.191] cargo:rerun-if-changed=build.rs
+[libc 0.2.191] cargo:rerun-if-env-changed=LIBC_BUILD_VERBOSE
+[libc 0.2.191] cargo:rerun-if-env-changed=RUST_LIBC_UNSTABLE_FREEBSD_VERSION
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(libc_deny_warnings)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(emscripten_old_stat_abi)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(emscripten_fsblkcnt_is_32bit)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(emscripten_sigset_large)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(emscripten_nfds_is_ulong)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(espidf_picolibc)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(espidf_time32)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd10)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd11)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd12)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd13)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd14)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd15)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(libc_elfv2)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(vxworks_lt_25_09)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(libc_pauthtest)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(gnu_file_offset_bits64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(gnu_time_bits64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(linux_time_bits64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(musl_v1_2)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(musl32_time64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(musl_redir_time64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(uclibc32_time64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(target_os,values("switch","aix","ohos","hurd","rtems","visionos","nuttx","cygwin","qurt","qnx","helenos"))
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(target_env,values("illumos","wasi","aix","ohos","nto71_iosock"))
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(target_arch,values("loongarch64","mips32r6","mips64r6","csky"))
+[libc 0.2.191] cargo:rustc-cfg=linux_time_bits64
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=libc CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='Raw FFI bindings to platform libraries like libc.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=libc CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/libc' CARGO_PKG_RUST_VERSION=1.65 CARGO_PKG_VERSION=0.2.191 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=2 CARGO_PKG_VERSION_PATCH=191 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' OUT_DIR=/work/probe/target/debug/build/libc-dd2b6c7b4035ddad/out /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name libc --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --allow=unused_qualifications '--warn=clippy::unnecessary_semicolon' '--allow=clippy::unnecessary_cast' '--warn=clippy::ptr_as_ptr' '--allow=clippy::non_minimal_cfg' '--allow=clippy::missing_safety_doc' '--warn=clippy::map_unwrap_or' '--warn=clippy::manual_assert' '--allow=clippy::identity_op' '--warn=clippy::explicit_iter_loop' --cfg 'feature="default"' --cfg 'feature="std"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("align", "const-extern-fn", "default", "extra_traits", "rustc-dep-of-std", "rustc-std-workspace-core", "std", "use_std"))' -C metadata=81850a49a0f53b10 -C extra-filename=-e8bc71ec93663ccf --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --cap-lints warn --cfg linux_time_bits64 --check-cfg 'cfg(libc_deny_warnings)' --check-cfg 'cfg(emscripten_old_stat_abi)' --check-cfg 'cfg(emscripten_fsblkcnt_is_32bit)' --check-cfg 'cfg(emscripten_sigset_large)' --check-cfg 'cfg(emscripten_nfds_is_ulong)' --check-cfg 'cfg(espidf_picolibc)' --check-cfg 'cfg(espidf_time32)' --check-cfg 'cfg(freebsd10)' --check-cfg 'cfg(freebsd11)' --check-cfg 'cfg(freebsd12)' --check-cfg 'cfg(freebsd13)' --check-cfg 'cfg(freebsd14)' --check-cfg 'cfg(freebsd15)' --check-cfg 'cfg(libc_elfv2)' --check-cfg 'cfg(vxworks_lt_25_09)' --check-cfg 'cfg(libc_pauthtest)' --check-cfg 'cfg(gnu_file_offset_bits64)' --check-cfg 'cfg(gnu_time_bits64)' --check-cfg 'cfg(linux_time_bits64)' --check-cfg 'cfg(musl_v1_2)' --check-cfg 'cfg(musl32_time64)' --check-cfg 'cfg(musl_redir_time64)' --check-cfg 'cfg(uclibc32_time64)' --check-cfg 'cfg(target_os,values("switch","aix","ohos","hurd","rtems","visionos","nuttx","cygwin","qurt","qnx","helenos"))' --check-cfg 'cfg(target_env,values("illumos","wasi","aix","ohos","nto71_iosock"))' --check-cfg 'cfg(target_arch,values("loongarch64","mips32r6","mips64r6","csky"))'`
+   Compiling openssl-src v300.6.1+3.6.3
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=openssl_src CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-src-300.6.1+3.6.3 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-src-300.6.1+3.6.3/Cargo.toml CARGO_PKG_AUTHORS='Alex Crichton <alex@alexcrichton.com>' CARGO_PKG_DESCRIPTION='Source of OpenSSL and logic to build it.
+' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE=MIT/Apache-2.0 CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=openssl-src CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/alexcrichton/openssl-src-rs' CARGO_PKG_RUST_VERSION='' CARGO_PKG_VERSION=300.6.1+3.6.3 CARGO_PKG_VERSION_MAJOR=300 CARGO_PKG_VERSION_MINOR=6 CARGO_PKG_VERSION_PATCH=1 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name openssl_src --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-src-300.6.1+3.6.3/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no --cfg 'feature="default"' --cfg 'feature="legacy"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("camellia", "default", "force-engine", "idea", "ktls", "legacy", "no-dso", "seed", "ssl3", "weak-crypto"))' -C metadata=78f386ebcf86eb29 -C extra-filename=-8fb237f5358a1d5d --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --extern cc=/work/probe/target/debug/deps/libcc-d94142bd62a771d9.rmeta --cap-lints warn`
+warning: field `bin_dir` is never read
+  --> /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-src-300.6.1+3.6.3/src/lib.rs:28:5
+   |
+25 | pub struct Artifacts {
+   |            --------- field in this struct
+...
+28 |     bin_dir: PathBuf,
+   |     ^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `openssl-src` (lib) generated 1 warning
+   Compiling openssl-sys v0.9.117
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=build_script_main CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-sys-0.9.117 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-sys-0.9.117/Cargo.toml CARGO_PKG_AUTHORS='Alex Crichton <alex@alexcrichton.com>:Steven Fackler <sfackler@gmail.com>' CARGO_PKG_DESCRIPTION='FFI bindings to OpenSSL' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE=MIT CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=openssl-sys CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-openssl/rust-openssl' CARGO_PKG_RUST_VERSION=1.80.0 CARGO_PKG_VERSION=0.9.117 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=9 CARGO_PKG_VERSION_PATCH=117 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name build_script_main --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-sys-0.9.117/build/main.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no --cfg 'feature="openssl-src"' --cfg 'feature="vendored"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("aws-lc", "aws-lc-fips", "bindgen", "bssl-sys", "openssl-src", "unstable_boringssl", "vendored"))' -C metadata=31ca5711f6fdca4f -C extra-filename=-b9dc02985e5e9add --out-dir /work/probe/target/debug/build/openssl-sys-b9dc02985e5e9add -L dependency=/work/probe/target/debug/deps --extern cc=/work/probe/target/debug/deps/libcc-d94142bd62a771d9.rlib --extern openssl_src=/work/probe/target/debug/deps/libopenssl_src-8fb237f5358a1d5d.rlib --extern pkg_config=/work/probe/target/debug/deps/libpkg_config-6cab8de4c405c4ee.rlib --extern vcpkg=/work/probe/target/debug/deps/libvcpkg-b27777c4d81aa7bb.rlib --cap-lints warn`
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CFG_DEBUG_ASSERTIONS='' CARGO_CFG_FEATURE=openssl-src,vendored CARGO_CFG_PANIC=unwind CARGO_CFG_TARGET_ABI='' CARGO_CFG_TARGET_ARCH=aarch64 CARGO_CFG_TARGET_ENDIAN=little CARGO_CFG_TARGET_ENV=gnu CARGO_CFG_TARGET_FAMILY=unix CARGO_CFG_TARGET_FEATURE=neon CARGO_CFG_TARGET_HAS_ATOMIC=128,16,32,64,8,ptr CARGO_CFG_TARGET_HAS_ATOMIC_PRIMITIVE_ALIGNMENT=128,16,32,64,8,ptr CARGO_CFG_TARGET_OS=linux CARGO_CFG_TARGET_POINTER_WIDTH=64 CARGO_CFG_TARGET_VENDOR=unknown CARGO_CFG_UNIX='' CARGO_ENCODED_RUSTFLAGS='' CARGO_FEATURE_OPENSSL_SRC=1 CARGO_FEATURE_VENDORED=1 CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-sys-0.9.117 CARGO_MANIFEST_LINKS=openssl CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-sys-0.9.117/Cargo.toml CARGO_PKG_AUTHORS='Alex Crichton <alex@alexcrichton.com>:Steven Fackler <sfackler@gmail.com>' CARGO_PKG_DESCRIPTION='FFI bindings to OpenSSL' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE=MIT CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=openssl-sys CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-openssl/rust-openssl' CARGO_PKG_RUST_VERSION=1.80.0 CARGO_PKG_VERSION=0.9.117 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=9 CARGO_PKG_VERSION_PATCH=117 CARGO_PKG_VERSION_PRE='' DEBUG=true HOST=aarch64-unknown-linux-gnu LD_LIBRARY_PATH='/work/probe/target/debug:/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib/rustlib/aarch64-unknown-linux-gnu/lib:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' NUM_JOBS=9 OPT_LEVEL=0 OUT_DIR=/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out PROFILE=debug RUSTC=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc RUSTDOC=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustdoc TARGET=aarch64-unknown-linux-gnu /work/probe/target/debug/build/openssl-sys-b9dc02985e5e9add/build-script-main`
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(osslconf, values("OPENSSL_NO_OCB", "OPENSSL_NO_SM4", "OPENSSL_NO_SEED", "OPENSSL_NO_CHACHA", "OPENSSL_NO_CAST", "OPENSSL_NO_IDEA", "OPENSSL_NO_CAMELLIA", "OPENSSL_NO_RC4", "OPENSSL_NO_BF", "OPENSSL_NO_PSK", "OPENSSL_NO_DEPRECATED_3_0", "OPENSSL_NO_SCRYPT", "OPENSSL_NO_SM3", "OPENSSL_NO_RMD160", "OPENSSL_NO_EC2M", "OPENSSL_NO_OCSP", "OPENSSL_NO_CMS", "OPENSSL_NO_COMP", "OPENSSL_NO_SOCK", "OPENSSL_NO_STDIO", "OPENSSL_NO_EC", "OPENSSL_NO_SSL3_METHOD", "OPENSSL_NO_KRB5", "OPENSSL_NO_TLSEXT", "OPENSSL_NO_SRP", "OPENSSL_NO_SRTP", "OPENSSL_NO_RFC3779", "OPENSSL_NO_SHA", "OPENSSL_NO_NEXTPROTONEG", "OPENSSL_NO_ENGINE", "OPENSSL_NO_BUF_FREELISTS", "OPENSSL_NO_RC2"))
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(openssl)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(boringssl)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(awslc)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(awslc_pregenerated)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl250)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl251)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl252)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl261)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl270)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl271)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl273)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl280)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl281)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl291)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl310)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl321)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl332)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl340)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl350)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl360)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl361)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl370)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl380)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl381)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl382)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl390)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl400)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl410)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl420)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(libressl430)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl101)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl102)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl102f)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl102h)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl110)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl110f)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl110g)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl110h)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl111)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl111b)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl111c)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl111d)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl300)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl310)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl320)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl330)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl340)
+[openssl-sys 0.9.117] cargo:rustc-check-cfg=cfg(ossl400)
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=AARCH64_UNKNOWN_LINUX_GNU_OPENSSL_NO_VENDOR
+[openssl-sys 0.9.117] AARCH64_UNKNOWN_LINUX_GNU_OPENSSL_NO_VENDOR unset
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=OPENSSL_NO_VENDOR
+[openssl-sys 0.9.117] OPENSSL_NO_VENDOR unset
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=AARCH64_UNKNOWN_LINUX_GNU_OPENSSL_CONFIG_DIR
+[openssl-sys 0.9.117] AARCH64_UNKNOWN_LINUX_GNU_OPENSSL_CONFIG_DIR unset
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=OPENSSL_CONFIG_DIR
+[openssl-sys 0.9.117] OPENSSL_CONFIG_DIR unset
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CC_aarch64-unknown-linux-gnu
+[openssl-sys 0.9.117] CC_aarch64-unknown-linux-gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CC_aarch64_unknown_linux_gnu
+[openssl-sys 0.9.117] CC_aarch64_unknown_linux_gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=HOST_CC
+[openssl-sys 0.9.117] HOST_CC = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CC
+[openssl-sys 0.9.117] CC = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CPATH
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=C_INCLUDE_PATH
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CPLUS_INCLUDE_PATH
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=OBJC_INCLUDE_PATH
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=OBJCPLUS_INCLUDE_PATH
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=COMPILER_PATH
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=SOURCE_DATE_EPOCH
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=GCC_EXEC_PREFIX
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+[openssl-sys 0.9.117] CRATE_CC_NO_DEFAULTS = None
+[openssl-sys 0.9.117] CRATE_CC_NO_DEFAULTS = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CFLAGS
+[openssl-sys 0.9.117] CFLAGS = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=HOST_CFLAGS
+[openssl-sys 0.9.117] HOST_CFLAGS = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CFLAGS_aarch64_unknown_linux_gnu
+[openssl-sys 0.9.117] CFLAGS_aarch64_unknown_linux_gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=CFLAGS_aarch64-unknown-linux-gnu
+[openssl-sys 0.9.117] CFLAGS_aarch64-unknown-linux-gnu = None
+[openssl-sys 0.9.117] CFLAGS = None
+[openssl-sys 0.9.117] HOST_CFLAGS = None
+[openssl-sys 0.9.117] CFLAGS_aarch64_unknown_linux_gnu = None
+[openssl-sys 0.9.117] CFLAGS_aarch64-unknown-linux-gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=AR_aarch64-unknown-linux-gnu
+[openssl-sys 0.9.117] AR_aarch64-unknown-linux-gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=AR_aarch64_unknown_linux_gnu
+[openssl-sys 0.9.117] AR_aarch64_unknown_linux_gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=HOST_AR
+[openssl-sys 0.9.117] HOST_AR = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=AR
+[openssl-sys 0.9.117] AR = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=ARFLAGS
+[openssl-sys 0.9.117] ARFLAGS = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=HOST_ARFLAGS
+[openssl-sys 0.9.117] HOST_ARFLAGS = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=ARFLAGS_aarch64_unknown_linux_gnu
+[openssl-sys 0.9.117] ARFLAGS_aarch64_unknown_linux_gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=ARFLAGS_aarch64-unknown-linux-gnu
+[openssl-sys 0.9.117] ARFLAGS_aarch64-unknown-linux-gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=RANLIB_aarch64-unknown-linux-gnu
+[openssl-sys 0.9.117] RANLIB_aarch64-unknown-linux-gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=RANLIB_aarch64_unknown_linux_gnu
+[openssl-sys 0.9.117] RANLIB_aarch64_unknown_linux_gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=HOST_RANLIB
+[openssl-sys 0.9.117] HOST_RANLIB = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=RANLIB
+[openssl-sys 0.9.117] RANLIB = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=RANLIBFLAGS
+[openssl-sys 0.9.117] RANLIBFLAGS = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=HOST_RANLIBFLAGS
+[openssl-sys 0.9.117] HOST_RANLIBFLAGS = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=RANLIBFLAGS_aarch64_unknown_linux_gnu
+[openssl-sys 0.9.117] RANLIBFLAGS_aarch64_unknown_linux_gnu = None
+[openssl-sys 0.9.117] cargo:rerun-if-env-changed=RANLIBFLAGS_aarch64-unknown-linux-gnu
+[openssl-sys 0.9.117] RANLIBFLAGS_aarch64-unknown-linux-gnu = None
+[openssl-sys 0.9.117] running cd "/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src" && env -u CROSS_COMPILE AR="ar" CC="cc" RANLIB="ranlib" "perl" "./Configure" "--prefix=/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install" "--openssldir=/usr/local/ssl" "no-shared" "no-module" "no-tests" "no-comp" "no-zlib" "no-zlib-dynamic" "--libdir=lib" "no-ssl3" "no-md2" "no-rc5" "no-weak-ssl-ciphers" "no-camellia" "no-idea" "no-seed" "linux-aarch64" "-O2" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-gdwarf-4" "-fno-omit-frame-pointer" "-mno-omit-leaf-frame-pointer" "-w"
+[openssl-sys 0.9.117] Can't locate FindBin.pm in @INC (you may need to install the FindBin module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/aarch64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at ./Configure line 15.
+[openssl-sys 0.9.117] BEGIN failed--compilation aborted at ./Configure line 15.
+[openssl-sys 0.9.117] cargo:warning=configuring OpenSSL build: 'perl' reported failure with exit status: 2
+[openssl-sys 0.9.117] cargo:warning=openssl-src: failed to build OpenSSL from source
+[openssl-sys 0.9.117] 
+[openssl-sys 0.9.117] 
+[openssl-sys 0.9.117] 
+[openssl-sys 0.9.117] Error configuring OpenSSL build:
+[openssl-sys 0.9.117]     'perl' reported failure with exit status: 2
+[openssl-sys 0.9.117]     Command failed: cd "/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src" && env -u CROSS_COMPILE AR="ar" CC="cc" RANLIB="ranlib" "perl" "./Configure" "--prefix=/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install" "--openssldir=/usr/local/ssl" "no-shared" "no-module" "no-tests" "no-comp" "no-zlib" "no-zlib-dynamic" "--libdir=lib" "no-ssl3" "no-md2" "no-rc5" "no-weak-ssl-ciphers" "no-camellia" "no-idea" "no-seed" "linux-aarch64" "-O2" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-gdwarf-4" "-fno-omit-frame-pointer" "-mno-omit-leaf-frame-pointer" "-w"
+[openssl-sys 0.9.117] 
+[openssl-sys 0.9.117] 
+[openssl-sys 0.9.117] 
+warning: openssl-sys@0.9.117: configuring OpenSSL build: 'perl' reported failure with exit status: 2
+warning: openssl-sys@0.9.117: openssl-src: failed to build OpenSSL from source
+error: failed to run custom build command for `openssl-sys v0.9.117`
+
+Caused by:
+  process didn't exit successfully: `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CFG_DEBUG_ASSERTIONS='' CARGO_CFG_FEATURE=openssl-src,vendored CARGO_CFG_PANIC=unwind CARGO_CFG_TARGET_ABI='' CARGO_CFG_TARGET_ARCH=aarch64 CARGO_CFG_TARGET_ENDIAN=little CARGO_CFG_TARGET_ENV=gnu CARGO_CFG_TARGET_FAMILY=unix CARGO_CFG_TARGET_FEATURE=neon CARGO_CFG_TARGET_HAS_ATOMIC=128,16,32,64,8,ptr CARGO_CFG_TARGET_HAS_ATOMIC_PRIMITIVE_ALIGNMENT=128,16,32,64,8,ptr CARGO_CFG_TARGET_OS=linux CARGO_CFG_TARGET_POINTER_WIDTH=64 CARGO_CFG_TARGET_VENDOR=unknown CARGO_CFG_UNIX='' CARGO_ENCODED_RUSTFLAGS='' CARGO_FEATURE_OPENSSL_SRC=1 CARGO_FEATURE_VENDORED=1 CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-sys-0.9.117 CARGO_MANIFEST_LINKS=openssl CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/openssl-sys-0.9.117/Cargo.toml CARGO_PKG_AUTHORS='Alex Crichton <alex@alexcrichton.com>:Steven Fackler <sfackler@gmail.com>' CARGO_PKG_DESCRIPTION='FFI bindings to OpenSSL' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE=MIT CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=openssl-sys CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-openssl/rust-openssl' CARGO_PKG_RUST_VERSION=1.80.0 CARGO_PKG_VERSION=0.9.117 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=9 CARGO_PKG_VERSION_PATCH=117 CARGO_PKG_VERSION_PRE='' DEBUG=true HOST=aarch64-unknown-linux-gnu LD_LIBRARY_PATH='/work/probe/target/debug:/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib/rustlib/aarch64-unknown-linux-gnu/lib:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' NUM_JOBS=9 OPT_LEVEL=0 OUT_DIR=/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out PROFILE=debug RUSTC=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc RUSTDOC=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustdoc TARGET=aarch64-unknown-linux-gnu /work/probe/target/debug/build/openssl-sys-b9dc02985e5e9add/build-script-main` (exit status: 1)
+  --- stdout
+  cargo:rustc-check-cfg=cfg(osslconf, values("OPENSSL_NO_OCB", "OPENSSL_NO_SM4", "OPENSSL_NO_SEED", "OPENSSL_NO_CHACHA", "OPENSSL_NO_CAST", "OPENSSL_NO_IDEA", "OPENSSL_NO_CAMELLIA", "OPENSSL_NO_RC4", "OPENSSL_NO_BF", "OPENSSL_NO_PSK", "OPENSSL_NO_DEPRECATED_3_0", "OPENSSL_NO_SCRYPT", "OPENSSL_NO_SM3", "OPENSSL_NO_RMD160", "OPENSSL_NO_EC2M", "OPENSSL_NO_OCSP", "OPENSSL_NO_CMS", "OPENSSL_NO_COMP", "OPENSSL_NO_SOCK", "OPENSSL_NO_STDIO", "OPENSSL_NO_EC", "OPENSSL_NO_SSL3_METHOD", "OPENSSL_NO_KRB5", "OPENSSL_NO_TLSEXT", "OPENSSL_NO_SRP", "OPENSSL_NO_SRTP", "OPENSSL_NO_RFC3779", "OPENSSL_NO_SHA", "OPENSSL_NO_NEXTPROTONEG", "OPENSSL_NO_ENGINE", "OPENSSL_NO_BUF_FREELISTS", "OPENSSL_NO_RC2"))
+  cargo:rustc-check-cfg=cfg(openssl)
+  cargo:rustc-check-cfg=cfg(libressl)
+  cargo:rustc-check-cfg=cfg(boringssl)
+  cargo:rustc-check-cfg=cfg(awslc)
+  cargo:rustc-check-cfg=cfg(awslc_pregenerated)
+  cargo:rustc-check-cfg=cfg(libressl250)
+  cargo:rustc-check-cfg=cfg(libressl251)
+  cargo:rustc-check-cfg=cfg(libressl252)
+  cargo:rustc-check-cfg=cfg(libressl261)
+  cargo:rustc-check-cfg=cfg(libressl270)
+  cargo:rustc-check-cfg=cfg(libressl271)
+  cargo:rustc-check-cfg=cfg(libressl273)
+  cargo:rustc-check-cfg=cfg(libressl280)
+  cargo:rustc-check-cfg=cfg(libressl281)
+  cargo:rustc-check-cfg=cfg(libressl291)
+  cargo:rustc-check-cfg=cfg(libressl310)
+  cargo:rustc-check-cfg=cfg(libressl321)
+  cargo:rustc-check-cfg=cfg(libressl332)
+  cargo:rustc-check-cfg=cfg(libressl340)
+  cargo:rustc-check-cfg=cfg(libressl350)
+  cargo:rustc-check-cfg=cfg(libressl360)
+  cargo:rustc-check-cfg=cfg(libressl361)
+  cargo:rustc-check-cfg=cfg(libressl370)
+  cargo:rustc-check-cfg=cfg(libressl380)
+  cargo:rustc-check-cfg=cfg(libressl381)
+  cargo:rustc-check-cfg=cfg(libressl382)
+  cargo:rustc-check-cfg=cfg(libressl390)
+  cargo:rustc-check-cfg=cfg(libressl400)
+  cargo:rustc-check-cfg=cfg(libressl410)
+  cargo:rustc-check-cfg=cfg(libressl420)
+  cargo:rustc-check-cfg=cfg(libressl430)
+  cargo:rustc-check-cfg=cfg(ossl101)
+  cargo:rustc-check-cfg=cfg(ossl102)
+  cargo:rustc-check-cfg=cfg(ossl102f)
+  cargo:rustc-check-cfg=cfg(ossl102h)
+  cargo:rustc-check-cfg=cfg(ossl110)
+  cargo:rustc-check-cfg=cfg(ossl110f)
+  cargo:rustc-check-cfg=cfg(ossl110g)
+  cargo:rustc-check-cfg=cfg(ossl110h)
+  cargo:rustc-check-cfg=cfg(ossl111)
+  cargo:rustc-check-cfg=cfg(ossl111b)
+  cargo:rustc-check-cfg=cfg(ossl111c)
+  cargo:rustc-check-cfg=cfg(ossl111d)
+  cargo:rustc-check-cfg=cfg(ossl300)
+  cargo:rustc-check-cfg=cfg(ossl310)
+  cargo:rustc-check-cfg=cfg(ossl320)
+  cargo:rustc-check-cfg=cfg(ossl330)
+  cargo:rustc-check-cfg=cfg(ossl340)
+  cargo:rustc-check-cfg=cfg(ossl400)
+  cargo:rerun-if-env-changed=AARCH64_UNKNOWN_LINUX_GNU_OPENSSL_NO_VENDOR
+  AARCH64_UNKNOWN_LINUX_GNU_OPENSSL_NO_VENDOR unset
+  cargo:rerun-if-env-changed=OPENSSL_NO_VENDOR
+  OPENSSL_NO_VENDOR unset
+  cargo:rerun-if-env-changed=AARCH64_UNKNOWN_LINUX_GNU_OPENSSL_CONFIG_DIR
+  AARCH64_UNKNOWN_LINUX_GNU_OPENSSL_CONFIG_DIR unset
+  cargo:rerun-if-env-changed=OPENSSL_CONFIG_DIR
+  OPENSSL_CONFIG_DIR unset
+  cargo:rerun-if-env-changed=CC_aarch64-unknown-linux-gnu
+  CC_aarch64-unknown-linux-gnu = None
+  cargo:rerun-if-env-changed=CC_aarch64_unknown_linux_gnu
+  CC_aarch64_unknown_linux_gnu = None
+  cargo:rerun-if-env-changed=HOST_CC
+  HOST_CC = None
+  cargo:rerun-if-env-changed=CC
+  CC = None
+  cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+  cargo:rerun-if-env-changed=CPATH
+  cargo:rerun-if-env-changed=C_INCLUDE_PATH
+  cargo:rerun-if-env-changed=CPLUS_INCLUDE_PATH
+  cargo:rerun-if-env-changed=OBJC_INCLUDE_PATH
+  cargo:rerun-if-env-changed=OBJCPLUS_INCLUDE_PATH
+  cargo:rerun-if-env-changed=COMPILER_PATH
+  cargo:rerun-if-env-changed=SOURCE_DATE_EPOCH
+  cargo:rerun-if-env-changed=GCC_EXEC_PREFIX
+  cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+  CRATE_CC_NO_DEFAULTS = None
+  CRATE_CC_NO_DEFAULTS = None
+  cargo:rerun-if-env-changed=CFLAGS
+  CFLAGS = None
+  cargo:rerun-if-env-changed=HOST_CFLAGS
+  HOST_CFLAGS = None
+  cargo:rerun-if-env-changed=CFLAGS_aarch64_unknown_linux_gnu
+  CFLAGS_aarch64_unknown_linux_gnu = None
+  cargo:rerun-if-env-changed=CFLAGS_aarch64-unknown-linux-gnu
+  CFLAGS_aarch64-unknown-linux-gnu = None
+  CFLAGS = None
+  HOST_CFLAGS = None
+  CFLAGS_aarch64_unknown_linux_gnu = None
+  CFLAGS_aarch64-unknown-linux-gnu = None
+  cargo:rerun-if-env-changed=AR_aarch64-unknown-linux-gnu
+  AR_aarch64-unknown-linux-gnu = None
+  cargo:rerun-if-env-changed=AR_aarch64_unknown_linux_gnu
+  AR_aarch64_unknown_linux_gnu = None
+  cargo:rerun-if-env-changed=HOST_AR
+  HOST_AR = None
+  cargo:rerun-if-env-changed=AR
+  AR = None
+  cargo:rerun-if-env-changed=ARFLAGS
+  ARFLAGS = None
+  cargo:rerun-if-env-changed=HOST_ARFLAGS
+  HOST_ARFLAGS = None
+  cargo:rerun-if-env-changed=ARFLAGS_aarch64_unknown_linux_gnu
+  ARFLAGS_aarch64_unknown_linux_gnu = None
+  cargo:rerun-if-env-changed=ARFLAGS_aarch64-unknown-linux-gnu
+  ARFLAGS_aarch64-unknown-linux-gnu = None
+  cargo:rerun-if-env-changed=RANLIB_aarch64-unknown-linux-gnu
+  RANLIB_aarch64-unknown-linux-gnu = None
+  cargo:rerun-if-env-changed=RANLIB_aarch64_unknown_linux_gnu
+  RANLIB_aarch64_unknown_linux_gnu = None
+  cargo:rerun-if-env-changed=HOST_RANLIB
+  HOST_RANLIB = None
+  cargo:rerun-if-env-changed=RANLIB
+  RANLIB = None
+  cargo:rerun-if-env-changed=RANLIBFLAGS
+  RANLIBFLAGS = None
+  cargo:rerun-if-env-changed=HOST_RANLIBFLAGS
+  HOST_RANLIBFLAGS = None
+  cargo:rerun-if-env-changed=RANLIBFLAGS_aarch64_unknown_linux_gnu
+  RANLIBFLAGS_aarch64_unknown_linux_gnu = None
+  cargo:rerun-if-env-changed=RANLIBFLAGS_aarch64-unknown-linux-gnu
+  RANLIBFLAGS_aarch64-unknown-linux-gnu = None
+  running cd "/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src" && env -u CROSS_COMPILE AR="ar" CC="cc" RANLIB="ranlib" "perl" "./Configure" "--prefix=/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install" "--openssldir=/usr/local/ssl" "no-shared" "no-module" "no-tests" "no-comp" "no-zlib" "no-zlib-dynamic" "--libdir=lib" "no-ssl3" "no-md2" "no-rc5" "no-weak-ssl-ciphers" "no-camellia" "no-idea" "no-seed" "linux-aarch64" "-O2" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-gdwarf-4" "-fno-omit-frame-pointer" "-mno-omit-leaf-frame-pointer" "-w"
+  cargo:warning=configuring OpenSSL build: 'perl' reported failure with exit status: 2
+  cargo:warning=openssl-src: failed to build OpenSSL from source
+
+  --- stderr
+  Can't locate FindBin.pm in @INC (you may need to install the FindBin module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/aarch64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at ./Configure line 15.
+  BEGIN failed--compilation aborted at ./Configure line 15.
+
+
+
+  Error configuring OpenSSL build:
+      'perl' reported failure with exit status: 2
+      Command failed: cd "/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src" && env -u CROSS_COMPILE AR="ar" CC="cc" RANLIB="ranlib" "perl" "./Configure" "--prefix=/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install" "--openssldir=/usr/local/ssl" "no-shared" "no-module" "no-tests" "no-comp" "no-zlib" "no-zlib-dynamic" "--libdir=lib" "no-ssl3" "no-md2" "no-rc5" "no-weak-ssl-ciphers" "no-camellia" "no-idea" "no-seed" "linux-aarch64" "-O2" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-gdwarf-4" "-fno-omit-frame-pointer" "-mno-omit-leaf-frame-pointer" "-w"
+
+
+

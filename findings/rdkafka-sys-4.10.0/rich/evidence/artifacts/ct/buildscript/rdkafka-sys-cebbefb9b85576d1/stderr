@@ -1,0 +1,4 @@
+Building and linking librdkafka statically
+Running command: "cp -a librdkafka/. /work/probe/target/debug/build/rdkafka-sys-cebbefb9b85576d1/out" in dir: .
+Running command: "/work/probe/target/debug/build/rdkafka-sys-cebbefb9b85576d1/out/configure --disable-ssl --disable-gssapi --disable-curl --disable-zstd --disable-lz4-ext" in dir: /work/probe/target/debug/build/rdkafka-sys-cebbefb9b85576d1/out
+Running command: "make libs" in dir: /work/probe/target/debug/build/rdkafka-sys-cebbefb9b85576d1/out

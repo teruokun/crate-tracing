@@ -1,0 +1,2 @@
+openssl-sys-7072da406c8cb2cb	dylib	ssl	/usr/lib/aarch64-linux-gnu/libssl.so	libssl-dev	/usr/lib/aarch64-linux-gnu/libssl.so.3	libssl3t64
+openssl-sys-7072da406c8cb2cb	dylib	crypto	/usr/lib/aarch64-linux-gnu/libcrypto.so	libssl-dev	/usr/lib/aarch64-linux-gnu/libcrypto.so.3	libssl3t64

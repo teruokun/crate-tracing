@@ -1,0 +1,36 @@
+DEBUG: all keys: APPLINKDIR, BINDIR, CMAKECONFIGDIR, COMMENT, ENGINESDIR, INCLUDEDIR, LDLIBS, LIBDIR, MODULESDIR, PKGCONFIGDIR, PREFIX, VERSION, libdir
+Use of uninitialized value in concatenation (.) or string at util/mkinstallvars.pl line 55.
+DEBUG: all keys: APPLINKDIR, BINDIR, CMAKECONFIGDIR, COMMENT, ENGINESDIR, INCLUDEDIR, LDLIBS, LIBDIR, MODULESDIR, PKGCONFIGDIR, PREFIX, VERSION, libdir
+DEBUG: LIBDIR = , libdir =  => Use of uninitialized value in concatenation (.) or string at util/mkinstallvars.pl line 57.
+LIBDIR = 
+No value given for CMAKECONFIGDIR
+DEBUG: LIBDIR = lib, libdir = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib => No value given for PKGCONFIGDIR
+LIBDIR = lib
+No value given for libdir
+No value given for COMMENT
+DEBUG: PREFIX = . => DEBUG: PREFIX = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install => PREFIX = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install
+DEBUG: libdir = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib => libdir = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib
+DEBUG: BINDIR = PREFIX = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src
+bin => Use of uninitialized value in concatenation (.) or string at util/mkinstallvars.pl line 72.
+DEBUG: libdir =  => Use of uninitialized value in concatenation (.) or string at util/mkinstallvars.pl line 75.
+libdir = 
+DEBUG: BINDIR = apps => BINDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/bin, BINDIR_REL_PREFIX = bin
+DEBUG: LIBDIR = lib => BINDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src/apps, BINDIR_REL_PREFIX = apps
+DEBUG: LIBDIR = LIBDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib, LIBDIR_REL_PREFIX = lib
+Use of uninitialized value in print at util/mkinstallvars.pl line 91.
+DEBUG: INCLUDEDIR =  => include => INCLUDEDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/include, INCLUDEDIR_REL_PREFIX = include
+Use of uninitialized value in concatenation (.) or string at util/mkinstallvars.pl line 108.
+DEBUG: APPLINKDIR = include/opensslLIBDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src, LIBDIR_REL_PREFIX =  => 
+DEBUG: INCLUDEDIR = [ include, ./include ] => APPLINKDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/include/openssl, APPLINKDIR_REL_PREFIX = include/openssl
+DEBUG: ENGINESDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib/engines-3 => INCLUDEDIR = [ /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src/include, /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src/include ], INCLUDEDIR_REL_PREFIX = [ include, ./include ]
+DEBUG: APPLINKDIR = ms => APPLINKDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src/ms, APPLINKDIR_REL_PREFIX = ms
+DEBUG: ENGINESDIR = engines => ENGINESDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src/engines, ENGINESDIR_REL_LIBDIR = engines
+DEBUG: MODULESDIR = providers => MODULESDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src/providers, MODULESDIR_REL_LIBDIR = providers
+DEBUG: PKGCONFIGDIR = .ENGINESDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib/engines-3, ENGINESDIR_REL_LIBDIR = engines-3 => 
+DEBUG: MODULESDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib/ossl-modules => PKGCONFIGDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src, PKGCONFIGDIR_REL_LIBDIR = .
+DEBUG: CMAKECONFIGDIR = . => CMAKECONFIGDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/build/src, CMAKECONFIGDIR_REL_LIBDIR = .
+MODULESDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib/ossl-modules, MODULESDIR_REL_LIBDIR = ossl-modules
+DEBUG: PKGCONFIGDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib/pkgconfig => Use of uninitialized value in join or string at util/mkinstallvars.pl line 157.
+PKGCONFIGDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib/pkgconfig, PKGCONFIGDIR_REL_LIBDIR = pkgconfig
+DEBUG: CMAKECONFIGDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib/cmake/OpenSSL => CMAKECONFIGDIR = /work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib/cmake/OpenSSL, CMAKECONFIGDIR_REL_LIBDIR = cmake/OpenSSL
+Use of uninitialized value in concatenation (.) or string at util/mkinstallvars.pl line 137.

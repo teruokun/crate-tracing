@@ -18,6 +18,8 @@ from .context import write_context
 from .corpus import load_corpus, load_profiles
 
 ROOT = Path.cwd()
+# Facts about the run itself, not the ledger: re-analysis keeps them.
+RUN_FIELDS = ("warden_exit", "wall_seconds", "output_bytes")
 # Evidence promoted next to a finding: enough to re-verify every claim offline.
 # Payload captures stay in runs/ (they are whatever the build downloaded).
 PROMOTE = ("ledger.zst", "ledger", "ca.cert.pem.zst", "ca.cert.pem", "environment.json")
@@ -108,6 +110,8 @@ def cmd_measure(args) -> int:
             continue
         f = finding_mod.build(m, p, ledger_mod.load(r.inspect_json), r.output, warden)
         f["measurement"]["warden_exit"] = r.build_exit
+        f["measurement"]["wall_seconds"] = round(r.wall_seconds, 1)
+        f["measurement"]["output_bytes"] = runner.output_bytes(r.output)
         (run_dir / "finding.json").write_text(_dump(f))
         render.finding(f, console)
         if args.promote:
@@ -128,11 +132,14 @@ def cmd_analyze(args) -> int:
             console.print(f"[dim]{m.id} · {p.name}: no run[/]")
             continue
         previous = run_dir / "finding.json"
-        warden = None
+        warden, kept = None, {}
         if previous.is_file():
             # The ledger was made by the warden recorded at measure time.
-            warden = json.loads(previous.read_text())["measurement"]["tool"].get("warden")
+            before = json.loads(previous.read_text())["measurement"]
+            warden = before["tool"].get("warden")
+            kept = {k: before[k] for k in RUN_FIELDS if k in before}
         f = finding_mod.build(m, p, ledger_mod.load(inspect), run_dir / "warden-output", warden)
+        f["measurement"].update(kept)
         (run_dir / "finding.json").write_text(_dump(f))
         if args.json:
             sys.stdout.write(_dump(f))
