@@ -1,0 +1,266 @@
+{
+  "schema": "https://github.com/teruokun/crate-tracing/schemas/finding-v1.schema.json",
+  "subject": {
+    "purl": "pkg:cargo/openssl-sys@0.9.117",
+    "name": "openssl-sys",
+    "version": "0.9.117",
+    "features": [
+      "vendored"
+    ],
+    "default_features": true
+  },
+  "measurement": {
+    "id": "openssl-sys-0.9.117-vendored",
+    "profile": {
+      "name": "minimal",
+      "image": "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+      "apt_packages": [
+        "build-essential",
+        "pkg-config",
+        "cmake",
+        "perl",
+        "python3",
+        "git",
+        "curl"
+      ]
+    },
+    "arch": "aarch64",
+    "host_triple": "aarch64-unknown-linux-gnu",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "measured_at": "2026-10-30T17:31:18+00:00",
+    "tool": {
+      "crate_tracing": "0.1.0",
+      "warden": {
+        "path": "/Users/jeff/crate-tracing/.tools/buildwarden/dist/warden",
+        "binary_sha256": "7eb4119b85a04f3f1d4e61179e1254117bd14516a2e57bceee26a11421320b27",
+        "version": "dev",
+        "go": "go1.26.5",
+        "module": "github.com/buildwarden/buildwarden",
+        "module_version": "v0.5.1-0.20261029195147-137feae2f8b0",
+        "revision": "137feae2f8b07e19e21b0893cc4ec9e96f97d42f",
+        "revision_time": "2026-10-29T19:51:47Z",
+        "modified": false
+      }
+    },
+    "warden_exit": 0,
+    "wall_seconds": 46.6,
+    "output_bytes": 160820622
+  },
+  "outcome": {
+    "status": "measured",
+    "fetch_exit": 0,
+    "build_exit": 0,
+    "built": true,
+    "failure": null
+  },
+  "routes": {
+    "taken": [
+      "B",
+      "D"
+    ],
+    "A_downloads": [],
+    "B_bundled": [
+      {
+        "purl": "pkg:cargo/openssl-sys@0.9.117",
+        "c_compilations": 1136,
+        "libs": [
+          "ssl",
+          "crypto"
+        ],
+        "native": {
+          "name": "openssl",
+          "version": "3.6.3",
+          "method": "semver-build-metadata",
+          "confidence": "high",
+          "source_crate": "pkg:cargo/openssl-src@300.6.1%2B3.6.3"
+        }
+      }
+    ],
+    "C_system": [],
+    "D_tools": [
+      {
+        "purl": "pkg:cargo/openssl-sys@0.9.117",
+        "tools": {
+          "make": 3,
+          "perl": 1
+        }
+      }
+    ],
+    "C_unresolved": []
+  },
+  "downloads": [],
+  "packages": [
+    {
+      "purl": "pkg:cargo/libc@0.2.191",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/openssl-sys@0.9.117",
+      "links": "openssl",
+      "build_script_ran": true,
+      "c_compilations": 1136,
+      "link_libs": [
+        {
+          "name": "ssl",
+          "kind": "static",
+          "origin": "in-tree",
+          "path": "/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib/libssl.a"
+        },
+        {
+          "name": "crypto",
+          "kind": "static",
+          "origin": "in-tree",
+          "path": "/work/probe/target/debug/build/openssl-sys-3f555056309d6207/out/openssl-build/install/lib/libcrypto.a"
+        }
+      ],
+      "tools": {
+        "make": 3,
+        "perl": 1
+      },
+      "pkg_config_probes": [],
+      "declared": {
+        "version_number": "30600030"
+      },
+      "bundled_native": {
+        "name": "openssl",
+        "version": "3.6.3",
+        "method": "semver-build-metadata",
+        "confidence": "high",
+        "source_crate": "pkg:cargo/openssl-src@300.6.1%2B3.6.3"
+      },
+      "built_in_tree": true
+    }
+  ],
+  "crates": [
+    {
+      "purl": "pkg:cargo/openssl-sys@0.9.117",
+      "name": "openssl-sys",
+      "version": "0.9.117",
+      "phase": "fetch",
+      "ledger_seq": 364,
+      "sha256": "b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695",
+      "lock_checksum_match": true,
+      "links": "openssl",
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/vcpkg@0.2.15",
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "phase": "fetch",
+      "ledger_seq": 368,
+      "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/pkg-config@0.3.34",
+      "name": "pkg-config",
+      "version": "0.3.34",
+      "phase": "fetch",
+      "ledger_seq": 370,
+      "sha256": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/shlex@2.0.1",
+      "name": "shlex",
+      "version": "2.0.1",
+      "phase": "fetch",
+      "ledger_seq": 374,
+      "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/openssl-src@300.6.1%2B3.6.3",
+      "name": "openssl-src",
+      "version": "300.6.1+3.6.3",
+      "phase": "fetch",
+      "ledger_seq": 378,
+      "sha256": "46eb8fb9fb3b61ce1c0f8a026c4c1a0714d3a9e138e7fbde78753ce2babc3846",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/libc@0.2.191",
+      "name": "libc",
+      "version": "0.2.191",
+      "phase": "fetch",
+      "ledger_seq": 382,
+      "sha256": "65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/cc@1.10.0",
+      "name": "cc",
+      "version": "1.10.0",
+      "phase": "fetch",
+      "ledger_seq": 387,
+      "sha256": "86e055fa6e3e40ad6187ba25b6855eeb635d5271f8e0f0e1e9a5826b8d75bea0",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/find-msvc-tools@0.1.15",
+      "name": "find-msvc-tools",
+      "version": "0.1.15",
+      "phase": "fetch",
+      "ledger_seq": 391,
+      "sha256": "1c66915cc5391097de7a2b0b972e8505aa33c0df401fd3a6811dbdb32881ba48",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    }
+  ],
+  "traffic": {
+    "setup": {
+      "os-packages": {
+        "requests": 77,
+        "bytes": 69743858,
+        "hosts": [
+          "deb.debian.org"
+        ]
+      }
+    },
+    "fetch": {
+      "crates-registry": {
+        "requests": 17,
+        "bytes": 9060744,
+        "hosts": [
+          "index.crates.io",
+          "static.crates.io"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "ledger_valid": true,
+    "ledger_records": 440,
+    "environment_type": "oci-image/v1",
+    "environment_digest": "sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+    "artifacts_verified": true
+  },
+  "anomalies": [],
+  "expect": [
+    "B",
+    "D"
+  ],
+  "matches_expectation": true
+}

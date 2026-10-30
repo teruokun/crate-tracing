@@ -7,7 +7,7 @@ approach.
 
 ## Where things stand
 
-- **The whole PoC corpus is measured.** 13 measurements × 2 profiles, all
+- **The whole PoC corpus is measured.** 13 measurements × 3 profiles, all
   `measured`, ledgers valid, artifacts verified, lock checksums matching, no
   anomalies. Every finding is pinned to BuildWarden `137feae2f8b0`, built
   clean (`BUILDWARDEN_REV`). They are in `findings/` with their original
@@ -22,6 +22,13 @@ approach.
   slim has no `c++`, `cmake`, python3 or curl, trixie's libgit2 is too old for
   libgit2-sys, aws-lc-sys never runs cmake, ort pulls openssl-sys, and v8
   downloads with python3 rather than a Rust client.
+- **`minimal` sits between bare and rich**: build tools, no `-dev` libraries.
+  It turns three of bare's six failures into builds (vendored OpenSSL,
+  rdkafka-sys, v8). What still fails needs a library: OpenSSL for openssl-sys
+  and for ort (its downloader uses native-tls), and curl headers for
+  rdkafka-sys's cmake build, through a librdkafka bug (`#cmakedefine01` tested
+  with `#ifdef`; details in the corpus notes). 12 of 13 minimal expectations,
+  written before measuring, held.
 - **Tests run over real output.** `tests/fixtures/real/` holds seven packed
   runs (ledger, artifacts, build-phase capture headers), one or more per
   route; `tests/test_real.py` checks them. `tests/fixtures/pack_real.py` packs
@@ -60,10 +67,14 @@ In rough order of value:
    linked.
 3. **Per-crate network attribution** (DESIGN expansion), before measuring
    larger dependency trees.
-4. **A pinned rich image.** Rich spends about 15 s and 156 MiB on apt per run.
+4. **Make rich a superset of minimal.** Rich has clang but not
+   `build-essential`, so its C++ builds use `clang++`. Adding
+   `build-essential` (and re-measuring rich) would make each profile step add
+   only one kind of thing.
+5. **A pinned rich image.** Rich spends about 15 s and 156 MiB on apt per run.
    Building it once and pinning it by digest makes rich runs cheap enough to
    scale.
-5. **Scale the corpus** (DESIGN, Scaling to crates.io).
+6. **Scale the corpus** (DESIGN, Scaling to crates.io).
 
 ## Decisions so far
 

@@ -13,6 +13,19 @@ description = "The official Rust slim image as published: a C compiler and libc 
 image = "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7"
 apt_packages = []
 
+[profiles.minimal]
+description = "bare plus the build tools a typical developer machine has, and no -dev libraries: whatever still fails here needs a library, not a tool."
+image = "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7"
+apt_packages = [
+    "build-essential",
+    "pkg-config",
+    "cmake",
+    "perl",
+    "python3",
+    "git",
+    "curl",
+]
+
 [profiles.rich]
 description = "bare plus the -dev libraries and build tools a typical CI image carries, so build scripts can find system copies."
 image = "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7"

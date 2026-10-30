@@ -1,0 +1,223 @@
+{
+  "schema": "https://github.com/teruokun/crate-tracing/schemas/finding-v1.schema.json",
+  "subject": {
+    "purl": "pkg:cargo/serde@1.0.229",
+    "name": "serde",
+    "version": "1.0.229",
+    "features": [
+      "derive"
+    ],
+    "default_features": true
+  },
+  "measurement": {
+    "id": "serde-1.0.229-derive",
+    "profile": {
+      "name": "minimal",
+      "image": "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+      "apt_packages": [
+        "build-essential",
+        "pkg-config",
+        "cmake",
+        "perl",
+        "python3",
+        "git",
+        "curl"
+      ]
+    },
+    "arch": "aarch64",
+    "host_triple": "aarch64-unknown-linux-gnu",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "measured_at": "2026-10-30T17:31:18+00:00",
+    "tool": {
+      "crate_tracing": "0.1.0",
+      "warden": {
+        "path": "/Users/jeff/crate-tracing/.tools/buildwarden/dist/warden",
+        "binary_sha256": "7eb4119b85a04f3f1d4e61179e1254117bd14516a2e57bceee26a11421320b27",
+        "version": "dev",
+        "go": "go1.26.5",
+        "module": "github.com/buildwarden/buildwarden",
+        "module_version": "v0.5.1-0.20261029195147-137feae2f8b0",
+        "revision": "137feae2f8b07e19e21b0893cc4ec9e96f97d42f",
+        "revision_time": "2026-10-29T19:51:47Z",
+        "modified": false
+      }
+    },
+    "warden_exit": 0,
+    "wall_seconds": 18.2,
+    "output_bytes": 143607730
+  },
+  "outcome": {
+    "status": "measured",
+    "fetch_exit": 0,
+    "build_exit": 0,
+    "built": true,
+    "failure": null
+  },
+  "routes": {
+    "taken": [
+      "none"
+    ],
+    "A_downloads": [],
+    "B_bundled": [],
+    "C_system": [],
+    "D_tools": [],
+    "C_unresolved": []
+  },
+  "downloads": [],
+  "packages": [
+    {
+      "purl": "pkg:cargo/proc-macro2@1.0.107",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/quote@1.0.47",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/serde@1.0.229",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/serde_core@1.0.229",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    }
+  ],
+  "crates": [
+    {
+      "purl": "pkg:cargo/serde@1.0.229",
+      "name": "serde",
+      "version": "1.0.229",
+      "phase": "fetch",
+      "ledger_seq": 360,
+      "sha256": "4148590afebada386688f18773da617792bf2ef03ffc1e4cbd2b1d45b023e0ba",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/serde_derive@1.0.229",
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "phase": "fetch",
+      "ledger_seq": 364,
+      "sha256": "e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/syn@3.0.9",
+      "name": "syn",
+      "version": "3.0.9",
+      "phase": "fetch",
+      "ledger_seq": 366,
+      "sha256": "d78c8dee4c7bf0e14673097256fed6142ce9d3b85a408189d07482442145823b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/proc-macro2@1.0.107",
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "phase": "fetch",
+      "ledger_seq": 370,
+      "sha256": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/quote@1.0.47",
+      "name": "quote",
+      "version": "1.0.47",
+      "phase": "fetch",
+      "ledger_seq": 375,
+      "sha256": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/serde_core@1.0.229",
+      "name": "serde_core",
+      "version": "1.0.229",
+      "phase": "fetch",
+      "ledger_seq": 378,
+      "sha256": "67dca2c9c51e58a4791a4b1ed58308b39c64224d349a935ab5039aa360942a48",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/unicode-ident@1.0.27",
+      "name": "unicode-ident",
+      "version": "1.0.27",
+      "phase": "fetch",
+      "ledger_seq": 383,
+      "sha256": "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    }
+  ],
+  "traffic": {
+    "setup": {
+      "os-packages": {
+        "requests": 77,
+        "bytes": 69743858,
+        "hosts": [
+          "deb.debian.org"
+        ]
+      }
+    },
+    "fetch": {
+      "crates-registry": {
+        "requests": 15,
+        "bytes": 1846395,
+        "hosts": [
+          "index.crates.io",
+          "static.crates.io"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "ledger_valid": true,
+    "ledger_records": 435,
+    "environment_type": "oci-image/v1",
+    "environment_digest": "sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+    "artifacts_verified": true
+  },
+  "anomalies": [],
+  "expect": [
+    "none"
+  ],
+  "matches_expectation": true
+}
