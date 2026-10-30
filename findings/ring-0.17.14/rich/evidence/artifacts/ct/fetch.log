@@ -3,19 +3,19 @@
   Downloaded ring v0.17.14
   Downloaded windows-targets v0.52.6
   Downloaded windows-sys v0.52.0
-  Downloaded windows_x86_64_gnu v0.52.6
+  Downloaded windows_i686_gnu v0.52.6
   Downloaded untrusted v0.9.0
   Downloaded wasi v0.11.1+wasi-snapshot-preview1
-  Downloaded windows_i686_gnu v0.52.6
   Downloaded shlex v2.0.1
   Downloaded windows_x86_64_gnullvm v0.52.6
-  Downloaded getrandom v0.2.17
   Downloaded windows_aarch64_msvc v0.52.6
+  Downloaded getrandom v0.2.17
   Downloaded find-msvc-tools v0.1.15
-  Downloaded cfg-if v1.0.5
   Downloaded windows_i686_gnullvm v0.52.6
-  Downloaded cc v1.10.0
+  Downloaded cfg-if v1.0.5
+  Downloaded windows_x86_64_gnu v0.52.6
   Downloaded windows_i686_msvc v0.52.6
+  Downloaded cc v1.10.0
   Downloaded windows_x86_64_msvc v0.52.6
   Downloaded windows_aarch64_gnullvm v0.52.6
   Downloaded libc v0.2.191

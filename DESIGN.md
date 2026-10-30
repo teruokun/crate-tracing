@@ -84,10 +84,10 @@ supports (the image is pinned by its multi-arch index digest).
   `-dev` libraries. What fails here needs a library, not a tool: in the PoC,
   openssl-sys and ort (whose downloader uses native-tls) need OpenSSL, and
   rdkafka-sys's cmake build needs curl headers.
-- **rich**: bare plus the `-dev` libraries and build tools a typical CI image
-  has, so build scripts that prefer a system library find one. It is not yet
-  a strict superset of minimal: it has clang but not `build-essential`, so
-  C++ builds use `clang++` (librdkafka's configure falls back to it).
+- **rich**: minimal plus the `-dev` libraries and extra tools (clang, nasm,
+  protoc) a typical CI image has, so build scripts that prefer a system
+  library find one. Each profile step adds one kind of thing: tools, then
+  libraries.
 
 The apt traffic for **minimal** and **rich** is in the ledger's setup phase, so
 the finding records exactly what the profile installed.
@@ -275,17 +275,17 @@ be large, and they are third-party content.
 3. **Ordering.** Sort by recent downloads, so the crates that matter most are
    measured first.
 4. **Throughput.** One measurement is one container plus a relay. Each
-   finding records `wall_seconds` and `output_bytes`. In the PoC (26 runs,
-   sequential, 8m22s in all on an Apple silicon Mac): bare runs took 7–15 s
-   and wrote 4–135 MiB; rich runs took 23–40 s and wrote 316–520 MiB. Rich's
-   cost is mostly its setup: about 15 s and 156 MiB of apt packages, captured
-   in full. Minimal runs took 18–47 s and wrote 137–341 MiB (70 MiB of apt
-   packages). One minimal run took 90 s and 18 s when repeated, so the apt
-   mirror adds variance. Promoted evidence is far smaller (12 MiB for the first
-   26 runs). Runs are
-   independent (BuildWarden stages each in its own directory), so they
-   parallelize across cores and machines. Building a rich image once and
-   pinning it by digest would remove most of its cost.
+   finding records `wall_seconds` and `output_bytes`. In the PoC (13
+   measurements per profile, run sequentially, 6–9 minutes per profile on an
+   Apple silicon Mac): bare runs took 7–15 s and wrote 4–135 MiB; minimal
+   18–47 s and 137–341 MiB; rich 28–88 s and 341–545 MiB. The difference is
+   mostly setup: minimal installs 67 MiB of apt packages and rich 168 MiB,
+   captured in full. One minimal run took 90 s and 18 s when repeated, so the
+   apt mirror adds variance. Promoted evidence is far smaller (20 MiB for all
+   39 runs). Runs are independent (BuildWarden stages each in its own
+   directory), so they parallelize across cores and machines. Building the
+   minimal and rich images once and pinning them by digest would remove most
+   of their cost.
 5. **Caching.** A shared, read-only crates mirror would cut fetch time, but it
    would remove the registry traffic from the ledger. Prefer ledgered fetches
    until the cost is known.

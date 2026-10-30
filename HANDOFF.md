@@ -13,8 +13,8 @@ approach.
   clean (`BUILDWARDEN_REV`). They are in `findings/` with their original
   ledgers. `make summary` shows the matrix.
 - **Environment:** aarch64, an Apple silicon Mac with Finch as the container
-  runtime (`warden doctor` passes; the container driver, not `vz`). 26 runs
-  took 8m22s sequentially. Per-run wall time and output size are in each
+  runtime (`warden doctor` passes; the container driver, not `vz`). Each
+  profile takes 6–9 minutes sequentially. Per-run wall time and output size are in each
   finding and summarized in DESIGN.md (Scaling, item 4).
 - **Expectations that were wrong** are corrected in `corpus/poc.toml`. Each
   keeps the original hypothesis in `notes` and says what the evidence showed.
@@ -28,7 +28,9 @@ approach.
   and for ort (its downloader uses native-tls), and curl headers for
   rdkafka-sys's cmake build, through a librdkafka bug (`#cmakedefine01` tested
   with `#ifdef`; details in the corpus notes). 12 of 13 minimal expectations,
-  written before measuring, held.
+  written before measuring, held. Rich is now minimal plus libraries (it
+  gained `build-essential` and was re-measured; routes unchanged, but C++
+  builds now use `g++` instead of falling back to `clang++`).
 - **Tests run over real output.** `tests/fixtures/real/` holds seven packed
   runs (ledger, artifacts, build-phase capture headers), one or more per
   route; `tests/test_real.py` checks them. `tests/fixtures/pack_real.py` packs
@@ -67,14 +69,10 @@ In rough order of value:
    linked.
 3. **Per-crate network attribution** (DESIGN expansion), before measuring
    larger dependency trees.
-4. **Make rich a superset of minimal.** Rich has clang but not
-   `build-essential`, so its C++ builds use `clang++`. Adding
-   `build-essential` (and re-measuring rich) would make each profile step add
-   only one kind of thing.
-5. **A pinned rich image.** Rich spends about 15 s and 156 MiB on apt per run.
+4. **A pinned rich image.** Rich spends about 20 s and 168 MiB on apt per run.
    Building it once and pinning it by digest makes rich runs cheap enough to
    scale.
-6. **Scale the corpus** (DESIGN, Scaling to crates.io).
+5. **Scale the corpus** (DESIGN, Scaling to crates.io).
 
 ## Decisions so far
 

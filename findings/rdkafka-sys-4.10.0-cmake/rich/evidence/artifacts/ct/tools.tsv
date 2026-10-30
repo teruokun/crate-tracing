@@ -1,38 +1,36 @@
-quote	1.0.47	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/quote-454ef128d2f49aba/rustc5hjbM3/symbols.o /work/probe/target/debug/build/quote-454ef128d2f49aba/build_script_build-454ef128d2f49aba.build_script_build.2f15c4e71ea745d3-cgu.0.rcgu.o /work/probe/target/debug/build/quote-454ef128d2f49aba/bui
-proc-macro2	1.0.107	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/proc-macro2-d1c483d309dedf61/rustc90opso/symbols.o /work/probe/target/debug/build/proc-macro2-d1c483d309dedf61/build_script_build-d1c483d309dedf61.build_script_build.6afff175563eff46-cgu.0.rcgu.o /work/probe/target/debug/build/proc-macro2-d1
-rustversion	1.0.23	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/rustversion-43f861ed8e8f81c4/rustcqbPlPj/symbols.o /work/probe/target/debug/build/rustversion-43f861ed8e8f81c4/build_script_build-43f861ed8e8f81c4.build_script_build.d2ee8d243f6b828-cgu.0.rcgu.o /work/probe/target/debug/build/rustversion-43f
-libc	0.2.191	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/libc-2946c5d050133518/rustcPAnFwy/symbols.o /work/probe/target/debug/build/libc-2946c5d050133518/build_script_build-2946c5d050133518.build_script_build.7a91d40ece75ada3-cgu.0.rcgu.o /work/probe/target/debug/build/libc-2946c5d050133518/build_
-rustversion	1.0.23	cc	-	-Wl,--version-script=/work/probe/target/debug/deps/rustcXqeYMV/list -Wl,--no-undefined-version -Wl,--fix-cortex-a53-843419 /work/probe/target/debug/deps/rustcXqeYMV/symbols.o /work/probe/target/debug/deps/rustversion-b6eff462c67578d8.rustversion.e4a449fd6907acbb-cgu.0.rcgu.o /work/probe/target/debug
-rdkafka-sys	4.10.0+2.12.1	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/rdkafka-sys-61f7c8c392b8bd66/rustcOQyRiL/symbols.o /work/probe/target/debug/build/rdkafka-sys-61f7c8c392b8bd66/build_script_build-61f7c8c392b8bd66.build_script_build.b1e937e807aea009-cgu.0.rcgu.o /work/probe/target/debug/build/rdkafka-sys-61
-libz-sys	1.1.31	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/libz-sys-63c5c1f7dfb58cf1/rustcKAEuY6/symbols.o /work/probe/target/debug/build/libz-sys-63c5c1f7dfb58cf1/build_script_build-63c5c1f7dfb58cf1.build_script_build.5af125a298828bb3-cgu.0.rcgu.o /work/probe/target/debug/build/libz-sys-63c5c1f7dfb
+quote	1.0.47	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/quote-454ef128d2f49aba/rustcoPqdn4/symbols.o /work/probe/target/debug/build/quote-454ef128d2f49aba/build_script_build-454ef128d2f49aba.build_script_build.2f15c4e71ea745d3-cgu.0.rcgu.o /work/probe/target/debug/build/quote-454ef128d2f49aba/bui
+proc-macro2	1.0.107	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/proc-macro2-d1c483d309dedf61/rustcm3wAgL/symbols.o /work/probe/target/debug/build/proc-macro2-d1c483d309dedf61/build_script_build-d1c483d309dedf61.build_script_build.6afff175563eff46-cgu.0.rcgu.o /work/probe/target/debug/build/proc-macro2-d1
+rustversion	1.0.23	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/rustversion-43f861ed8e8f81c4/rustcgsMdJr/symbols.o /work/probe/target/debug/build/rustversion-43f861ed8e8f81c4/build_script_build-43f861ed8e8f81c4.build_script_build.d2ee8d243f6b828-cgu.0.rcgu.o /work/probe/target/debug/build/rustversion-43f
+libc	0.2.191	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/libc-2946c5d050133518/rustc8tN03p/symbols.o /work/probe/target/debug/build/libc-2946c5d050133518/build_script_build-2946c5d050133518.build_script_build.7a91d40ece75ada3-cgu.0.rcgu.o /work/probe/target/debug/build/libc-2946c5d050133518/build_
+rustversion	1.0.23	cc	-	-Wl,--version-script=/work/probe/target/debug/deps/rustcdGYqqL/list -Wl,--no-undefined-version -Wl,--fix-cortex-a53-843419 /work/probe/target/debug/deps/rustcdGYqqL/symbols.o /work/probe/target/debug/deps/rustversion-b6eff462c67578d8.rustversion.e4a449fd6907acbb-cgu.0.rcgu.o /work/probe/target/debug
+rdkafka-sys	4.10.0+2.12.1	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/rdkafka-sys-61f7c8c392b8bd66/rustcGYr0St/symbols.o /work/probe/target/debug/build/rdkafka-sys-61f7c8c392b8bd66/build_script_build-61f7c8c392b8bd66.build_script_build.b1e937e807aea009-cgu.0.rcgu.o /work/probe/target/debug/build/rdkafka-sys-61
+libz-sys	1.1.31	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/libz-sys-63c5c1f7dfb58cf1/rustcXQMmv5/symbols.o /work/probe/target/debug/build/libz-sys-63c5c1f7dfb58cf1/build_script_build-63c5c1f7dfb58cf1.build_script_build.5af125a298828bb3-cgu.0.rcgu.o /work/probe/target/debug/build/libz-sys-63c5c1f7dfb
 libz-sys	1.1.31	pkg-config	-	--libs --cflags zlib
 libz-sys	1.1.31	pkg-config	-	--modversion zlib
-libz-sys	1.1.31	cc	-	-E /work/probe/target/debug/build/libz-sys-9b3da0b50d3fa417/out/15591034966158843626detect_compiler_family.c
+libz-sys	1.1.31	cc	-	-E /work/probe/target/debug/build/libz-sys-9b3da0b50d3fa417/out/13477533411327689974detect_compiler_family.c
 libz-sys	1.1.31	cc	-	-?
 libz-sys	1.1.31	cc	compile	-O0 -ffunction-sections -fdata-sections -fPIC -Wall -Wextra -mno-omit-leaf-frame-pointer -o /work/probe/target/debug/build/libz-sys-9b3da0b50d3fa417/out/flag_check -c /work/probe/target/debug/build/libz-sys-9b3da0b50d3fa417/out/flag_check.c
 libz-sys	1.1.31	cc	-	-O0 -ffunction-sections -fdata-sections -fPIC -g -gdwarf-4 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wall -Wextra src/smoke.c -g0 -o /dev/null -lz
-rdkafka-sys	4.10.0+2.12.1	cc	-	-E /work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/9250019067854072390detect_compiler_family.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-E /work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/2910453213585124217detect_compiler_family.c
 rdkafka-sys	4.10.0+2.12.1	cc	-	-?
-rdkafka-sys	4.10.0+2.12.1	c++	-	-E /work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/4650179798970418689detect_compiler_family.c
+rdkafka-sys	4.10.0+2.12.1	c++	-	-E /work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/1452974005332020707detect_compiler_family.c
 rdkafka-sys	4.10.0+2.12.1	c++	-	-?
-rdkafka-sys	4.10.0+2.12.1	c++	-	--version
 rdkafka-sys	4.10.0+2.12.1	cmake	-	--version
 rdkafka-sys	4.10.0+2.12.1	cmake	-	/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka -B /work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/build -DRDKAFKA_BUILD_STATIC=1 -DRDKAFKA_BUILD_TESTS=0 -DRDKAFKA_BUILD_EXAMPLES=0 -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_POLICY_VERSION_M
 rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeCCompilerId.c
 rdkafka-sys	4.10.0+2.12.1	cc	-	-print-sysroot
-rdkafka-sys	4.10.0+2.12.1	c++	-	-ffunction-sections -fdata-sections -fPIC --target=aarch64-unknown-linux-gnu -w CMakeCXXCompilerId.cpp
-rdkafka-sys	4.10.0+2.12.1	c++	-	-print-resource-dir
-rdkafka-sys	4.10.0+2.12.1	c++	-	-ffunction-sections -fdata-sections -fPIC --target=aarch64-unknown-linux-gnu -w -E -x c++-header /usr/share/cmake-3.31/Modules/CXX-DetectStdlib.h -o -
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_28771/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -v -o CMakeFiles/cmTC_28771.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c
-rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w -v -Wl,-v CMakeFiles/cmTC_28771.dir/CMakeCCompilerABI.c.o -o cmTC_28771
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_e6c50/fast
-rdkafka-sys	4.10.0+2.12.1	c++	compile	-ffunction-sections -fdata-sections -fPIC --target=aarch64-unknown-linux-gnu -w -v -MD -MT CMakeFiles/cmTC_e6c50.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_e6c50.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_e6c50.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.31/Modules/CMakeCXXCom
-rdkafka-sys	4.10.0+2.12.1	c++	-	-ffunction-sections -fdata-sections -fPIC --target=aarch64-unknown-linux-gnu -w -v -Wl,-v CMakeFiles/cmTC_e6c50.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_e6c50
+rdkafka-sys	4.10.0+2.12.1	c++	-	-ffunction-sections -fdata-sections -fPIC -w CMakeCXXCompilerId.cpp
+rdkafka-sys	4.10.0+2.12.1	c++	-	-print-sysroot
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_63161/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -v -o CMakeFiles/cmTC_63161.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w -v -Wl,-v CMakeFiles/cmTC_63161.dir/CMakeCCompilerABI.c.o -o cmTC_63161
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_bbcf0/fast
+rdkafka-sys	4.10.0+2.12.1	c++	compile	-ffunction-sections -fdata-sections -fPIC -w -v -o CMakeFiles/cmTC_bbcf0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+rdkafka-sys	4.10.0+2.12.1	c++	-	-ffunction-sections -fdata-sections -fPIC -w -v -Wl,-v CMakeFiles/cmTC_bbcf0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_bbcf0
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--version
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_88162/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -DCHECK_FUNCTION_EXISTS=pow -o CMakeFiles/cmTC_88162.dir/CheckFunctionExists.c.o -c /work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/build/CMakeFiles/CMakeScratch/TryCompile-Ss68SK/CheckFunctionExists.c
-rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w -DCHECK_FUNCTION_EXISTS=pow CMakeFiles/cmTC_88162.dir/CheckFunctionExists.c.o -o cmTC_88162 -lm
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_fa040/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -DCHECK_FUNCTION_EXISTS=pow -o CMakeFiles/cmTC_fa040.dir/CheckFunctionExists.c.o -c /work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/build/CMakeFiles/CMakeScratch/TryCompile-OG1pSG/CheckFunctionExists.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w -DCHECK_FUNCTION_EXISTS=pow CMakeFiles/cmTC_fa040.dir/CheckFunctionExists.c.o -o cmTC_fa040 -lm
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--version
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--print-errors --short-errors --exists libcurl
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--modversion libcurl
@@ -55,10 +53,9 @@ rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--cflags-only-other libcurl
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--static --cflags-only-other libcurl
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--variable=supported_protocols libcurl
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--variable=supported_features libcurl
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_11abb/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_11abb.dir/dlopen_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/dlopen_test.c
-rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_11abb.dir/dlopen_test.c.o -o cmTC_11abb -ldl
-num_enum_derive	0.7.6	cc	-	-Wl,--version-script=/work/probe/target/debug/deps/rustc7azJW7/list -Wl,--no-undefined-version -Wl,--fix-cortex-a53-843419 /work/probe/target/debug/deps/rustc7azJW7/symbols.o /work/probe/target/debug/deps/num_enum_derive-7b8072ea0060f42a.num_enum_derive.6a0d086c39041eae-cgu.0.rcgu.o /work/probe/targ
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_e4b60/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_e4b60.dir/dlopen_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/dlopen_test.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_e4b60.dir/dlopen_test.c.o -o cmTC_e4b60 -ldl
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--version
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--print-errors --short-errors --exists openssl
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--modversion openssl
@@ -98,36 +95,37 @@ rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--cflags libsasl2
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--static --cflags libsasl2
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--cflags-only-other libsasl2
 rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--static --cflags-only-other libsasl2
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_32122/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_32122.dir/regex_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/regex_test.c
-rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_32122.dir/regex_test.c.o -o cmTC_32122
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_f00a0/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_f00a0.dir/strndup_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/strndup_test.c
-rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_f00a0.dir/strndup_test.c.o -o cmTC_f00a0
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_ca64d/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_ca64d.dir/rand_r_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/rand_r_test.c
-rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_ca64d.dir/rand_r_test.c.o -o cmTC_ca64d
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_9f808/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-D_GNU_SOURCE -ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_9f808.dir/pthread_setname_gnu_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/pthread_setname_gnu_test.c
-rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_9f808.dir/pthread_setname_gnu_test.c.o -o cmTC_9f808 -lpthread
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_38a3d/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-D_DARWIN_C_SOURCE -ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_38a3d.dir/pthread_setname_darwin_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/pthread_setname_darwin_test.c
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_15d24/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_15d24.dir/pthread_setname_freebsd_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/pthread_setname_freebsd_test.c
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_56e4c/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_56e4c.dir/atomic_32_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/atomic_32_test.c
-rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_56e4c.dir/atomic_32_test.c.o -o cmTC_56e4c
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_871b2/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_871b2.dir/atomic_64_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/atomic_64_test.c
-rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_871b2.dir/atomic_64_test.c.o -o cmTC_871b2
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_6c44e/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_6c44e.dir/c11threads_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/c11threads_test.c
-rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_6c44e.dir/c11threads_test.c.o -o cmTC_6c44e -pthread
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_c80ba/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_c80ba.dir/crc32c_hw_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/crc32c_hw_test.c
-rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_0712c/fast
-rdkafka-sys	4.10.0+2.12.1	cc	compile	-DCMAKE_HAVE_LIBC_PTHREAD -ffunction-sections -fdata-sections -fPIC -w -fPIE -o CMakeFiles/cmTC_0712c.dir/src.c.o -c /work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/build/CMakeFiles/CMakeScratch/TryCompile-XXLu7a/src.c
-rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_0712c.dir/src.c.o -o cmTC_0712c
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_eb4dd/fast
+num_enum_derive	0.7.6	cc	-	-Wl,--version-script=/work/probe/target/debug/deps/rustcgeXHYI/list -Wl,--no-undefined-version -Wl,--fix-cortex-a53-843419 /work/probe/target/debug/deps/rustcgeXHYI/symbols.o /work/probe/target/debug/deps/num_enum_derive-7b8072ea0060f42a.num_enum_derive.6a0d086c39041eae-cgu.0.rcgu.o /work/probe/targ
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_eb4dd.dir/regex_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/regex_test.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_eb4dd.dir/regex_test.c.o -o cmTC_eb4dd
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_4b085/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_4b085.dir/strndup_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/strndup_test.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_4b085.dir/strndup_test.c.o -o cmTC_4b085
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_b2e8d/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_b2e8d.dir/rand_r_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/rand_r_test.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_b2e8d.dir/rand_r_test.c.o -o cmTC_b2e8d
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_9da8b/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-D_GNU_SOURCE -ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_9da8b.dir/pthread_setname_gnu_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/pthread_setname_gnu_test.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_9da8b.dir/pthread_setname_gnu_test.c.o -o cmTC_9da8b -lpthread
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_32f5f/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-D_DARWIN_C_SOURCE -ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_32f5f.dir/pthread_setname_darwin_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/pthread_setname_darwin_test.c
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_ed1d4/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_ed1d4.dir/pthread_setname_freebsd_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/pthread_setname_freebsd_test.c
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_f67f4/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_f67f4.dir/atomic_32_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/atomic_32_test.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_f67f4.dir/atomic_32_test.c.o -o cmTC_f67f4
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_38656/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_38656.dir/atomic_64_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/atomic_64_test.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_38656.dir/atomic_64_test.c.o -o cmTC_38656
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_6f309/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_6f309.dir/c11threads_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/c11threads_test.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_6f309.dir/c11threads_test.c.o -o cmTC_6f309 -pthread
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_377d4/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-ffunction-sections -fdata-sections -fPIC -w -o CMakeFiles/cmTC_377d4.dir/crc32c_hw_test.c.o -c /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/packaging/cmake/try_compile/crc32c_hw_test.c
+rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile cmTC_603dc/fast
+rdkafka-sys	4.10.0+2.12.1	cc	compile	-DCMAKE_HAVE_LIBC_PTHREAD -ffunction-sections -fdata-sections -fPIC -w -fPIE -o CMakeFiles/cmTC_603dc.dir/src.c.o -c /work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/build/CMakeFiles/CMakeScratch/TryCompile-9vOQZR/src.c
+rdkafka-sys	4.10.0+2.12.1	cc	-	-ffunction-sections -fdata-sections -fPIC -w CMakeFiles/cmTC_603dc.dir/src.c.o -o cmTC_603dc
 rdkafka-sys	4.10.0+2.12.1	cmake	-	--build /work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/build --target install --config Debug
 rdkafka-sys	4.10.0+2.12.1	gmake	-	-f Makefile install
 rdkafka-sys	4.10.0+2.12.1	cc	compile	-DLIBRDKAFKA_STATICLIB -I/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rdkafka-sys-4.10.0+2.12.1/librdkafka/src -I/work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/build/generated/dummy -ffunction-sections -fdata-sections -fPIC -w -g -fPIC -MD -MT src/CMakeFiles/rdkafk

@@ -27,9 +27,11 @@ apt_packages = [
 ]
 
 [profiles.rich]
-description = "bare plus the -dev libraries and build tools a typical CI image carries, so build scripts can find system copies."
+description = "minimal plus the -dev libraries and extra tools a typical CI image carries, so build scripts can find system copies."
 image = "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7"
+# Everything in minimal, then more: each profile step adds one kind of thing.
 apt_packages = [
+    "build-essential",
     "pkg-config",
     "make",
     "cmake",

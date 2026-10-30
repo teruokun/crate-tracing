@@ -13,6 +13,7 @@
       "name": "rich",
       "image": "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
       "apt_packages": [
+        "build-essential",
         "pkg-config",
         "make",
         "cmake",
@@ -41,7 +42,7 @@
     "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
     "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
     "os": "Debian GNU/Linux 13 (trixie)",
-    "measured_at": "2026-10-30T17:14:39+00:00",
+    "measured_at": "2026-10-30T17:54:28+00:00",
     "tool": {
       "crate_tracing": "0.1.0",
       "warden": {
@@ -57,8 +58,8 @@
       }
     },
     "warden_exit": 0,
-    "wall_seconds": 25.2,
-    "output_bytes": 330982639
+    "wall_seconds": 46.8,
+    "output_bytes": 357477173
   },
   "outcome": {
     "status": "measured",
@@ -171,7 +172,7 @@
       "name": "openssl-sys",
       "version": "0.9.117",
       "phase": "fetch",
-      "ledger_seq": 596,
+      "ledger_seq": 640,
       "sha256": "b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695",
       "lock_checksum_match": true,
       "links": "openssl",
@@ -182,7 +183,7 @@
       "name": "vcpkg",
       "version": "0.2.15",
       "phase": "fetch",
-      "ledger_seq": 600,
+      "ledger_seq": 644,
       "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
       "lock_checksum_match": true,
       "links": null,
@@ -193,7 +194,7 @@
       "name": "pkg-config",
       "version": "0.3.34",
       "phase": "fetch",
-      "ledger_seq": 602,
+      "ledger_seq": 646,
       "sha256": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
       "lock_checksum_match": true,
       "links": null,
@@ -204,7 +205,7 @@
       "name": "shlex",
       "version": "2.0.1",
       "phase": "fetch",
-      "ledger_seq": 606,
+      "ledger_seq": 650,
       "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
       "lock_checksum_match": true,
       "links": null,
@@ -215,7 +216,7 @@
       "name": "cc",
       "version": "1.10.0",
       "phase": "fetch",
-      "ledger_seq": 610,
+      "ledger_seq": 655,
       "sha256": "86e055fa6e3e40ad6187ba25b6855eeb635d5271f8e0f0e1e9a5826b8d75bea0",
       "lock_checksum_match": true,
       "links": null,
@@ -226,7 +227,7 @@
       "name": "find-msvc-tools",
       "version": "0.1.15",
       "phase": "fetch",
-      "ledger_seq": 614,
+      "ledger_seq": 658,
       "sha256": "1c66915cc5391097de7a2b0b972e8505aa33c0df401fd3a6811dbdb32881ba48",
       "lock_checksum_match": true,
       "links": null,
@@ -237,7 +238,7 @@
       "name": "libc",
       "version": "0.2.191",
       "phase": "fetch",
-      "ledger_seq": 619,
+      "ledger_seq": 663,
       "sha256": "65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a",
       "lock_checksum_match": true,
       "links": null,
@@ -247,8 +248,8 @@
   "traffic": {
     "setup": {
       "os-packages": {
-        "requests": 136,
-        "bytes": 163358318,
+        "requests": 147,
+        "bytes": 176585162,
         "hosts": [
           "deb.debian.org"
         ]
@@ -267,7 +268,7 @@
   },
   "evidence": {
     "ledger_valid": true,
-    "ledger_records": 665,
+    "ledger_records": 709,
     "environment_type": "oci-image/v1",
     "environment_digest": "sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
     "artifacts_verified": true
