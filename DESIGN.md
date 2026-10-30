@@ -25,12 +25,14 @@ project measures all of them in more than one environment.
 |---|---|---|---|
 | **A** build-time download | A build script (or proc macro) fetches something from the network: `v8` gets a prebuilt rusty_v8, `ort` gets ONNX Runtime. | Ledger requests to anything but the registry, made **during the build phase**. | URL (GitHub release tag, `name-1.2.3.tar.gz`, `name@1.2.3`), the URL that redirected to it, or the archive's top-level directory in the captured payload. Every download has its content hashes. |
 | **B** bundled source compiled | The native source is inside a crate (`openssl-src`, `zstd-sys`, `libsqlite3-sys` with `bundled`, `ring`) and a build script compiles it. | A static library the package links resolves **inside `target/`**, and the package built it (compiler calls, a build system, or a declared bundled version). | The crate's semver build metadata (`openssl-src 300.6.1+3.6.3` means OpenSSL 3.6.3, `zstd-sys 2.1.2+zstd.1.5.7`), or a version the build script declares (`cargo:version_number=…`). |
-| **C** system library linked | The build script finds a library the environment already has, usually through pkg-config. | A `rustc-link-lib` that resolves to a system path owned by a dpkg package. | The owning dpkg package and its version (both the `-dev` and the runtime package). |
+| **C** system library linked | The build script finds a library the environment already has, usually through pkg-config. | A `rustc-link-lib` that resolves to a system path owned by a dpkg package. A file outside `target/` that no package owns (a downloaded archive) is `external`, not C. | The owning dpkg package and its version (both the `-dev` and the runtime package). |
 | **D** build tools run | A build script runs `cmake`, `make`, `perl`, `protoc`, `go`, `nasm`, `git`, `curl`, ... | Logging shims for each tool on `PATH`, attributed through the `CARGO_PKG_NAME` cargo sets for every build script. | The tool's dpkg package (in `dpkg.tsv`); not reported per invocation yet. |
 
-Plus two outcomes: **none** (the build succeeded and no route was taken, like
-serde's compiler probe) and **fail** (the build failed in this environment, with
-the failing crate and the error excerpt). A build failure is a finding, not a
+Plus three outcomes: **none** (the build succeeded and no route was taken,
+like serde's compiler probe), **unresolved** (the build succeeded, but a build
+script asked to link a system library nothing provides, so a binary would fail
+to link; see limitation 8) and **fail** (the build failed in this environment,
+with the failing crate and the error excerpt). A build failure is a finding, not a
 failed measurement: "`openssl-sys` cannot build without a system OpenSSL" is
 the answer for the bare profile.
 
@@ -187,8 +189,8 @@ agreed with ecosyste.ms before freezing a v2 of the schema.
   binary's version, its git commit and dirty flag (from Go's VCS build stamp),
   and the binary's SHA-256 (`measurement.tool.warden`). An unknown commit or a
   dirty build is reported as an anomaly. The Makefile pins the commit used for
-  the published findings (`BUILDWARDEN_REV`), and `make warden` installs that
-  build. The relay, holder and netns images are fixed by that commit: either
+  the published findings (`BUILDWARDEN_REV`), and `make warden` builds that
+  commit from a checkout. The relay, holder and netns images are fixed by that commit: either
   pinned inside a release binary or built from the same source.
 - Build-time downloads are not pinned by anything we control. A re-run that
   downloads different bytes shows up as different hashes.
@@ -207,9 +209,10 @@ be large, and they are third-party content.
 
 1. **Network attribution is per measurement, not per crate.** A download in
    the build phase is attributed to "the build scripts and proc macros of this
-   dependency tree". The User-Agent narrows it (`ureq/…` from a Rust build
-   script, `curl/…` from a tool). For a crate measured on its own, the tree is
-   usually small. Per-crate attribution is an expansion.
+   dependency tree". The User-Agent narrows it: ort-sys sends its own
+   (`ort-sys/2.0.0-rc.15 …`), while v8's build script shells out to python3,
+   so its requests say `Python-urllib/3.13`. For a crate measured on its own,
+   the tree is usually small. Per-crate attribution is an expansion.
 2. **Proc macros can reach the network too**, as can `build.rs` of any
    dependency. Both are reported as route A; neither is singled out.
 3. **Shims perturb the environment slightly.** Shimmed tools run through a
@@ -228,6 +231,26 @@ be large, and they are third-party content.
    dependencies enable.
 7. **dpkg-based route C only.** The profiles are Debian. Other distributions
    would need another package-owner query.
+8. **The probe is a library, so nothing links.** A build script can ask for a
+   system library that does not exist and the build still succeeds:
+   libsqlite3-sys in bare declares `sqlite3` without checking for it. Such
+   libraries are reported as route `unresolved` (`routes.C_unresolved`), not
+   as a failure. Binary linkage (an expansion) would confirm it.
+9. **A missing tool hides an attempted route.** Shims exist only for tools
+   that exist. v8 in bare tries python3, then curl; neither is in the slim
+   image, so the build fails without a single request and with no tool run
+   recorded. Only the failure excerpt shows that a download was attempted.
+10. **Bare measures the image as much as the crate.** `rust:*-slim` has `cc`
+    but no `c++`, `cmake`, full perl (only perl-base), python3 or curl. Most
+    bare failures in the PoC are one of these, not the crate's own route.
+11. **External libraries are attributed by co-occurrence.** A linked library
+    outside the build tree that no OS package owns (ort-sys's ONNX Runtime
+    archive in `~/.cache`) is origin `external`. It is explained by a route A
+    download in the same build, not matched to it by hash, and is an anomaly
+    when there is no download.
+12. **One architecture so far.** The PoC findings are aarch64 (an Apple
+    silicon Mac running Finch). Prebuilt downloads are per target, so x86_64
+    can differ.
 
 ## Scaling to crates.io
 
@@ -242,10 +265,15 @@ be large, and they are third-party content.
    format already pins these explicitly.
 3. **Ordering.** Sort by recent downloads, so the crates that matter most are
    measured first.
-4. **Throughput.** One measurement is one container plus a relay. The PoC
-   should record the wall time and output size per run, to estimate cost
-   before scaling. Runs are independent (BuildWarden stages each in its own
-   directory), so they parallelize across cores and machines.
+4. **Throughput.** One measurement is one container plus a relay. Each
+   finding records `wall_seconds` and `output_bytes`. In the PoC (26 runs,
+   sequential, 8m22s in all on an Apple silicon Mac): bare runs took 7–15 s
+   and wrote 4–135 MiB; rich runs took 23–40 s and wrote 316–520 MiB. Rich's
+   cost is mostly its setup: about 15 s and 156 MiB of apt packages, captured
+   in full. Promoted evidence is far smaller (12 MiB for all 26). Runs are
+   independent (BuildWarden stages each in its own directory), so they
+   parallelize across cores and machines. Building a rich image once and
+   pinning it by digest would remove most of its cost.
 5. **Caching.** A shared, read-only crates mirror would cut fetch time, but it
    would remove the registry traffic from the ledger. Prefer ledgered fetches
    until the cost is known.

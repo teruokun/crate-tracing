@@ -14,7 +14,7 @@ import pytest
 from ledgerkit import LedgerBuilder, measured_run
 from rich.console import Console
 
-from crate_tracing import finding, ledger, render
+from crate_tracing import evidence, finding, ledger, render
 from crate_tracing.corpus import Measurement, Profile
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -53,35 +53,35 @@ def test_zstd_sys_compiles_its_bundled_source(tmp_path):
     assert f["anomalies"] == []
 
 
-def test_openssl_sys_links_the_system_openssl(tmp_path):
+def _syslibs(*rows):
+    def write(out):
+        (out / "artifacts" / "ct" / "syslibs.tsv").write_text("".join("\t".join(r) + "\n" for r in rows))
+
+    return write
+
+
+def test_missing_system_library_is_unresolved_not_none(tmp_path):
+    # libsqlite3-sys without `bundled` in bare: nothing provides sqlite3, but
+    # the probe is a library, so the build still succeeds.
     m = Measurement(id="openssl-sys-0.9.117", crate="openssl-sys", version="0.9.117")
-    f = analyze(tmp_path, "openssl-sys-0.9.117", m)
+    unit = "openssl-sys-c326141ad8a4002f"
+    f = analyze(tmp_path, "openssl-sys-0.9.117", m, mutate=_syslibs((unit, "dylib", "ssl", "", "", "", "")))
+    assert f["routes"]["taken"] == ["unresolved"]
+    assert [c["name"] for c in f["routes"]["C_unresolved"]] == ["ssl"]
+    assert f["routes"]["C_system"] == []
 
-    assert f["routes"]["taken"] == ["C"]
-    libs = {c["name"]: c for c in f["routes"]["C_system"]}
-    assert set(libs) == {"ssl", "crypto"}
-    assert libs["ssl"]["kind"] == "dylib"
-    assert libs["ssl"]["os_package"]["name"] == "libssl-dev"
-    assert libs["ssl"]["os_package"]["version"]  # read from dpkg.tsv
+
+def test_unpackaged_library_outside_the_tree_is_not_route_c(tmp_path):
+    # ort-sys links the ONNX Runtime archive it downloaded into ~/.cache.
+    m = Measurement(id="openssl-sys-0.9.117", crate="openssl-sys", version="0.9.117")
+    path = "/root/.cache/ort.pyke.io/dfbin/libonnxruntime.a"
+    row = ("openssl-sys-c326141ad8a4002f", "static", "onnxruntime", path, "", path, "")
+    f = analyze(tmp_path, "openssl-sys-0.9.117", m, mutate=_syslibs(row))
+    assert "C" not in f["routes"]["taken"]
     (pkg,) = [p for p in f["packages"] if p["purl"].startswith("pkg:cargo/openssl-sys@")]
-    # Its header probe compiles once; that alone is not route B.
-    assert pkg["c_compilations"] >= 1
-    assert pkg["declared"]["version_number"]
-    assert pkg["pkg_config_probes"]
-
-
-def test_openssl_sys_vendored_names_the_openssl_version(tmp_path):
-    m = Measurement(id="openssl-sys-0.9.117-vendored", crate="openssl-sys", version="0.9.117", features=("vendored",))
-    f = analyze(tmp_path, "openssl-sys-0.9.117-vendored", m)
-
-    assert f["routes"]["taken"] == ["B", "D"]
-    (b,) = f["routes"]["B_bundled"]
-    assert b["native"]["name"] == "openssl"
-    assert b["native"]["version"] == "3.6.3"
-    assert b["native"]["source_crate"] == "pkg:cargo/openssl-src@300.6.1%2B3.6.3"
-    assert sorted(b["libs"]) == ["crypto", "ssl"]
-    (d,) = f["routes"]["D_tools"]
-    assert {"make", "perl"} <= set(d["tools"])
+    assert pkg["link_libs"][0]["origin"] == "external"
+    # No download explains it here, so the finding says so.
+    assert any("no OS package owns" in a for a in f["anomalies"])
 
 
 def test_bundled_sqlite(tmp_path):
@@ -91,13 +91,14 @@ def test_bundled_sqlite(tmp_path):
     assert f["routes"]["B_bundled"][0]["libs"] == ["sqlite3"]
 
 
-def test_serde_control_has_no_native_effect(tmp_path):
-    m = Measurement(id="serde", crate="serde", version="1.0.229", features=("derive",))
-    f = analyze(tmp_path, "serde-1.0.229-derive", m)
-    assert f["routes"]["taken"] == ["none"]
-    assert f["downloads"] == []
-    assert set(f["traffic"]["fetch"]) == {"crates-registry"}
-    assert "build" not in f["traffic"]
+def test_empty_artifact_verifies_without_a_hash_block(tmp_path):
+    out = tmp_path / "warden-output"
+    lb = LedgerBuilder(out)
+    lb.artifact("ct/syslibs.tsv", b"")
+    assert "hash_block" not in lb.records[-1]
+    assert evidence.verify(out, ledger.parse(lb.report())) == []
+    (out / "artifacts" / "ct" / "syslibs.tsv").write_text("libssl.so.3\n")
+    assert evidence.verify(out, ledger.parse(lb.report())) == ["ct/syslibs.tsv"]
 
 
 def _tgz(root: str) -> bytes:
@@ -158,13 +159,16 @@ def test_failed_build_names_the_crate(tmp_path):
         (ct / "syslibs.tsv").write_text("")
         (ct / "build.log").write_text(
             "error: failed to run custom build command for `openssl-sys v0.9.117`\n"
-            "--- stderr\n"
+            "\n"
+            "Caused by:\n"
+            "  --- stderr\n"
             "  Could not find directory of OpenSSL installation\n"
         )
 
     f = analyze(tmp_path, "openssl-sys-0.9.117", m, mutate=fail)
     assert f["outcome"]["built"] is False
     assert f["outcome"]["failure"]["package"] == "openssl-sys"
+    assert f["outcome"]["failure"]["version"] == "0.9.117"
     assert "Could not find directory of OpenSSL installation" in f["outcome"]["failure"]["excerpt"][0]
     assert f["routes"]["taken"] == ["fail"]
     assert f["matches_expectation"] is True
@@ -234,3 +238,16 @@ def test_unpinned_warden_is_an_anomaly(tmp_path):
     assert any("commit unknown" in a for a in f["anomalies"])
     f = finding.build(m, BARE, ledger.parse(report), out, {"revision": "ab" * 20, "modified": True})
     assert any("modified tree" in a for a in f["anomalies"])
+
+
+def test_terminal_names_crates_and_keeps_other_urls():
+    assert render._crate("pkg:cargo/libgit2-sys@0.18.8%2B1.9.7") == "libgit2-sys 0.18.8+1.9.7"
+    text = (
+        "registry request during build (seq 9): https://static.crates.io/crates/cc/1.2.3/download; "
+        "https://static.crates.io/crates/cc/cc-1.2.4.crate; pkg:cargo/ort-sys@2.0.0-rc.15 links x; "
+        "https://github.com/denoland/rusty_v8/releases/download/v152.2.0/a.gz"
+    )
+    assert render._crates_in(text) == (
+        "registry request during build (seq 9): cc 1.2.3; cc 1.2.4; ort-sys 2.0.0-rc.15 links x; "
+        "https://github.com/denoland/rusty_v8/releases/download/v152.2.0/a.gz"
+    )

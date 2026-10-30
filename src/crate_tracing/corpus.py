@@ -7,7 +7,7 @@ import tomllib
 from dataclasses import dataclass, field
 from pathlib import Path
 
-ROUTES = ("A", "B", "C", "D", "none", "fail")
+ROUTES = ("A", "B", "C", "D", "unresolved", "none", "fail")
 _ID = re.compile(r"^[a-z0-9][a-z0-9.+_-]*$")
 
 

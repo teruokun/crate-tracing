@@ -40,6 +40,8 @@
         "os": { "type": ["string", "null"] },
         "measured_at": { "type": "string", "format": "date-time" },
         "warden_exit": { "type": "integer" },
+        "wall_seconds": { "type": "number", "description": "Wall time of `warden build`, setup included." },
+        "output_bytes": { "type": "integer", "description": "Size of warden's output, payload captures included." },
         "tool": {
           "type": "object",
           "required": ["crate_tracing", "warden"],
@@ -84,12 +86,17 @@
     },
     "routes": {
       "type": "object",
-      "required": ["taken", "A_downloads", "B_bundled", "C_system", "D_tools"],
+      "required": ["taken", "A_downloads", "B_bundled", "C_system", "D_tools", "C_unresolved"],
       "properties": {
-        "taken": { "type": "array", "items": { "enum": ["A", "B", "C", "D", "none", "fail"] } },
+        "taken": { "type": "array", "items": { "enum": ["A", "B", "C", "D", "unresolved", "none", "fail"] } },
         "A_downloads": { "type": "array", "items": { "type": "integer" }, "description": "Ledger sequence numbers of the downloads (entries in `downloads`), redirects excluded." },
         "B_bundled": { "type": "array", "items": { "$ref": "#/$defs/bundled" } },
         "C_system": { "type": "array", "items": { "$ref": "#/$defs/link_lib" } },
+        "C_unresolved": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/link_lib" },
+          "description": "System libraries a build script asked to link that nothing on the system provides. The probe is a library, so only a downstream binary would fail."
+        },
         "D_tools": {
           "type": "array",
           "items": {
@@ -173,7 +180,7 @@
         "purl": { "type": "string" },
         "name": { "type": "string" },
         "kind": { "type": "string" },
-        "origin": { "enum": ["in-tree", "system", "unresolved"] },
+        "origin": { "enum": ["in-tree", "system", "external", "unresolved"], "description": "system: owned by an OS package; external: a file outside the build tree that no OS package owns (a downloaded archive, say)." },
         "path": { "type": "string" },
         "os_package": { "type": "object", "properties": { "name": { "type": "string" }, "version": { "type": ["string", "null"] } } },
         "os_runtime_package": { "type": "object", "properties": { "name": { "type": "string" }, "version": { "type": ["string", "null"] } } },

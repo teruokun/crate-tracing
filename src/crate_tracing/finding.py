@@ -158,11 +158,16 @@ def packages(ev: evidence.Evidence) -> list[dict]:
             tools = Counter(t.tool for t in runs if t.tool not in evidence.COMPILERS | evidence.PROBES)
             links = []
             for lib in links_by_pkg.get(name, []):
+                # System means an OS package owns it. A library outside the
+                # build tree that no package owns came from somewhere else:
+                # ort-sys links the archive it downloaded into ~/.cache.
                 origin = "unresolved"
                 if lib.path.startswith(PROBE_ROOT):
                     origin = "in-tree"
-                elif lib.path:
+                elif lib.package:
                     origin = "system"
+                elif lib.path:
+                    origin = "external"
                 entry = {"name": lib.name, "kind": lib.kind, "origin": origin}
                 if lib.path:
                     entry["path"] = lib.path
@@ -216,7 +221,7 @@ def packages(ev: evidence.Evidence) -> list[dict]:
 def routes(dl: list[dict], pkgs: list[dict], built: bool | None) -> dict:
     """Collapse the evidence into the four routes, each with its basis."""
     a = [d for d in dl if (d["status"] or 0) < 300 or (d["status"] or 0) >= 400]
-    b, c, d_ = [], [], []
+    b, c, d_, missing = [], [], [], []
     for p in pkgs:
         # B needs a library this package built in-tree. A probe compile alone
         # (openssl-sys checks its headers) is not one, and an in-tree library
@@ -228,11 +233,19 @@ def routes(dl: list[dict], pkgs: list[dict], built: bool | None) -> dict:
                 item["native"] = p["bundled_native"]
             b.append(item)
         for lib in p["link_libs"]:
-            if lib["origin"] == "system" and not lib.get("baseline"):
+            if lib.get("baseline"):
+                continue
+            if lib["origin"] == "system":
                 c.append({"purl": p["purl"], **lib})
+            elif lib["origin"] == "unresolved":
+                missing.append({"purl": p["purl"], **lib})
         if p["tools"]:
             d_.append({"purl": p["purl"], "tools": p["tools"]})
     taken = [r for r, items in (("A", a), ("B", b), ("C", c), ("D", d_)) if items]
+    # The probe is a library, so nothing links it: a system library the build
+    # script asked for but the system lacks fails only a downstream binary.
+    if missing and built:
+        taken.append("unresolved")
     if built is False:
         taken.append("fail")
     elif not taken and built:
@@ -243,6 +256,7 @@ def routes(dl: list[dict], pkgs: list[dict], built: bool | None) -> dict:
         "B_bundled": b,
         "C_system": c,
         "D_tools": d_,
+        "C_unresolved": missing,
     }
 
 
@@ -296,6 +310,14 @@ def build(
     dl = downloads(ledger, output_dir)
     pkgs = packages(ev)
     issues = anomalies(ledger, ev)
+    rts = routes(dl, pkgs, built)
+    if "A" not in rts["taken"]:
+        for pkg in pkgs:
+            for lib in pkg["link_libs"]:
+                if lib["origin"] == "external":
+                    issues.append(
+                        f"{pkg['purl']} links {lib['path']}, which no OS package owns and no build download explains"
+                    )
     if not (warden or {}).get("revision"):
         issues.append("BuildWarden commit unknown: the measurement cannot be pinned to a warden build")
     elif warden.get("modified"):
@@ -334,7 +356,7 @@ def build(
             "built": built,
             "failure": evidence.failure(ev),
         },
-        "routes": routes(dl, pkgs, built),
+        "routes": rts,
         "downloads": dl,
         "packages": pkgs,
         "crates": crates(ledger, ev),

@@ -100,7 +100,9 @@ class LedgerBuilder:
         path.write_bytes(data)
         sig = self._rec("open", 0, meta={"method": "POST", "url": f"http://artifacts/{name}", "protocol": "HTTP/1.1"})
         self._rec("checkpoint", 1, -64, sig, hash_block(b"req"), {"headers": []})
-        self._rec("artifact", 3, -len(data), sig, hash_block(data), {"name": name, "context": {}})
+        # The relay leaves out an empty artifact's hash block.
+        block = hash_block(data) if data else None
+        self._rec("artifact", 3, -len(data), sig, block, {"name": name, "context": {}})
         return len(self.records)
 
     def marker(self, name: str) -> int:

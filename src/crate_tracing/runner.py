@@ -7,6 +7,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -21,6 +22,7 @@ class Run:
     inspect_json: Path
     build_exit: int
     inspect_exit: int
+    wall_seconds: float
 
 
 def warden_info(warden: str) -> dict | None:
@@ -66,6 +68,11 @@ def _go_buildinfo(path: str) -> dict:
     return info
 
 
+def output_bytes(out: Path) -> int:
+    """Size of warden's output directory, payload captures included."""
+    return sum(f.stat().st_size for f in out.rglob("*") if f.is_file())
+
+
 def _sha256(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
@@ -107,6 +114,7 @@ def run(
     ]
     if not echo:
         cmd.append("-q")
+    started = time.monotonic()
     with (run_dir / "warden.log").open("w") as log:
         log.write("$ " + " ".join(cmd) + "\n")
         log.flush()
@@ -117,10 +125,11 @@ def run(
             if echo:
                 sys.stdout.write(line)
         build_exit = proc.wait()
+    wall_seconds = time.monotonic() - started
 
     inspect_json = run_dir / "inspect.json"
     with inspect_json.open("w") as f:
         inspect_exit = subprocess.run(
             [warden, "inspect", str(out), "--json"], stdout=f, stderr=subprocess.DEVNULL, check=False
         ).returncode
-    return Run(run_dir, out, inspect_json, build_exit, inspect_exit)
+    return Run(run_dir, out, inspect_json, build_exit, inspect_exit, wall_seconds)
