@@ -1,0 +1,146 @@
+quote	1.0.47	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/quote-454ef128d2f49aba/rustcALmDSl/symbols.o /work/probe/target/debug/build/quote-454ef128d2f49aba/build_script_build-454ef128d2f49aba.build_script_build.2f15c4e71ea745d3-cgu.0.rcgu.o /work/probe/target/debug/build/quote-454ef128d2f49aba/bui
+proc-macro2	1.0.107	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/proc-macro2-d1c483d309dedf61/rustcbOnb1H/symbols.o /work/probe/target/debug/build/proc-macro2-d1c483d309dedf61/build_script_build-d1c483d309dedf61.build_script_build.6afff175563eff46-cgu.0.rcgu.o /work/probe/target/debug/build/proc-macro2-d1
+libc	0.2.191	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/libc-2946c5d050133518/rustcAInn4E/symbols.o /work/probe/target/debug/build/libc-2946c5d050133518/build_script_build-2946c5d050133518.build_script_build.7a91d40ece75ada3-cgu.0.rcgu.o /work/probe/target/debug/build/libc-2946c5d050133518/build_
+rustversion	1.0.23	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/rustversion-43f861ed8e8f81c4/rustcjbOSuO/symbols.o /work/probe/target/debug/build/rustversion-43f861ed8e8f81c4/build_script_build-43f861ed8e8f81c4.build_script_build.d2ee8d243f6b828-cgu.0.rcgu.o /work/probe/target/debug/build/rustversion-43f
+rdkafka-sys	4.10.0+2.12.1	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/rdkafka-sys-c940dd1b4dc107d3/rustcmtIgi6/symbols.o /work/probe/target/debug/build/rdkafka-sys-c940dd1b4dc107d3/build_script_build-c940dd1b4dc107d3.build_script_build.9e29ee70aa6b26b7-cgu.0.rcgu.o /work/probe/target/debug/build/rdkafka-sys-c9
+rustversion	1.0.23	cc	-	-Wl,--version-script=/work/probe/target/debug/deps/rustcoTVWPN/list -Wl,--no-undefined-version -Wl,--fix-cortex-a53-843419 /work/probe/target/debug/deps/rustcoTVWPN/symbols.o /work/probe/target/debug/deps/rustversion-b6eff462c67578d8.rustversion.e4a449fd6907acbb-cgu.0.rcgu.o /work/probe/target/debug
+libz-sys	1.1.31	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/libz-sys-63c5c1f7dfb58cf1/rustcdx95Ql/symbols.o /work/probe/target/debug/build/libz-sys-63c5c1f7dfb58cf1/build_script_build-63c5c1f7dfb58cf1.build_script_build.5af125a298828bb3-cgu.0.rcgu.o /work/probe/target/debug/build/libz-sys-63c5c1f7dfb
+libz-sys	1.1.31	pkg-config	-	--libs --cflags zlib
+libz-sys	1.1.31	pkg-config	-	--modversion zlib
+libz-sys	1.1.31	cc	-	-E /work/probe/target/debug/build/libz-sys-9b3da0b50d3fa417/out/14558665111360626323detect_compiler_family.c
+libz-sys	1.1.31	cc	-	-?
+libz-sys	1.1.31	cc	compile	-O0 -ffunction-sections -fdata-sections -fPIC -Wall -Wextra -mno-omit-leaf-frame-pointer -o /work/probe/target/debug/build/libz-sys-9b3da0b50d3fa417/out/flag_check -c /work/probe/target/debug/build/libz-sys-9b3da0b50d3fa417/out/flag_check.c
+libz-sys	1.1.31	cc	-	-O0 -ffunction-sections -fdata-sections -fPIC -g -gdwarf-4 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -Wall -Wextra src/smoke.c -g0 -o /dev/null -lz
+rdkafka-sys	4.10.0+2.12.1	gcc	-	--version
+rdkafka-sys	4.10.0+2.12.1	clang++	-	--version
+rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--version
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -Wall -Werror _mkltmpB7LnhD.c -o _mkltmpB7LnhD.c.o -fPIC
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Werror _mkltmp8GZkwG.c -o _mkltmp8GZkwG.c.o -shared -Wl,-soname,mkltest.0
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Werror _mkltmpEXtC7v.c -o _mkltmpEXtC7v.c.o -shared -Wl,--version-script=_mkltmpptEso8
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Werror _mkltmpDeWw1o.c -o _mkltmpDeWw1o.c.o
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Werror _mkltmpR4Brgf.c -o _mkltmpR4Brgf.c.o
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpUBW6Fa.c -o _mkltmpUBW6Fa.c.o
+num_enum_derive	0.7.6	cc	-	-Wl,--version-script=/work/probe/target/debug/deps/rustcscUBA5/list -Wl,--no-undefined-version -Wl,--fix-cortex-a53-843419 /work/probe/target/debug/deps/rustcscUBA5/symbols.o /work/probe/target/debug/deps/num_enum_derive-7b8072ea0060f42a.num_enum_derive.6a0d086c39041eae-cgu.0.rcgu.o /work/probe/targ
+rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--short-errors --cflags librt
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpLvqMTf.c -o _mkltmpLvqMTf.c.o -lrt
+rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--short-errors --cflags libpthread
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmp1QS36H.c -o _mkltmp1QS36H.c.o -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--short-errors --cflags c11threads
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpd0n3ef.c -o _mkltmpd0n3ef.c.o -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--short-errors --cflags libdl
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpcdsTNO.c -o _mkltmpcdsTNO.c.o -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--short-errors --cflags zlib
+rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--short-errors --libs zlib
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpKKy5sS.c -o _mkltmpKKy5sS.c.o -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	pkg-config	-	--short-errors --cflags libm
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpKNomaZ.c -o _mkltmpKNomaZ.c.o -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpvwXrCE.c -o _mkltmpvwXrCE.c.o -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	clang++	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpDImUyq.cpp -o _mkltmpDImUyq.cpp.o -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpoR0YOC.c -o _mkltmpoR0YOC.c.o -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmp4mYynT.c -o _mkltmp4mYynT.c.o -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpSQD2dD.c -o _mkltmpSQD2dD.c.o -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpjCPPgq.c -o _mkltmpjCPPgq.c.o -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpck1ETZ.c -o _mkltmpck1ETZ.c.o -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpTgONGE.c -o _mkltmpTgONGE.c.o -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpwNwUZX.c -o _mkltmpwNwUZX.c.o -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmp7i8SPg.c -o _mkltmp7i8SPg.c.o -D_GNU_SOURCE -lpthread -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	python3	-	-V
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpgZJBV8.c -o _mkltmpgZJBV8.c.o -lm -lz -ldl -lpthread -lrt -lpthread -lrt
+rdkafka-sys	4.10.0+2.12.1	make	-	libs
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka.c -o rdkafka.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_broker.c -o rdkafka_broker.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_msg.c -o rdkafka_msg.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_conf.c -o rdkafka_conf.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_topic.c -o rdkafka_topic.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_offset.c -o rdkafka_offset.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_transport.c -o rdkafka_transport.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_buf.c -o rdkafka_buf.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_timer.c -o rdkafka_timer.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_queue.c -o rdkafka_queue.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_op.c -o rdkafka_op.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_request.c -o rdkafka_request.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_cgrp.c -o rdkafka_cgrp.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_pattern.c -o rdkafka_pattern.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_partition.c -o rdkafka_partition.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_subscription.c -o rdkafka_subscription.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_assignment.c -o rdkafka_assignment.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_assignor.c -o rdkafka_assignor.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_range_assignor.c -o rdkafka_range_assignor.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_roundrobin_assignor.c -o rdkafka_roundrobin_assignor.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_sticky_assignor.c -o rdkafka_sticky_assignor.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_feature.c -o rdkafka_feature.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdcrc32.c -o rdcrc32.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c crc32c.c -o crc32c.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdmurmur2.c -o rdmurmur2.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdfnv1a.c -o rdfnv1a.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c cJSON.c -o cJSON.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdaddr.c -o rdaddr.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdrand.c -o rdrand.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdlist.c -o rdlist.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c tinycthread.c -o tinycthread.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c tinycthread_extra.c -o tinycthread_extra.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdlog.c -o rdlog.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdstring.c -o rdstring.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_event.c -o rdkafka_event.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_metadata.c -o rdkafka_metadata.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdregex.c -o rdregex.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdports.c -o rdports.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_metadata_cache.c -o rdkafka_metadata_cache.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdavl.c -o rdavl.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_sasl.c -o rdkafka_sasl.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_sasl_plain.c -o rdkafka_sasl_plain.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_interceptor.c -o rdkafka_interceptor.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_msgset_writer.c -o rdkafka_msgset_writer.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_msgset_reader.c -o rdkafka_msgset_reader.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_header.c -o rdkafka_header.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_admin.c -o rdkafka_admin.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_aux.c -o rdkafka_aux.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_background.c -o rdkafka_background.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_idempotence.c -o rdkafka_idempotence.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_cert.c -o rdkafka_cert.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_txnmgr.c -o rdkafka_txnmgr.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_coord.c -o rdkafka_coord.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdbase64.c -o rdbase64.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdvarint.c -o rdvarint.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdbuf.c -o rdbuf.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdmap.c -o rdmap.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdunittest.c -o rdunittest.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_mock.c -o rdkafka_mock.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_mock_handlers.c -o rdkafka_mock_handlers.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_mock_cgrp.c -o rdkafka_mock_cgrp.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_error.c -o rdkafka_error.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_fetcher.c -o rdkafka_fetcher.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_telemetry.c -o rdkafka_telemetry.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_telemetry_encode.c -o rdkafka_telemetry_encode.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_telemetry_decode.c -o rdkafka_telemetry_decode.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c nanopb/pb_encode.c -o nanopb/pb_encode.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c nanopb/pb_decode.c -o nanopb/pb_decode.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c nanopb/pb_common.c -o nanopb/pb_common.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c opentelemetry/metrics.pb.c -o opentelemetry/metrics.pb.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c opentelemetry/common.pb.c -o opentelemetry/common.pb.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c opentelemetry/resource.pb.c -o opentelemetry/resource.pb.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c snappy.c -o snappy.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdgz.c -o rdgz.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdhdrhistogram.c -o rdhdrhistogram.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_lz4.c -o rdkafka_lz4.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -O3 -c rdxxhash.c -o rdxxhash.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -O3 -c lz4.c -o lz4.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -O3 -c lz4frame.c -o lz4frame.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -O3 -c lz4hc.c -o lz4hc.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rddl.c -o rddl.o
+rdkafka-sys	4.10.0+2.12.1	gcc	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -I. -c rdkafka_plugin.c -o rdkafka_plugin.o
+rdkafka-sys	4.10.0+2.12.1	python3	-	../lds-gen.py
+rdkafka-sys	4.10.0+2.12.1	gcc	-	-shared -Wl,-soname,librdkafka.so.1 -Wl,--version-script=librdkafka.lds rdkafka.o rdkafka_broker.o rdkafka_msg.o rdkafka_topic.o rdkafka_conf.o rdkafka_timer.o rdkafka_offset.o rdkafka_transport.o rdkafka_buf.o rdkafka_queue.o rdkafka_op.o rdkafka_request.o rdkafka_cgrp.o rdkafka_pattern.o rdkafka_p
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c HandleImpl.cpp -o HandleImpl.o
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c RdKafka.cpp -o RdKafka.o
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c ConsumerImpl.cpp -o ConsumerImpl.o
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c ProducerImpl.cpp -o ProducerImpl.o
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c KafkaConsumerImpl.cpp -o KafkaConsumerImpl.o
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c ConfImpl.cpp -o ConfImpl.o
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c TopicPartitionImpl.cpp -o TopicPartitionImpl.o
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c TopicImpl.cpp -o TopicImpl.o
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c MessageImpl.cpp -o MessageImpl.o
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c HeadersImpl.cpp -o HeadersImpl.o
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c QueueImpl.cpp -o QueueImpl.o
+rdkafka-sys	4.10.0+2.12.1	clang++	compile	-MD -MP -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wno-non-virtual-dtor -c MetadataImpl.cpp -o MetadataImpl.o
+rdkafka-sys	4.10.0+2.12.1	clang++	-	-shared -Wl,-soname,librdkafka++.so.1 RdKafka.o ConfImpl.o HandleImpl.o ConsumerImpl.o ProducerImpl.o KafkaConsumerImpl.o TopicImpl.o TopicPartitionImpl.o MessageImpl.o HeadersImpl.o QueueImpl.o MetadataImpl.o -o librdkafka++.so.1 -L../src -lrdkafka

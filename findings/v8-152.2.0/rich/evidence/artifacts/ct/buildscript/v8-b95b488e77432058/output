@@ -1,0 +1,46 @@
+cargo:rerun-if-changed=.gn
+cargo:rerun-if-changed=BUILD.gn
+cargo:rerun-if-changed=src/binding.cc
+cargo:rerun-if-env-changed=CCACHE
+cargo:rerun-if-env-changed=CLANG_BASE_PATH
+cargo:rerun-if-env-changed=CXXSTDLIB
+cargo:rerun-if-env-changed=DENO_TRYBUILD
+cargo:rerun-if-env-changed=DOCS_RS
+cargo:rerun-if-env-changed=GN
+cargo:rerun-if-env-changed=GN_ARGS
+cargo:rerun-if-env-changed=HOST
+cargo:rerun-if-env-changed=LIBCLANG_PATH
+cargo:rerun-if-env-changed=NINJA
+cargo:rerun-if-env-changed=OUT_DIR
+cargo:rerun-if-env-changed=RUSTY_V8_ARCHIVE
+cargo:rerun-if-env-changed=RUSTY_V8_ARCHIVE_SHA256
+cargo:rerun-if-env-changed=RUSTY_V8_BINDGEN_RESOURCE_DIR
+cargo:rerun-if-env-changed=RUSTY_V8_GLIBC_PREFIX
+cargo:rerun-if-env-changed=RUSTY_V8_MIRROR
+cargo:rerun-if-env-changed=RUSTY_V8_MIRROR_TAG
+cargo:rerun-if-env-changed=RUSTY_V8_MIRROR_FALLBACK
+cargo:rerun-if-env-changed=RUSTY_V8_MUSL_SYSROOT
+cargo:rerun-if-env-changed=RUSTY_V8_SKIP_DOWNLOAD
+cargo:rerun-if-env-changed=RUSTY_V8_SRC_BINDING_PATH
+cargo:rerun-if-env-changed=RUSTY_V8_SRC_BINDING_URL
+cargo:rerun-if-env-changed=SCCACHE
+cargo:rerun-if-env-changed=V8_FORCE_DEBUG
+cargo:rerun-if-env-changed=V8_FROM_SOURCE
+cargo:rerun-if-env-changed=PYTHON
+cargo:rerun-if-env-changed=DISABLE_CLANG
+cargo:rerun-if-env-changed=EXTRA_GN_ARGS
+cargo:rerun-if-env-changed=PRINT_GN_ARGS
+cargo:rerun-if-env-changed=CARGO_ENCODED_RUSTFLAGS
+cargo:rustc-link-lib=static=rusty_v8
+lockfile: "/work/probe/target/debug/build/v8.fslock"
+cargo:rustc-env=RUSTY_V8_SRC_BINDING_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/v8-152.2.0/gen/src_binding_release_aarch64-unknown-linux-gnu.rs
+cargo:rustc-link-search=/work/probe/target/debug/gn_out/obj
+static lib URLs: ["https://github.com/denoland/rusty_v8/releases/download/v152.2.0/librusty_v8_release_aarch64-unknown-linux-gnu.a.gz"]
+Trying to fetch from https://github.com/denoland/rusty_v8/releases/download/v152.2.0/librusty_v8_release_aarch64-unknown-linux-gnu.a.gz
+Looking for download in '"/usr/local/cargo/.rusty_v8/v152_2_0_librusty_v8_release_aarch64_unknown_linux_gnu_a_gz"'
+Looking for download in '"/usr/local/cargo/.rusty_v8/https___github_com_denoland_rusty_v8_releases_download_v152_2_0_librusty_v8_release_aarch64_unknown_linux_gnu_a_gz"'
+Downloading https://github.com/denoland/rusty_v8/releases/download/v152.2.0/librusty_v8_release_aarch64-unknown-linux-gnu.a.gz
+Trying with Python...
+Downloading https://github.com/denoland/rusty_v8/releases/download/v152.2.0/librusty_v8_release_aarch64-unknown-linux-gnu.a.gz... Done.
+Copying /work/probe/target/debug/gn_out/obj/librusty_v8.tmp to "/work/probe/target/debug/gn_out/obj/librusty_v8.a"
+Detected GZIP archive: /work/probe/target/debug/gn_out/obj/librusty_v8.tmp

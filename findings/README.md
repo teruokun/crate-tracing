@@ -16,10 +16,10 @@ findings/<measurement-id>/
 
 `finding.json` names the BuildWarden that produced the ledger under
 `measurement.tool.warden` (version, git `revision`, `modified`, binary
-SHA-256). To rebuild that warden:
+SHA-256). To rebuild that warden, set `BUILDWARDEN_REV` to its `revision`:
 
 ```bash
-go install github.com/buildwarden/buildwarden/cmd/warden@<revision>
+make warden BUILDWARDEN_REV=<revision>
 ```
 
 To verify a finding's evidence:

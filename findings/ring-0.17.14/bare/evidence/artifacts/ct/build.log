@@ -1,0 +1,354 @@
+   Compiling find-msvc-tools v0.1.15
+   Compiling shlex v2.0.1
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=find_msvc_tools CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/find-msvc-tools-0.1.15 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/find-msvc-tools-0.1.15/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='Find windows-specific tools, read MSVC versions from the registry and from COM interfaces' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=find-msvc-tools CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/cc-rs' CARGO_PKG_RUST_VERSION=1.65.0 CARGO_PKG_VERSION=0.1.15 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=1 CARGO_PKG_VERSION_PATCH=15 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name find_msvc_tools --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/find-msvc-tools-0.1.15/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no --allow=unexpected_cfgs '--warn=clippy::ptr_cast_constness' '--warn=clippy::ptr_as_ptr' --warn=missing_docs '--warn=clippy::manual_let_else' '--warn=clippy::doc_markdown' '--warn=clippy::disallowed_methods' '--warn=clippy::borrow_as_ptr' --check-cfg 'cfg(disable_clang_cl_tests)' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values())' -C metadata=335b96724d8c57db -C extra-filename=-7b97c6e4807c45ac --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --cap-lints warn`
+   Compiling libc v0.2.191
+   Compiling cfg-if v1.0.5
+   Compiling untrusted v0.9.0
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=shlex CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-2.0.1 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-2.0.1/Cargo.toml CARGO_PKG_AUTHORS='comex <comexk@gmail.com>:Fenhl <fenhl@fenhl.net>:Adrian Taylor <adetaylor@chromium.org>:Alex Touchet <alextouchet@outlook.com>:Daniel Parks <dp+git@oxidized.org>:Garrett Berg <googberg@gmail.com>' CARGO_PKG_DESCRIPTION='Split a string into shell words, like Python'\''s shlex.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=shlex CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/comex/rust-shlex' CARGO_PKG_RUST_VERSION=1.46.0 CARGO_PKG_VERSION=2.0.1 CARGO_PKG_VERSION_MAJOR=2 CARGO_PKG_VERSION_MINOR=0 CARGO_PKG_VERSION_PATCH=1 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name shlex --edition=2018 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-2.0.1/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no --warn=unexpected_cfgs --check-cfg 'cfg(manual_codegen_check)' --cfg 'feature="default"' --cfg 'feature="std"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("default", "std"))' -C metadata=2d5331fc87e6d2a8 -C extra-filename=-5ca74b1d3ebc9f2a --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --cap-lints warn`
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=build_script_build CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='Raw FFI bindings to platform libraries like libc.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=libc CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/libc' CARGO_PKG_RUST_VERSION=1.65 CARGO_PKG_VERSION=0.2.191 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=2 CARGO_PKG_VERSION_PATCH=191 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name build_script_build --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no --allow=unused_qualifications '--warn=clippy::unnecessary_semicolon' '--allow=clippy::unnecessary_cast' '--warn=clippy::ptr_as_ptr' '--allow=clippy::non_minimal_cfg' '--allow=clippy::missing_safety_doc' '--warn=clippy::map_unwrap_or' '--warn=clippy::manual_assert' '--allow=clippy::identity_op' '--warn=clippy::explicit_iter_loop' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("align", "const-extern-fn", "default", "extra_traits", "rustc-dep-of-std", "rustc-std-workspace-core", "std", "use_std"))' -C metadata=bf4a7a325a6b53ac -C extra-filename=-020178aa2bb66fc7 --out-dir /work/probe/target/debug/build/libc-020178aa2bb66fc7 -L dependency=/work/probe/target/debug/deps --cap-lints warn`
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=cfg_if CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cfg-if-1.0.5 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cfg-if-1.0.5/Cargo.toml CARGO_PKG_AUTHORS='Alex Crichton <alex@alexcrichton.com>' CARGO_PKG_DESCRIPTION='A macro to ergonomically define an item depending on a large number of #[cfg]
+parameters. Structured like an if-else chain, the first matching branch is the
+item that gets emitted.
+' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=cfg-if CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/cfg-if' CARGO_PKG_RUST_VERSION=1.32 CARGO_PKG_VERSION=1.0.5 CARGO_PKG_VERSION_MAJOR=1 CARGO_PKG_VERSION_MINOR=0 CARGO_PKG_VERSION_PATCH=5 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name cfg_if --edition=2018 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cfg-if-1.0.5/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("core", "rustc-dep-of-std"))' -C metadata=91554986961a667f -C extra-filename=-b97e8460fae2c9d2 --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --cap-lints warn`
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=untrusted CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/untrusted-0.9.0 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/untrusted-0.9.0/Cargo.toml CARGO_PKG_AUTHORS='Brian Smith <brian@briansmith.org>' CARGO_PKG_DESCRIPTION='Safe, fast, zero-panic, zero-crashing, zero-allocation parsing of untrusted inputs in Rust.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE=ISC CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=untrusted CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/briansmith/untrusted' CARGO_PKG_RUST_VERSION='' CARGO_PKG_VERSION=0.9.0 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=9 CARGO_PKG_VERSION_PATCH=0 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name untrusted --edition=2018 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/untrusted-0.9.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values())' -C metadata=f2f3672e767f3b3a -C extra-filename=-e22c3f6dab662c8c --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --cap-lints warn`
+   Compiling cc v1.10.0
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=cc CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cc-1.10.0 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cc-1.10.0/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='A build-time dependency for Cargo build scripts to assist in invoking the native
+C compiler to compile native C code into a static archive to be linked into Rust
+code.
+' CARGO_PKG_HOMEPAGE='https://github.com/rust-lang/cc-rs' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=cc CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/cc-rs' CARGO_PKG_RUST_VERSION=1.65.0 CARGO_PKG_VERSION=1.10.0 CARGO_PKG_VERSION_MAJOR=1 CARGO_PKG_VERSION_MINOR=10 CARGO_PKG_VERSION_PATCH=0 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name cc --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cc-1.10.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no --allow=unexpected_cfgs '--warn=clippy::ptr_cast_constness' '--warn=clippy::ptr_as_ptr' --warn=missing_docs '--warn=clippy::manual_let_else' '--warn=clippy::doc_markdown' '--warn=clippy::disallowed_methods' '--warn=clippy::borrow_as_ptr' --check-cfg 'cfg(disable_clang_cl_tests)' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("compile-commands", "jobserver", "parallel"))' -C metadata=b451b72fcc4eb25b -C extra-filename=-d94142bd62a771d9 --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --extern find_msvc_tools=/work/probe/target/debug/deps/libfind_msvc_tools-7b97c6e4807c45ac.rmeta --extern shlex=/work/probe/target/debug/deps/libshlex-5ca74b1d3ebc9f2a.rmeta --cap-lints warn`
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CFG_DEBUG_ASSERTIONS='' CARGO_CFG_FEATURE='' CARGO_CFG_PANIC=unwind CARGO_CFG_TARGET_ABI='' CARGO_CFG_TARGET_ARCH=aarch64 CARGO_CFG_TARGET_ENDIAN=little CARGO_CFG_TARGET_ENV=gnu CARGO_CFG_TARGET_FAMILY=unix CARGO_CFG_TARGET_FEATURE=neon CARGO_CFG_TARGET_HAS_ATOMIC=128,16,32,64,8,ptr CARGO_CFG_TARGET_HAS_ATOMIC_PRIMITIVE_ALIGNMENT=128,16,32,64,8,ptr CARGO_CFG_TARGET_OS=linux CARGO_CFG_TARGET_POINTER_WIDTH=64 CARGO_CFG_TARGET_VENDOR=unknown CARGO_CFG_UNIX='' CARGO_ENCODED_RUSTFLAGS='' CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='Raw FFI bindings to platform libraries like libc.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=libc CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/libc' CARGO_PKG_RUST_VERSION=1.65 CARGO_PKG_VERSION=0.2.191 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=2 CARGO_PKG_VERSION_PATCH=191 CARGO_PKG_VERSION_PRE='' DEBUG=true HOST=aarch64-unknown-linux-gnu LD_LIBRARY_PATH='/work/probe/target/debug:/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib/rustlib/aarch64-unknown-linux-gnu/lib:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' NUM_JOBS=9 OPT_LEVEL=0 OUT_DIR=/work/probe/target/debug/build/libc-1d052874fd66761a/out PROFILE=debug RUSTC=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc RUSTDOC=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustdoc TARGET=aarch64-unknown-linux-gnu /work/probe/target/debug/build/libc-020178aa2bb66fc7/build-script-build`
+[libc 0.2.191] cargo:rerun-if-changed=build.rs
+[libc 0.2.191] cargo:rerun-if-env-changed=LIBC_BUILD_VERBOSE
+[libc 0.2.191] cargo:rerun-if-env-changed=RUST_LIBC_UNSTABLE_FREEBSD_VERSION
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(libc_deny_warnings)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(emscripten_old_stat_abi)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(emscripten_fsblkcnt_is_32bit)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(emscripten_sigset_large)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(emscripten_nfds_is_ulong)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(espidf_picolibc)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(espidf_time32)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd10)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd11)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd12)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd13)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd14)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(freebsd15)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(libc_elfv2)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(vxworks_lt_25_09)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(libc_pauthtest)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(gnu_file_offset_bits64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(gnu_time_bits64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(linux_time_bits64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(musl_v1_2)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(musl32_time64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(musl_redir_time64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(uclibc32_time64)
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(target_os,values("switch","aix","ohos","hurd","rtems","visionos","nuttx","cygwin","qurt","qnx","helenos"))
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(target_env,values("illumos","wasi","aix","ohos","nto71_iosock"))
+[libc 0.2.191] cargo:rustc-check-cfg=cfg(target_arch,values("loongarch64","mips32r6","mips64r6","csky"))
+[libc 0.2.191] cargo:rustc-cfg=linux_time_bits64
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=libc CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='Raw FFI bindings to platform libraries like libc.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=libc CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/libc' CARGO_PKG_RUST_VERSION=1.65 CARGO_PKG_VERSION=0.2.191 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=2 CARGO_PKG_VERSION_PATCH=191 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' OUT_DIR=/work/probe/target/debug/build/libc-1d052874fd66761a/out /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name libc --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --allow=unused_qualifications '--warn=clippy::unnecessary_semicolon' '--allow=clippy::unnecessary_cast' '--warn=clippy::ptr_as_ptr' '--allow=clippy::non_minimal_cfg' '--allow=clippy::missing_safety_doc' '--warn=clippy::map_unwrap_or' '--warn=clippy::manual_assert' '--allow=clippy::identity_op' '--warn=clippy::explicit_iter_loop' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("align", "const-extern-fn", "default", "extra_traits", "rustc-dep-of-std", "rustc-std-workspace-core", "std", "use_std"))' -C metadata=3f5fc0c767e88f9c -C extra-filename=-b58bd9a0b70118a9 --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --cap-lints warn --cfg linux_time_bits64 --check-cfg 'cfg(libc_deny_warnings)' --check-cfg 'cfg(emscripten_old_stat_abi)' --check-cfg 'cfg(emscripten_fsblkcnt_is_32bit)' --check-cfg 'cfg(emscripten_sigset_large)' --check-cfg 'cfg(emscripten_nfds_is_ulong)' --check-cfg 'cfg(espidf_picolibc)' --check-cfg 'cfg(espidf_time32)' --check-cfg 'cfg(freebsd10)' --check-cfg 'cfg(freebsd11)' --check-cfg 'cfg(freebsd12)' --check-cfg 'cfg(freebsd13)' --check-cfg 'cfg(freebsd14)' --check-cfg 'cfg(freebsd15)' --check-cfg 'cfg(libc_elfv2)' --check-cfg 'cfg(vxworks_lt_25_09)' --check-cfg 'cfg(libc_pauthtest)' --check-cfg 'cfg(gnu_file_offset_bits64)' --check-cfg 'cfg(gnu_time_bits64)' --check-cfg 'cfg(linux_time_bits64)' --check-cfg 'cfg(musl_v1_2)' --check-cfg 'cfg(musl32_time64)' --check-cfg 'cfg(musl_redir_time64)' --check-cfg 'cfg(uclibc32_time64)' --check-cfg 'cfg(target_os,values("switch","aix","ohos","hurd","rtems","visionos","nuttx","cygwin","qurt","qnx","helenos"))' --check-cfg 'cfg(target_env,values("illumos","wasi","aix","ohos","nto71_iosock"))' --check-cfg 'cfg(target_arch,values("loongarch64","mips32r6","mips64r6","csky"))'`
+   Compiling getrandom v0.2.17
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=getrandom CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.17 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.17/Cargo.toml CARGO_PKG_AUTHORS='The Rand Project Developers' CARGO_PKG_DESCRIPTION='A small cross-platform library for retrieving random data from system source' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=getrandom CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-random/getrandom' CARGO_PKG_RUST_VERSION='' CARGO_PKG_VERSION=0.2.17 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=2 CARGO_PKG_VERSION_PATCH=17 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name getrandom --edition=2018 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.17/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("compiler_builtins", "core", "custom", "js", "js-sys", "linux_disable_fallback", "rdrand", "rustc-dep-of-std", "std", "test-in-browser", "wasm-bindgen"))' -C metadata=e5c1b809557789c2 -C extra-filename=-89c6b369e2bf7854 --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --extern cfg_if=/work/probe/target/debug/deps/libcfg_if-b97e8460fae2c9d2.rmeta --extern libc=/work/probe/target/debug/deps/liblibc-b58bd9a0b70118a9.rmeta --cap-lints warn`
+   Compiling ring v0.17.14
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=build_script_build CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='An experiment.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='Apache-2.0 AND ISC' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=ring CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/briansmith/ring' CARGO_PKG_RUST_VERSION=1.66.0 CARGO_PKG_VERSION=0.17.14 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=17 CARGO_PKG_VERSION_PATCH=14 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name build_script_build --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no --cfg 'feature="alloc"' --cfg 'feature="default"' --cfg 'feature="dev_urandom_fallback"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("alloc", "default", "dev_urandom_fallback", "less-safe-getrandom-custom-or-rdrand", "less-safe-getrandom-espidf", "slow_tests", "std", "test_logging", "unstable-testing-arm-no-hw", "unstable-testing-arm-no-neon", "wasm32_unknown_unknown_js"))' -C metadata=cf7482fe0abd7c1b -C extra-filename=-687e57a1074cb740 --out-dir /work/probe/target/debug/build/ring-687e57a1074cb740 -L dependency=/work/probe/target/debug/deps --extern cc=/work/probe/target/debug/deps/libcc-d94142bd62a771d9.rlib --cap-lints warn`
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CFG_DEBUG_ASSERTIONS='' CARGO_CFG_FEATURE=alloc,default,dev_urandom_fallback CARGO_CFG_PANIC=unwind CARGO_CFG_TARGET_ABI='' CARGO_CFG_TARGET_ARCH=aarch64 CARGO_CFG_TARGET_ENDIAN=little CARGO_CFG_TARGET_ENV=gnu CARGO_CFG_TARGET_FAMILY=unix CARGO_CFG_TARGET_FEATURE=neon CARGO_CFG_TARGET_HAS_ATOMIC=128,16,32,64,8,ptr CARGO_CFG_TARGET_HAS_ATOMIC_PRIMITIVE_ALIGNMENT=128,16,32,64,8,ptr CARGO_CFG_TARGET_OS=linux CARGO_CFG_TARGET_POINTER_WIDTH=64 CARGO_CFG_TARGET_VENDOR=unknown CARGO_CFG_UNIX='' CARGO_ENCODED_RUSTFLAGS='' CARGO_FEATURE_ALLOC=1 CARGO_FEATURE_DEFAULT=1 CARGO_FEATURE_DEV_URANDOM_FALLBACK=1 CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14 CARGO_MANIFEST_LINKS=ring_core_0_17_14_ CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='An experiment.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='Apache-2.0 AND ISC' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=ring CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/briansmith/ring' CARGO_PKG_RUST_VERSION=1.66.0 CARGO_PKG_VERSION=0.17.14 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=17 CARGO_PKG_VERSION_PATCH=14 CARGO_PKG_VERSION_PRE='' DEBUG=true HOST=aarch64-unknown-linux-gnu LD_LIBRARY_PATH='/work/probe/target/debug:/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib/rustlib/aarch64-unknown-linux-gnu/lib:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' NUM_JOBS=9 OPT_LEVEL=0 OUT_DIR=/work/probe/target/debug/build/ring-b7c510510592e9a4/out PROFILE=debug RUSTC=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc RUSTDOC=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustdoc TARGET=aarch64-unknown-linux-gnu /work/probe/target/debug/build/ring-687e57a1074cb740/build-script-build`
+[ring 0.17.14] cargo:rerun-if-env-changed=CARGO_MANIFEST_DIR
+[ring 0.17.14] cargo:rerun-if-env-changed=CARGO_PKG_NAME
+[ring 0.17.14] cargo:rerun-if-env-changed=CARGO_PKG_VERSION_MAJOR
+[ring 0.17.14] cargo:rerun-if-env-changed=CARGO_PKG_VERSION_MINOR
+[ring 0.17.14] cargo:rerun-if-env-changed=CARGO_PKG_VERSION_PATCH
+[ring 0.17.14] cargo:rerun-if-env-changed=CARGO_PKG_VERSION_PRE
+[ring 0.17.14] cargo:rerun-if-env-changed=CARGO_MANIFEST_LINKS
+[ring 0.17.14] cargo:rerun-if-env-changed=RING_PREGENERATE_ASM
+[ring 0.17.14] cargo:rerun-if-env-changed=OUT_DIR
+[ring 0.17.14] cargo:rerun-if-env-changed=CARGO_CFG_TARGET_ARCH
+[ring 0.17.14] cargo:rerun-if-env-changed=CARGO_CFG_TARGET_OS
+[ring 0.17.14] cargo:rerun-if-env-changed=CARGO_CFG_TARGET_ENV
+[ring 0.17.14] cargo:rerun-if-env-changed=CARGO_CFG_TARGET_ENDIAN
+[ring 0.17.14] cargo:rerun-if-env-changed=CC_aarch64-unknown-linux-gnu
+[ring 0.17.14] CC_aarch64-unknown-linux-gnu = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CC_aarch64_unknown_linux_gnu
+[ring 0.17.14] CC_aarch64_unknown_linux_gnu = None
+[ring 0.17.14] cargo:rerun-if-env-changed=HOST_CC
+[ring 0.17.14] HOST_CC = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CC
+[ring 0.17.14] CC = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+[ring 0.17.14] cargo:rerun-if-env-changed=CPATH
+[ring 0.17.14] cargo:rerun-if-env-changed=C_INCLUDE_PATH
+[ring 0.17.14] cargo:rerun-if-env-changed=CPLUS_INCLUDE_PATH
+[ring 0.17.14] cargo:rerun-if-env-changed=OBJC_INCLUDE_PATH
+[ring 0.17.14] cargo:rerun-if-env-changed=OBJCPLUS_INCLUDE_PATH
+[ring 0.17.14] cargo:rerun-if-env-changed=COMPILER_PATH
+[ring 0.17.14] cargo:rerun-if-env-changed=SOURCE_DATE_EPOCH
+[ring 0.17.14] cargo:rerun-if-env-changed=GCC_EXEC_PREFIX
+[ring 0.17.14] cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+[ring 0.17.14] CRATE_CC_NO_DEFAULTS = None
+[ring 0.17.14] CRATE_CC_NO_DEFAULTS = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CFLAGS
+[ring 0.17.14] CFLAGS = None
+[ring 0.17.14] cargo:rerun-if-env-changed=HOST_CFLAGS
+[ring 0.17.14] HOST_CFLAGS = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CFLAGS_aarch64_unknown_linux_gnu
+[ring 0.17.14] CFLAGS_aarch64_unknown_linux_gnu = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CFLAGS_aarch64-unknown-linux-gnu
+[ring 0.17.14] CFLAGS_aarch64-unknown-linux-gnu = None
+[ring 0.17.14] CFLAGS = None
+[ring 0.17.14] HOST_CFLAGS = None
+[ring 0.17.14] CFLAGS_aarch64_unknown_linux_gnu = None
+[ring 0.17.14] CFLAGS_aarch64-unknown-linux-gnu = None
+[ring 0.17.14] cargo:rustc-link-lib=static=ring_core_0_17_14_
+[ring 0.17.14] cargo:rerun-if-env-changed=CC_aarch64-unknown-linux-gnu
+[ring 0.17.14] CC_aarch64-unknown-linux-gnu = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CC_aarch64_unknown_linux_gnu
+[ring 0.17.14] CC_aarch64_unknown_linux_gnu = None
+[ring 0.17.14] cargo:rerun-if-env-changed=HOST_CC
+[ring 0.17.14] HOST_CC = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CC
+[ring 0.17.14] CC = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+[ring 0.17.14] cargo:rerun-if-env-changed=CPATH
+[ring 0.17.14] cargo:rerun-if-env-changed=C_INCLUDE_PATH
+[ring 0.17.14] cargo:rerun-if-env-changed=CPLUS_INCLUDE_PATH
+[ring 0.17.14] cargo:rerun-if-env-changed=OBJC_INCLUDE_PATH
+[ring 0.17.14] cargo:rerun-if-env-changed=OBJCPLUS_INCLUDE_PATH
+[ring 0.17.14] cargo:rerun-if-env-changed=COMPILER_PATH
+[ring 0.17.14] cargo:rerun-if-env-changed=SOURCE_DATE_EPOCH
+[ring 0.17.14] cargo:rerun-if-env-changed=GCC_EXEC_PREFIX
+[ring 0.17.14] cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+[ring 0.17.14] CRATE_CC_NO_DEFAULTS = None
+[ring 0.17.14] CRATE_CC_NO_DEFAULTS = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CFLAGS
+[ring 0.17.14] CFLAGS = None
+[ring 0.17.14] cargo:rerun-if-env-changed=HOST_CFLAGS
+[ring 0.17.14] HOST_CFLAGS = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CFLAGS_aarch64_unknown_linux_gnu
+[ring 0.17.14] CFLAGS_aarch64_unknown_linux_gnu = None
+[ring 0.17.14] cargo:rerun-if-env-changed=CFLAGS_aarch64-unknown-linux-gnu
+[ring 0.17.14] CFLAGS_aarch64-unknown-linux-gnu = None
+[ring 0.17.14] CFLAGS = None
+[ring 0.17.14] HOST_CFLAGS = None
+[ring 0.17.14] CFLAGS_aarch64_unknown_linux_gnu = None
+[ring 0.17.14] CFLAGS_aarch64-unknown-linux-gnu = None
+[ring 0.17.14] cargo:rustc-link-lib=static=ring_core_0_17_14__test
+[ring 0.17.14] cargo:rustc-link-search=native=/work/probe/target/debug/build/ring-b7c510510592e9a4/out
+[ring 0.17.14] cargo:rerun-if-changed=crypto/mem.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/perlasm/x86gas.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/perlasm/arm-xlate.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/perlasm/x86_64-xlate.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/perlasm/x86nasm.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/perlasm/x86asm.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/crypto.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/cpu_intel.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/poly1305/poly1305_arm_asm.S
+[ring 0.17.14] cargo:rerun-if-changed=crypto/poly1305/poly1305_arm.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/poly1305/poly1305.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/curve25519/curve25519_tables.h
+[ring 0.17.14] cargo:rerun-if-changed=crypto/curve25519/asm/x25519-asm-arm.S
+[ring 0.17.14] cargo:rerun-if-changed=crypto/curve25519/curve25519.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/curve25519/curve25519_64_adx.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/curve25519/internal.h
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/bn/asm/x86_64-mont.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/bn/asm/armv4-mont.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/bn/asm/armv8-mont.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/bn/asm/x86_64-mont5.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/bn/asm/x86-mont.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/bn/montgomery_inv.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/bn/internal.h
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/bn/montgomery.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/aesni-gcm-x86_64.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/vpaes-x86.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/aesni-x86_64.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/aesv8-armx.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/ghash-x86_64.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/vpaes-armv7.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/vpaes-armv8.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/ghash-armv4.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/aesni-x86.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/bsaes-armv7.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/vpaes-x86_64.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/aesv8-gcm-armv8.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/aes-gcm-avx2-x86_64.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/ghash-neon-armv8.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/ghashv8-armx.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/ghash-x86.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/aes/aes_nohw.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/sha/asm/sha512-armv4.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/sha/asm/sha512-armv8.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/sha/asm/sha256-armv4.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/sha/asm/sha512-x86_64.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256-nistz.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256-nistz-table.h
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256-nistz.h
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/ecp_nistz.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/asm/p256-x86_64-asm.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/asm/p256-armv8-asm.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256_shared.h
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/gfp_p384.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/util.h
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/gfp_p256.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256_table.h
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/ecp_nistz384.h
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/ecp_nistz.h
+[ring 0.17.14] cargo:rerun-if-changed=crypto/fipsmodule/ec/ecp_nistz384.inl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/limbs/limbs.inl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/limbs/limbs.h
+[ring 0.17.14] cargo:rerun-if-changed=crypto/limbs/limbs.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/cipher/asm/chacha20_poly1305_armv8.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/cipher/asm/chacha20_poly1305_x86_64.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/chacha/asm/chacha-x86_64.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/chacha/asm/chacha-x86.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/chacha/asm/chacha-armv4.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/chacha/asm/chacha-armv8.pl
+[ring 0.17.14] cargo:rerun-if-changed=crypto/constant_time_test.c
+[ring 0.17.14] cargo:rerun-if-changed=crypto/internal.h
+[ring 0.17.14] cargo:rerun-if-changed=include/ring-core/check.h
+[ring 0.17.14] cargo:rerun-if-changed=include/ring-core/asm_base.h
+[ring 0.17.14] cargo:rerun-if-changed=include/ring-core/type_check.h
+[ring 0.17.14] cargo:rerun-if-changed=include/ring-core/aes.h
+[ring 0.17.14] cargo:rerun-if-changed=include/ring-core/base.h
+[ring 0.17.14] cargo:rerun-if-changed=include/ring-core/mem.h
+[ring 0.17.14] cargo:rerun-if-changed=include/ring-core/target.h
+[ring 0.17.14] cargo:rerun-if-changed=third_party/fiat/curve25519_64_msvc.h
+[ring 0.17.14] cargo:rerun-if-changed=third_party/fiat/p256_64_msvc.h
+[ring 0.17.14] cargo:rerun-if-changed=third_party/fiat/asm/fiat_curve25519_adx_square.S
+[ring 0.17.14] cargo:rerun-if-changed=third_party/fiat/asm/fiat_curve25519_adx_mul.S
+[ring 0.17.14] cargo:rerun-if-changed=third_party/fiat/p256_64.h
+[ring 0.17.14] cargo:rerun-if-changed=third_party/fiat/curve25519_32.h
+[ring 0.17.14] cargo:rerun-if-changed=third_party/fiat/curve25519_64_adx.h
+[ring 0.17.14] cargo:rerun-if-changed=third_party/fiat/curve25519_64.h
+[ring 0.17.14] cargo:rerun-if-changed=third_party/fiat/p256_32.h
+[ring 0.17.14] cargo:rerun-if-changed=third_party/fiat/LICENSE
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=ring CARGO_MANIFEST_DIR=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14 CARGO_MANIFEST_PATH=/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='An experiment.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='Apache-2.0 AND ISC' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=ring CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/briansmith/ring' CARGO_PKG_RUST_VERSION=1.66.0 CARGO_PKG_VERSION=0.17.14 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=17 CARGO_PKG_VERSION_PATCH=14 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' OUT_DIR=/work/probe/target/debug/build/ring-b7c510510592e9a4/out /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name ring --edition=2021 /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --cfg 'feature="alloc"' --cfg 'feature="default"' --cfg 'feature="dev_urandom_fallback"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("alloc", "default", "dev_urandom_fallback", "less-safe-getrandom-custom-or-rdrand", "less-safe-getrandom-espidf", "slow_tests", "std", "test_logging", "unstable-testing-arm-no-hw", "unstable-testing-arm-no-neon", "wasm32_unknown_unknown_js"))' -C metadata=dddfabb431a116fb -C extra-filename=-2ea9e3b505fbd786 --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --extern cfg_if=/work/probe/target/debug/deps/libcfg_if-b97e8460fae2c9d2.rmeta --extern getrandom=/work/probe/target/debug/deps/libgetrandom-89c6b369e2bf7854.rmeta --extern libc=/work/probe/target/debug/deps/liblibc-b58bd9a0b70118a9.rmeta --extern untrusted=/work/probe/target/debug/deps/libuntrusted-e22c3f6dab662c8c.rmeta --cap-lints warn -L native=/work/probe/target/debug/build/ring-b7c510510592e9a4/out -l static=ring_core_0_17_14_ -l static=ring_core_0_17_14__test`
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/src/polyfill/slice/as_chunks.rs:19:44
+   |
+19 | pub fn as_chunks<T, const N: usize>(slice: &[T]) -> (AsChunks<T, N>, &[T]) {
+   |                                            ^^^^      ^^^^^^^^^^^^^^  ^^^^ the same lifetime is elided here
+   |                                            |         |
+   |                                            |         the same lifetime is hidden here
+   |                                            the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+   = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+   |
+19 | pub fn as_chunks<T, const N: usize>(slice: &[T]) -> (AsChunks<'_, T, N>, &[T]) {
+   |                                                               +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/src/polyfill/slice/as_chunks_mut.rs:18:48
+   |
+18 | pub fn as_chunks_mut<T, const N: usize>(slice: &mut [T]) -> (AsChunksMut<T, N>, &mut [T]) {
+   |                                                ^^^^^^^^      ^^^^^^^^^^^^^^^^^  ^^^^^^^^ the same lifetime is elided here
+   |                                                |             |
+   |                                                |             the same lifetime is hidden here
+   |                                                the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+18 | pub fn as_chunks_mut<T, const N: usize>(slice: &mut [T]) -> (AsChunksMut<'_, T, N>, &mut [T]) {
+   |                                                                          +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/src/polyfill/slice/as_chunks_mut.rs:60:19
+   |
+60 |     pub fn as_ref(&self) -> AsChunks<T, N> {
+   |                   ^^^^^     ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                   |
+   |                   the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+60 |     pub fn as_ref(&self) -> AsChunks<'_, T, N> {
+   |                                      +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/src/polyfill/slice/as_chunks_mut.rs:67:47
+   |
+67 |     pub fn chunks_mut<const CHUNK_LEN: usize>(&mut self) -> AsChunksMutChunksMutIter<T, N> {
+   |                                               ^^^^^^^^^     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                                               |
+   |                                               the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+67 |     pub fn chunks_mut<const CHUNK_LEN: usize>(&mut self) -> AsChunksMutChunksMutIter<'_, T, N> {
+   |                                                                                      +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/src/arithmetic/bigint/modulus.rs:116:27
+    |
+116 |     pub(crate) fn modulus(&self, cpu_features: cpu::Features) -> Modulus<M> {
+    |                           ^^^^^ the lifetime is elided here      ^^^^^^^^^^ the same lifetime is hidden here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+116 |     pub(crate) fn modulus(&self, cpu_features: cpu::Features) -> Modulus<'_, M> {
+    |                                                                          +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/src/arithmetic/limbs512/storage.rs:45:9
+   |
+45 |         &mut self,
+   |         ^^^^^^^^^ the lifetime is elided here
+...
+48 |     ) -> Result<AsChunksMut<Limb, LIMBS_PER_CHUNK>, LenMismatchError> {
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+48 |     ) -> Result<AsChunksMut<'_, Limb, LIMBS_PER_CHUNK>, LenMismatchError> {
+   |                             +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/src/pkcs8.rs:56:21
+   |
+56 |     fn alg_id_value(&self) -> untrusted::Input {
+   |                     ^^^^^     ^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                     |
+   |                     the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+56 |     fn alg_id_value(&self) -> untrusted::Input<'_> {
+   |                                               ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/src/pkcs8.rs:65:22
+   |
+65 |     pub fn curve_oid(&self) -> untrusted::Input {
+   |                      ^^^^^     ^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                      |
+   |                      the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+65 |     pub fn curve_oid(&self) -> untrusted::Input<'_> {
+   |                                                ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ring-0.17.14/src/rsa/public_modulus.rs:91:25
+   |
+91 |     pub(super) fn value(&self, cpu_features: cpu::Features) -> bigint::Modulus<N> {
+   |                         ^^^^^ the lifetime is elided here      ^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+91 |     pub(super) fn value(&self, cpu_features: cpu::Features) -> bigint::Modulus<'_, N> {
+   |                                                                                +++
+
+   Compiling ct-probe v0.0.0 (/work/probe)
+     Running `CARGO=/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=ct_probe CARGO_MANIFEST_DIR=/work/probe CARGO_MANIFEST_PATH=/work/probe/Cargo.toml CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=ct-probe CARGO_PKG_README='' CARGO_PKG_REPOSITORY='' CARGO_PKG_RUST_VERSION='' CARGO_PKG_VERSION=0.0.0 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=0 CARGO_PKG_VERSION_PATCH=0 CARGO_PKG_VERSION_PRE='' CARGO_PRIMARY_PACKAGE=1 LD_LIBRARY_PATH='/work/probe/target/debug/deps:/usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.98.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name ct_probe --edition=2021 src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values())' -C metadata=ad7dc6a1c8555379 -C extra-filename=-5d89a843da44a31a --out-dir /work/probe/target/debug/deps -L dependency=/work/probe/target/debug/deps --extern ring=/work/probe/target/debug/deps/libring-2ea9e3b505fbd786.rmeta -L native=/work/probe/target/debug/build/ring-b7c510510592e9a4/out`
+warning: `ring` (lib) generated 9 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.26s

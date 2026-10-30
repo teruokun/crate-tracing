@@ -1,0 +1,8 @@
+libc	0.2.191	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/libc-2946c5d050133518/rustckUnb74/symbols.o /work/probe/target/debug/build/libc-2946c5d050133518/build_script_build-2946c5d050133518.build_script_build.7a91d40ece75ada3-cgu.0.rcgu.o /work/probe/target/debug/build/libc-2946c5d050133518/build_
+openssl-sys	0.9.117	cc	-	-Wl,--fix-cortex-a53-843419 /work/probe/target/debug/build/openssl-sys-77251ee9dd99b2c5/rustcdXQ0bo/symbols.o /work/probe/target/debug/build/openssl-sys-77251ee9dd99b2c5/build_script_main-77251ee9dd99b2c5.build_script_main.5a4c0d48261f770-cgu.0.rcgu.o /work/probe/target/debug/build/openssl-sys-77251
+openssl-sys	0.9.117	pkg-config	-	--libs --cflags openssl
+openssl-sys	0.9.117	pkg-config	-	--modversion openssl
+openssl-sys	0.9.117	cc	-	-E /work/probe/target/debug/build/openssl-sys-7072da406c8cb2cb/out/12941057560445970351detect_compiler_family.c
+openssl-sys	0.9.117	cc	-	-?
+openssl-sys	0.9.117	cc	compile	-O0 -ffunction-sections -fdata-sections -fPIC -Wall -Wextra -mno-omit-leaf-frame-pointer -o /work/probe/target/debug/build/openssl-sys-7072da406c8cb2cb/out/flag_check -c /work/probe/target/debug/build/openssl-sys-7072da406c8cb2cb/out/flag_check.c
+openssl-sys	0.9.117	cc	-	-O0 -ffunction-sections -fdata-sections -fPIC -g -gdwarf-4 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -I /usr/include -Wall -Wextra -E build/expando.c

@@ -1,0 +1,15 @@
+    Updating crates.io index
+     Locking 12 packages to latest compatible versions
+ Downloading crates ...
+  Downloaded libgit2-sys v0.18.8+1.9.7
+  Downloaded pkg-config v0.3.34
+  Downloaded libz-sys v1.1.31
+  Downloaded cc v1.10.0
+  Downloaded getrandom v0.4.3
+  Downloaded find-msvc-tools v0.1.15
+  Downloaded shlex v2.0.1
+  Downloaded vcpkg v0.2.15
+  Downloaded jobserver v0.1.35
+  Downloaded r-efi v6.0.0
+  Downloaded libc v0.2.191
+  Downloaded cfg-if v1.0.5

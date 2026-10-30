@@ -1,0 +1,195 @@
+{
+  "schema": "https://github.com/teruokun/crate-tracing/schemas/finding-v1.schema.json",
+  "subject": {
+    "purl": "pkg:cargo/libsqlite3-sys@0.39.1",
+    "name": "libsqlite3-sys",
+    "version": "0.39.1",
+    "features": [],
+    "default_features": true
+  },
+  "measurement": {
+    "id": "libsqlite3-sys-0.39.1",
+    "profile": {
+      "name": "rich",
+      "image": "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+      "apt_packages": [
+        "pkg-config",
+        "make",
+        "cmake",
+        "perl",
+        "python3",
+        "git",
+        "curl",
+        "clang",
+        "libclang-dev",
+        "nasm",
+        "protobuf-compiler",
+        "libssl-dev",
+        "zlib1g-dev",
+        "libzstd-dev",
+        "liblz4-dev",
+        "libsqlite3-dev",
+        "libgit2-dev",
+        "libssh2-1-dev",
+        "libcurl4-openssl-dev",
+        "libsasl2-dev",
+        "librdkafka-dev"
+      ]
+    },
+    "arch": "aarch64",
+    "host_triple": "aarch64-unknown-linux-gnu",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "measured_at": "2026-10-30T17:14:39+00:00",
+    "tool": {
+      "crate_tracing": "0.1.0",
+      "warden": {
+        "path": "/Users/jeff/crate-tracing/.tools/buildwarden/dist/warden",
+        "binary_sha256": "7eb4119b85a04f3f1d4e61179e1254117bd14516a2e57bceee26a11421320b27",
+        "version": "dev",
+        "go": "go1.26.5",
+        "module": "github.com/buildwarden/buildwarden",
+        "module_version": "v0.5.1-0.20261029195147-137feae2f8b0",
+        "revision": "137feae2f8b07e19e21b0893cc4ec9e96f97d42f",
+        "revision_time": "2026-10-29T19:51:47Z",
+        "modified": false
+      }
+    },
+    "warden_exit": 0,
+    "wall_seconds": 23.3,
+    "output_bytes": 333474767
+  },
+  "outcome": {
+    "status": "measured",
+    "fetch_exit": 0,
+    "build_exit": 0,
+    "built": true,
+    "failure": null
+  },
+  "routes": {
+    "taken": [
+      "C"
+    ],
+    "A_downloads": [],
+    "B_bundled": [],
+    "C_system": [
+      {
+        "purl": "pkg:cargo/libsqlite3-sys@0.39.1",
+        "name": "sqlite3",
+        "kind": "dylib",
+        "origin": "system",
+        "path": "/usr/lib/aarch64-linux-gnu/libsqlite3.so",
+        "os_package": {
+          "name": "libsqlite3-dev",
+          "version": "3.46.1-7+deb13u2"
+        },
+        "os_runtime_package": {
+          "name": "libsqlite3-0",
+          "version": "3.46.1-7+deb13u2"
+        }
+      }
+    ],
+    "D_tools": [],
+    "C_unresolved": []
+  },
+  "downloads": [],
+  "packages": [
+    {
+      "purl": "pkg:cargo/libsqlite3-sys@0.39.1",
+      "links": "sqlite3",
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [
+        {
+          "name": "sqlite3",
+          "kind": "dylib",
+          "origin": "system",
+          "path": "/usr/lib/aarch64-linux-gnu/libsqlite3.so",
+          "os_package": {
+            "name": "libsqlite3-dev",
+            "version": "3.46.1-7+deb13u2"
+          },
+          "os_runtime_package": {
+            "name": "libsqlite3-0",
+            "version": "3.46.1-7+deb13u2"
+          }
+        }
+      ],
+      "tools": {},
+      "pkg_config_probes": [
+        "--libs --cflags sqlite3 sqlite3 >= 3.45.3",
+        "--modversion sqlite3 sqlite3 >= 3.45.3"
+      ],
+      "declared": {}
+    }
+  ],
+  "crates": [
+    {
+      "purl": "pkg:cargo/libsqlite3-sys@0.39.1",
+      "name": "libsqlite3-sys",
+      "version": "0.39.1",
+      "phase": "fetch",
+      "ledger_seq": 580,
+      "sha256": "14a5f01b87b92705d07b433c06f96cbc764637d81a0bffb5734ce17cf0f9a2b3",
+      "lock_checksum_match": true,
+      "links": "sqlite3",
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/vcpkg@0.2.15",
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "phase": "fetch",
+      "ledger_seq": 584,
+      "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/pkg-config@0.3.34",
+      "name": "pkg-config",
+      "version": "0.3.34",
+      "phase": "fetch",
+      "ledger_seq": 586,
+      "sha256": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    }
+  ],
+  "traffic": {
+    "setup": {
+      "os-packages": {
+        "requests": 136,
+        "bytes": 163358318,
+        "hosts": [
+          "deb.debian.org"
+        ]
+      }
+    },
+    "fetch": {
+      "crates-registry": {
+        "requests": 7,
+        "bytes": 3110138,
+        "hosts": [
+          "index.crates.io",
+          "static.crates.io"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "ledger_valid": true,
+    "ledger_records": 630,
+    "environment_type": "oci-image/v1",
+    "environment_digest": "sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+    "artifacts_verified": true
+  },
+  "anomalies": [],
+  "expect": [
+    "C"
+  ],
+  "matches_expectation": true
+}

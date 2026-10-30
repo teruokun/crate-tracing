@@ -1,0 +1,136 @@
+cargo:rerun-if-env-changed=LIBZ_SYS_STATIC
+cargo:rerun-if-changed=build.rs
+cargo:rerun-if-changed=zng/cmake.rs
+cargo:rerun-if-changed=zng/cc.rs
+cargo:rerun-if-env-changed=ZLIB_NO_PKG_CONFIG
+cargo:rerun-if-env-changed=PKG_CONFIG_aarch64-unknown-linux-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_aarch64_unknown_linux_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+cargo:rerun-if-env-changed=PKG_CONFIG
+cargo:rerun-if-env-changed=ZLIB_STATIC
+cargo:rerun-if-env-changed=ZLIB_DYNAMIC
+cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH_aarch64-unknown-linux-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH_aarch64_unknown_linux_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_aarch64-unknown-linux-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_aarch64_unknown_linux_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_aarch64-unknown-linux-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_aarch64_unknown_linux_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+cargo:rerun-if-env-changed=ZLIB_STATIC
+cargo:rerun-if-env-changed=ZLIB_DYNAMIC
+cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH_aarch64-unknown-linux-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH_aarch64_unknown_linux_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_aarch64-unknown-linux-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_aarch64_unknown_linux_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_aarch64-unknown-linux-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_aarch64_unknown_linux_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+cargo:warning=Could not find zlib include paths via pkg-config: Could not run `PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags zlib`
+The pkg-config command could not be found.
+
+Most likely, you need to install a pkg-config package for your OS.
+Try `apt install pkg-config`, or `yum install pkg-config`, or `brew install pkgconf`
+or `pkg install pkg-config`, or `apk add pkgconfig` depending on your distribution.
+
+If you've already installed it, ensure the pkg-config command is one of the
+directories in the PATH environment variable.
+
+If you did not expect this build to link to a pre-installed system library,
+then check documentation of the libz-sys crate for an option to
+build the library from source, or disable features or dependencies
+that require pkg-config.
+cargo:rerun-if-env-changed=CC_aarch64-unknown-linux-gnu
+CC_aarch64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=CC_aarch64_unknown_linux_gnu
+CC_aarch64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CPATH
+cargo:rerun-if-env-changed=C_INCLUDE_PATH
+cargo:rerun-if-env-changed=CPLUS_INCLUDE_PATH
+cargo:rerun-if-env-changed=OBJC_INCLUDE_PATH
+cargo:rerun-if-env-changed=OBJCPLUS_INCLUDE_PATH
+cargo:rerun-if-env-changed=COMPILER_PATH
+cargo:rerun-if-env-changed=SOURCE_DATE_EPOCH
+cargo:rerun-if-env-changed=GCC_EXEC_PREFIX
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64_unknown_linux_gnu
+CFLAGS_aarch64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64-unknown-linux-gnu
+CFLAGS_aarch64-unknown-linux-gnu = None
+CFLAGS = None
+HOST_CFLAGS = None
+CFLAGS_aarch64_unknown_linux_gnu = None
+CFLAGS_aarch64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=CC_FORCE_DISABLE
+CC_FORCE_DISABLE = None
+CC_aarch64-unknown-linux-gnu = None
+CC_aarch64_unknown_linux_gnu = None
+HOST_CC = None
+CC = None
+CRATE_CC_NO_DEFAULTS = None
+CFLAGS = None
+HOST_CFLAGS = None
+CFLAGS_aarch64_unknown_linux_gnu = None
+CFLAGS_aarch64-unknown-linux-gnu = None
+CC_FORCE_DISABLE = None
+cargo:rerun-if-env-changed=AR_aarch64-unknown-linux-gnu
+AR_aarch64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=AR_aarch64_unknown_linux_gnu
+AR_aarch64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_aarch64_unknown_linux_gnu
+ARFLAGS_aarch64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=ARFLAGS_aarch64-unknown-linux-gnu
+ARFLAGS_aarch64-unknown-linux-gnu = None
+AR_aarch64-unknown-linux-gnu = None
+AR_aarch64_unknown_linux_gnu = None
+HOST_AR = None
+AR = None
+ARFLAGS = None
+HOST_ARFLAGS = None
+ARFLAGS_aarch64_unknown_linux_gnu = None
+ARFLAGS_aarch64-unknown-linux-gnu = None
+AR_aarch64-unknown-linux-gnu = None
+AR_aarch64_unknown_linux_gnu = None
+HOST_AR = None
+AR = None
+ARFLAGS = None
+HOST_ARFLAGS = None
+ARFLAGS_aarch64_unknown_linux_gnu = None
+ARFLAGS_aarch64-unknown-linux-gnu = None
+cargo:rustc-link-lib=static=z
+cargo:rustc-link-search=native=/work/probe/target/debug/build/libz-sys-9b3da0b50d3fa417/out/lib
+cargo:root=/work/probe/target/debug/build/libz-sys-9b3da0b50d3fa417/out
+cargo:rustc-link-search=native=/work/probe/target/debug/build/libz-sys-9b3da0b50d3fa417/out/lib
+cargo:include=/work/probe/target/debug/build/libz-sys-9b3da0b50d3fa417/out/include

@@ -1,0 +1,375 @@
+{
+  "schema": "https://github.com/teruokun/crate-tracing/schemas/finding-v1.schema.json",
+  "subject": {
+    "purl": "pkg:cargo/libgit2-sys@0.18.8%2B1.9.7",
+    "name": "libgit2-sys",
+    "version": "0.18.8+1.9.7",
+    "features": [],
+    "default_features": true
+  },
+  "measurement": {
+    "id": "libgit2-sys-0.18.8",
+    "profile": {
+      "name": "rich",
+      "image": "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+      "apt_packages": [
+        "pkg-config",
+        "make",
+        "cmake",
+        "perl",
+        "python3",
+        "git",
+        "curl",
+        "clang",
+        "libclang-dev",
+        "nasm",
+        "protobuf-compiler",
+        "libssl-dev",
+        "zlib1g-dev",
+        "libzstd-dev",
+        "liblz4-dev",
+        "libsqlite3-dev",
+        "libgit2-dev",
+        "libssh2-1-dev",
+        "libcurl4-openssl-dev",
+        "libsasl2-dev",
+        "librdkafka-dev"
+      ]
+    },
+    "arch": "aarch64",
+    "host_triple": "aarch64-unknown-linux-gnu",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "measured_at": "2026-10-30T17:14:39+00:00",
+    "tool": {
+      "crate_tracing": "0.1.0",
+      "warden": {
+        "path": "/Users/jeff/crate-tracing/.tools/buildwarden/dist/warden",
+        "binary_sha256": "7eb4119b85a04f3f1d4e61179e1254117bd14516a2e57bceee26a11421320b27",
+        "version": "dev",
+        "go": "go1.26.5",
+        "module": "github.com/buildwarden/buildwarden",
+        "module_version": "v0.5.1-0.20261029195147-137feae2f8b0",
+        "revision": "137feae2f8b07e19e21b0893cc4ec9e96f97d42f",
+        "revision_time": "2026-10-29T19:51:47Z",
+        "modified": false
+      }
+    },
+    "warden_exit": 0,
+    "wall_seconds": 27.9,
+    "output_bytes": 337493609
+  },
+  "outcome": {
+    "status": "measured",
+    "fetch_exit": 0,
+    "build_exit": 0,
+    "built": true,
+    "failure": null
+  },
+  "routes": {
+    "taken": [
+      "B",
+      "C"
+    ],
+    "A_downloads": [],
+    "B_bundled": [
+      {
+        "purl": "pkg:cargo/libgit2-sys@0.18.8%2B1.9.7",
+        "c_compilations": 207,
+        "libs": [
+          "git2"
+        ],
+        "native": {
+          "name": "git2",
+          "version": "1.9.7",
+          "method": "semver-build-metadata",
+          "confidence": "high"
+        }
+      }
+    ],
+    "C_system": [
+      {
+        "purl": "pkg:cargo/libz-sys@1.1.31",
+        "name": "z",
+        "kind": "dylib",
+        "origin": "system",
+        "path": "/usr/lib/aarch64-linux-gnu/libz.so",
+        "os_package": {
+          "name": "zlib1g-dev",
+          "version": "1:1.3.dfsg+really1.3.1-1+b1"
+        },
+        "os_runtime_package": {
+          "name": "zlib1g",
+          "version": "1:1.3.dfsg+really1.3.1-1+b1"
+        }
+      },
+      {
+        "purl": "pkg:cargo/libz-sys@1.1.31",
+        "name": "z",
+        "kind": "dylib",
+        "origin": "system",
+        "path": "/usr/lib/aarch64-linux-gnu/libz.so",
+        "os_package": {
+          "name": "zlib1g-dev",
+          "version": "1:1.3.dfsg+really1.3.1-1+b1"
+        },
+        "os_runtime_package": {
+          "name": "zlib1g",
+          "version": "1:1.3.dfsg+really1.3.1-1+b1"
+        }
+      }
+    ],
+    "D_tools": [],
+    "C_unresolved": []
+  },
+  "downloads": [],
+  "packages": [
+    {
+      "purl": "pkg:cargo/libc@0.2.191",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/libgit2-sys@0.18.8%2B1.9.7",
+      "links": "git2",
+      "build_script_ran": true,
+      "c_compilations": 207,
+      "link_libs": [
+        {
+          "name": "git2",
+          "kind": "static",
+          "origin": "in-tree",
+          "path": "/work/probe/target/debug/build/libgit2-sys-96827ba00450ca5f/out/build/libgit2.a"
+        }
+      ],
+      "tools": {},
+      "pkg_config_probes": [
+        "--libs --cflags libgit2 libgit2 >= 1.9.7 libgit2 < 1.10.0"
+      ],
+      "declared": {},
+      "bundled_native": {
+        "name": "git2",
+        "version": "1.9.7",
+        "method": "semver-build-metadata",
+        "confidence": "high"
+      },
+      "built_in_tree": true
+    },
+    {
+      "purl": "pkg:cargo/libz-sys@1.1.31",
+      "links": "z",
+      "build_script_ran": true,
+      "c_compilations": 1,
+      "link_libs": [
+        {
+          "name": "z",
+          "kind": "dylib",
+          "origin": "system",
+          "path": "/usr/lib/aarch64-linux-gnu/libz.so",
+          "os_package": {
+            "name": "zlib1g-dev",
+            "version": "1:1.3.dfsg+really1.3.1-1+b1"
+          },
+          "os_runtime_package": {
+            "name": "zlib1g",
+            "version": "1:1.3.dfsg+really1.3.1-1+b1"
+          }
+        },
+        {
+          "name": "z",
+          "kind": "dylib",
+          "origin": "system",
+          "path": "/usr/lib/aarch64-linux-gnu/libz.so",
+          "os_package": {
+            "name": "zlib1g-dev",
+            "version": "1:1.3.dfsg+really1.3.1-1+b1"
+          },
+          "os_runtime_package": {
+            "name": "zlib1g",
+            "version": "1:1.3.dfsg+really1.3.1-1+b1"
+          }
+        }
+      ],
+      "tools": {},
+      "pkg_config_probes": [
+        "--libs --cflags zlib",
+        "--modversion zlib"
+      ],
+      "declared": {}
+    }
+  ],
+  "crates": [
+    {
+      "purl": "pkg:cargo/libgit2-sys@0.18.8%2B1.9.7",
+      "name": "libgit2-sys",
+      "version": "0.18.8+1.9.7",
+      "phase": "fetch",
+      "ledger_seq": 616,
+      "sha256": "7f7c568b25d7489bc3fb2988ed69ab111d2944d2f5fec3d5c987fe545ea97b50",
+      "lock_checksum_match": true,
+      "links": "git2",
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/pkg-config@0.3.34",
+      "name": "pkg-config",
+      "version": "0.3.34",
+      "phase": "fetch",
+      "ledger_seq": 620,
+      "sha256": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/libz-sys@1.1.31",
+      "name": "libz-sys",
+      "version": "1.1.31",
+      "phase": "fetch",
+      "ledger_seq": 622,
+      "sha256": "ff20308ecabd635a2dc1dd5834a86c462cca20efba1d5d3ddab1f8aea3455cb2",
+      "lock_checksum_match": true,
+      "links": "z",
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/cc@1.10.0",
+      "name": "cc",
+      "version": "1.10.0",
+      "phase": "fetch",
+      "ledger_seq": 626,
+      "sha256": "86e055fa6e3e40ad6187ba25b6855eeb635d5271f8e0f0e1e9a5826b8d75bea0",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/getrandom@0.4.3",
+      "name": "getrandom",
+      "version": "0.4.3",
+      "phase": "fetch",
+      "ledger_seq": 631,
+      "sha256": "300e883d756b2e4ec94e02791f39b04b522276138852cfc41d9fb7e904106099",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/find-msvc-tools@0.1.15",
+      "name": "find-msvc-tools",
+      "version": "0.1.15",
+      "phase": "fetch",
+      "ledger_seq": 634,
+      "sha256": "1c66915cc5391097de7a2b0b972e8505aa33c0df401fd3a6811dbdb32881ba48",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/shlex@2.0.1",
+      "name": "shlex",
+      "version": "2.0.1",
+      "phase": "fetch",
+      "ledger_seq": 639,
+      "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/cfg-if@1.0.5",
+      "name": "cfg-if",
+      "version": "1.0.5",
+      "phase": "fetch",
+      "ledger_seq": 642,
+      "sha256": "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/jobserver@0.1.35",
+      "name": "jobserver",
+      "version": "0.1.35",
+      "phase": "fetch",
+      "ledger_seq": 646,
+      "sha256": "1c00acbd29eabad4a2392fa0e921c874934dbbf4194312ad20f04a0ed67a3cb3",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/libc@0.2.191",
+      "name": "libc",
+      "version": "0.2.191",
+      "phase": "fetch",
+      "ledger_seq": 650,
+      "sha256": "65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/r-efi@6.0.0",
+      "name": "r-efi",
+      "version": "6.0.0",
+      "phase": "fetch",
+      "ledger_seq": 655,
+      "sha256": "f8dcc9c7d52a811697d2151c701e0d08956f92b0e24136cf4cf27b57a6a0d9bf",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/vcpkg@0.2.15",
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "phase": "fetch",
+      "ledger_seq": 659,
+      "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    }
+  ],
+  "traffic": {
+    "setup": {
+      "os-packages": {
+        "requests": 136,
+        "bytes": 163358318,
+        "hosts": [
+          "deb.debian.org"
+        ]
+      }
+    },
+    "fetch": {
+      "crates-registry": {
+        "requests": 25,
+        "bytes": 5017138,
+        "hosts": [
+          "index.crates.io",
+          "static.crates.io"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "ledger_valid": true,
+    "ledger_records": 711,
+    "environment_type": "oci-image/v1",
+    "environment_digest": "sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+    "artifacts_verified": true
+  },
+  "anomalies": [],
+  "expect": [
+    "B",
+    "C"
+  ],
+  "matches_expectation": true
+}

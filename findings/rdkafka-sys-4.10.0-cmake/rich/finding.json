@@ -1,0 +1,665 @@
+{
+  "schema": "https://github.com/teruokun/crate-tracing/schemas/finding-v1.schema.json",
+  "subject": {
+    "purl": "pkg:cargo/rdkafka-sys@4.10.0%2B2.12.1",
+    "name": "rdkafka-sys",
+    "version": "4.10.0+2.12.1",
+    "features": [
+      "cmake-build"
+    ],
+    "default_features": true
+  },
+  "measurement": {
+    "id": "rdkafka-sys-4.10.0-cmake",
+    "profile": {
+      "name": "rich",
+      "image": "rust:1.98.1-slim-trixie@sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+      "apt_packages": [
+        "pkg-config",
+        "make",
+        "cmake",
+        "perl",
+        "python3",
+        "git",
+        "curl",
+        "clang",
+        "libclang-dev",
+        "nasm",
+        "protobuf-compiler",
+        "libssl-dev",
+        "zlib1g-dev",
+        "libzstd-dev",
+        "liblz4-dev",
+        "libsqlite3-dev",
+        "libgit2-dev",
+        "libssh2-1-dev",
+        "libcurl4-openssl-dev",
+        "libsasl2-dev",
+        "librdkafka-dev"
+      ]
+    },
+    "arch": "aarch64",
+    "host_triple": "aarch64-unknown-linux-gnu",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "measured_at": "2026-10-30T17:14:39+00:00",
+    "tool": {
+      "crate_tracing": "0.1.0",
+      "warden": {
+        "path": "/Users/jeff/crate-tracing/.tools/buildwarden/dist/warden",
+        "binary_sha256": "7eb4119b85a04f3f1d4e61179e1254117bd14516a2e57bceee26a11421320b27",
+        "version": "dev",
+        "go": "go1.26.5",
+        "module": "github.com/buildwarden/buildwarden",
+        "module_version": "v0.5.1-0.20261029195147-137feae2f8b0",
+        "revision": "137feae2f8b07e19e21b0893cc4ec9e96f97d42f",
+        "revision_time": "2026-10-29T19:51:47Z",
+        "modified": false
+      }
+    },
+    "warden_exit": 0,
+    "wall_seconds": 31.6,
+    "output_bytes": 349507347
+  },
+  "outcome": {
+    "status": "measured",
+    "fetch_exit": 0,
+    "build_exit": 0,
+    "built": true,
+    "failure": null
+  },
+  "routes": {
+    "taken": [
+      "B",
+      "C",
+      "D"
+    ],
+    "A_downloads": [],
+    "B_bundled": [
+      {
+        "purl": "pkg:cargo/rdkafka-sys@4.10.0%2B2.12.1",
+        "c_compilations": 109,
+        "libs": [
+          "rdkafka"
+        ],
+        "native": {
+          "name": "rdkafka",
+          "version": "2.12.1",
+          "method": "semver-build-metadata",
+          "confidence": "high"
+        }
+      }
+    ],
+    "C_system": [
+      {
+        "purl": "pkg:cargo/libz-sys@1.1.31",
+        "name": "z",
+        "kind": "dylib",
+        "origin": "system",
+        "path": "/usr/lib/aarch64-linux-gnu/libz.so",
+        "os_package": {
+          "name": "zlib1g-dev",
+          "version": "1:1.3.dfsg+really1.3.1-1+b1"
+        },
+        "os_runtime_package": {
+          "name": "zlib1g",
+          "version": "1:1.3.dfsg+really1.3.1-1+b1"
+        }
+      },
+      {
+        "purl": "pkg:cargo/libz-sys@1.1.31",
+        "name": "z",
+        "kind": "dylib",
+        "origin": "system",
+        "path": "/usr/lib/aarch64-linux-gnu/libz.so",
+        "os_package": {
+          "name": "zlib1g-dev",
+          "version": "1:1.3.dfsg+really1.3.1-1+b1"
+        },
+        "os_runtime_package": {
+          "name": "zlib1g",
+          "version": "1:1.3.dfsg+really1.3.1-1+b1"
+        }
+      }
+    ],
+    "D_tools": [
+      {
+        "purl": "pkg:cargo/rdkafka-sys@4.10.0%2B2.12.1",
+        "tools": {
+          "cmake": 3,
+          "gmake": 16
+        }
+      }
+    ],
+    "C_unresolved": []
+  },
+  "downloads": [],
+  "packages": [
+    {
+      "purl": "pkg:cargo/libc@0.2.191",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/libz-sys@1.1.31",
+      "links": "z",
+      "build_script_ran": true,
+      "c_compilations": 1,
+      "link_libs": [
+        {
+          "name": "z",
+          "kind": "dylib",
+          "origin": "system",
+          "path": "/usr/lib/aarch64-linux-gnu/libz.so",
+          "os_package": {
+            "name": "zlib1g-dev",
+            "version": "1:1.3.dfsg+really1.3.1-1+b1"
+          },
+          "os_runtime_package": {
+            "name": "zlib1g",
+            "version": "1:1.3.dfsg+really1.3.1-1+b1"
+          }
+        },
+        {
+          "name": "z",
+          "kind": "dylib",
+          "origin": "system",
+          "path": "/usr/lib/aarch64-linux-gnu/libz.so",
+          "os_package": {
+            "name": "zlib1g-dev",
+            "version": "1:1.3.dfsg+really1.3.1-1+b1"
+          },
+          "os_runtime_package": {
+            "name": "zlib1g",
+            "version": "1:1.3.dfsg+really1.3.1-1+b1"
+          }
+        }
+      ],
+      "tools": {},
+      "pkg_config_probes": [
+        "--libs --cflags zlib",
+        "--modversion zlib"
+      ],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/proc-macro2@1.0.107",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/quote@1.0.47",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/rdkafka-sys@4.10.0%2B2.12.1",
+      "links": "rdkafka",
+      "build_script_ran": true,
+      "c_compilations": 109,
+      "link_libs": [
+        {
+          "name": "rdkafka",
+          "kind": "static",
+          "origin": "in-tree",
+          "path": "/work/probe/target/debug/build/rdkafka-sys-2af5cab84f4d24e2/out/lib/librdkafka.a"
+        }
+      ],
+      "tools": {
+        "cmake": 3,
+        "gmake": 16
+      },
+      "pkg_config_probes": [
+        "--cflags libcurl",
+        "--cflags libsasl2",
+        "--cflags openssl",
+        "--cflags-only-I libcurl",
+        "--cflags-only-I libsasl2",
+        "--cflags-only-I openssl",
+        "--cflags-only-other libcurl",
+        "--cflags-only-other libsasl2",
+        "--cflags-only-other openssl",
+        "--libs libcurl",
+        "--libs libsasl2",
+        "--libs openssl",
+        "--libs-only-L libcurl",
+        "--libs-only-L libsasl2",
+        "--libs-only-L openssl",
+        "--libs-only-l libcurl",
+        "--libs-only-l libsasl2",
+        "--libs-only-l openssl",
+        "--libs-only-other libcurl",
+        "--libs-only-other libsasl2",
+        "--libs-only-other openssl",
+        "--modversion libcurl",
+        "--modversion libsasl2",
+        "--modversion openssl",
+        "--print-errors --short-errors --exists libcurl",
+        "--print-errors --short-errors --exists libsasl2",
+        "--print-errors --short-errors --exists openssl",
+        "--static --cflags libcurl",
+        "--static --cflags libsasl2",
+        "--static --cflags openssl",
+        "--static --cflags-only-I libcurl",
+        "--static --cflags-only-I libsasl2",
+        "--static --cflags-only-I openssl",
+        "--static --cflags-only-other libcurl",
+        "--static --cflags-only-other libsasl2",
+        "--static --cflags-only-other openssl",
+        "--static --libs libcurl",
+        "--static --libs libsasl2",
+        "--static --libs openssl",
+        "--static --libs-only-L libcurl",
+        "--static --libs-only-L libsasl2",
+        "--static --libs-only-L openssl",
+        "--static --libs-only-l libcurl",
+        "--static --libs-only-l libsasl2",
+        "--static --libs-only-l openssl",
+        "--static --libs-only-other libcurl",
+        "--static --libs-only-other libsasl2",
+        "--static --libs-only-other openssl",
+        "--variable=includedir libcurl",
+        "--variable=includedir libsasl2",
+        "--variable=includedir openssl",
+        "--variable=libdir libcurl",
+        "--variable=libdir libsasl2",
+        "--variable=libdir openssl",
+        "--variable=prefix libcurl",
+        "--variable=prefix libsasl2",
+        "--variable=prefix openssl",
+        "--variable=supported_features libcurl",
+        "--variable=supported_protocols libcurl",
+        "--version"
+      ],
+      "declared": {},
+      "bundled_native": {
+        "name": "rdkafka",
+        "version": "2.12.1",
+        "method": "semver-build-metadata",
+        "confidence": "high"
+      },
+      "built_in_tree": true
+    },
+    {
+      "purl": "pkg:cargo/rustversion@1.0.23",
+      "links": null,
+      "build_script_ran": true,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    },
+    {
+      "purl": "pkg:cargo/serde_core@1.0.229",
+      "links": null,
+      "build_script_ran": false,
+      "c_compilations": 0,
+      "link_libs": [],
+      "tools": {},
+      "pkg_config_probes": [],
+      "declared": {}
+    }
+  ],
+  "crates": [
+    {
+      "purl": "pkg:cargo/rdkafka-sys@4.10.0%2B2.12.1",
+      "name": "rdkafka-sys",
+      "version": "4.10.0+2.12.1",
+      "phase": "fetch",
+      "ledger_seq": 676,
+      "sha256": "e234cf318915c1059d4921ef7f75616b5219b10b46e9f3a511a15eb4b56a3f77",
+      "lock_checksum_match": true,
+      "links": "rdkafka",
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/pkg-config@0.3.34",
+      "name": "pkg-config",
+      "version": "0.3.34",
+      "phase": "fetch",
+      "ledger_seq": 680,
+      "sha256": "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/num_enum@0.7.6",
+      "name": "num_enum",
+      "version": "0.7.6",
+      "phase": "fetch",
+      "ledger_seq": 682,
+      "sha256": "5d0bca838442ec211fa11de3a8b0e0e8f3a4522575b5c4c06ed722e005036f26",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/syn@2.0.119",
+      "name": "syn",
+      "version": "2.0.119",
+      "phase": "fetch",
+      "ledger_seq": 686,
+      "sha256": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/proc-macro2@1.0.107",
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "phase": "fetch",
+      "ledger_seq": 690,
+      "sha256": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/winnow@1.0.4",
+      "name": "winnow",
+      "version": "1.0.4",
+      "phase": "fetch",
+      "ledger_seq": 695,
+      "sha256": "23b97319f7b8343df12cc98938e5c3eb436064524c8d2b4e30a1d3a36eecdf81",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/toml_datetime@1.1.2%2Bspec-1.1.0",
+      "name": "toml_datetime",
+      "version": "1.1.2+spec-1.1.0",
+      "phase": "fetch",
+      "ledger_seq": 698,
+      "sha256": "2b86d767906c6c42421dcba507eb9d203e779497710a47782a224bb871653053",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/syn@3.0.9",
+      "name": "syn",
+      "version": "3.0.9",
+      "phase": "fetch",
+      "ledger_seq": 702,
+      "sha256": "d78c8dee4c7bf0e14673097256fed6142ce9d3b85a408189d07482442145823b",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    },
+    {
+      "purl": "pkg:cargo/equivalent@1.0.3",
+      "name": "equivalent",
+      "version": "1.0.3",
+      "phase": "fetch",
+      "ledger_seq": 706,
+      "sha256": "00d174d5400e5e8fd687ad1049e2f578285fa914201b1af7e8b112a4546bd826",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/libc@0.2.191",
+      "name": "libc",
+      "version": "0.2.191",
+      "phase": "fetch",
+      "ledger_seq": 711,
+      "sha256": "65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/find-msvc-tools@0.1.15",
+      "name": "find-msvc-tools",
+      "version": "0.1.15",
+      "phase": "fetch",
+      "ledger_seq": 714,
+      "sha256": "1c66915cc5391097de7a2b0b972e8505aa33c0df401fd3a6811dbdb32881ba48",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/num_enum_derive@0.7.6",
+      "name": "num_enum_derive",
+      "version": "0.7.6",
+      "phase": "fetch",
+      "ledger_seq": 719,
+      "sha256": "680998035259dcfcafe653688bf2aa6d3e2dc05e98be6ab46afb089dc84f1df8",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/proc-macro-crate@3.5.0",
+      "name": "proc-macro-crate",
+      "version": "3.5.0",
+      "phase": "fetch",
+      "ledger_seq": 723,
+      "sha256": "e67ba7e9b2b56446f1d419b1d807906278ffa1a658a8a5d8a39dcb1f5a78614f",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/toml_parser@1.1.5%2Bspec-1.1.0",
+      "name": "toml_parser",
+      "version": "1.1.5+spec-1.1.0",
+      "phase": "fetch",
+      "ledger_seq": 726,
+      "sha256": "baa693a8032d7e1cada7d0041e96126df243179ff061456783ac7f12bda4744c",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/indexmap@2.14.2",
+      "name": "indexmap",
+      "version": "2.14.2",
+      "phase": "fetch",
+      "ledger_seq": 731,
+      "sha256": "cc4e190f5d26ca7051642629da2c52fc03bde85a03197c99408dcd291734c855",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/vcpkg@0.2.15",
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "phase": "fetch",
+      "ledger_seq": 734,
+      "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/cmake@0.1.58",
+      "name": "cmake",
+      "version": "0.1.58",
+      "phase": "fetch",
+      "ledger_seq": 739,
+      "sha256": "c0f78a02292a74a88ac736019ab962ece0bc380e3f977bf72e376c5d78ff0678",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/quote@1.0.47",
+      "name": "quote",
+      "version": "1.0.47",
+      "phase": "fetch",
+      "ledger_seq": 742,
+      "sha256": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/serde_core@1.0.229",
+      "name": "serde_core",
+      "version": "1.0.229",
+      "phase": "fetch",
+      "ledger_seq": 746,
+      "sha256": "67dca2c9c51e58a4791a4b1ed58308b39c64224d349a935ab5039aa360942a48",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/libz-sys@1.1.31",
+      "name": "libz-sys",
+      "version": "1.1.31",
+      "phase": "fetch",
+      "ledger_seq": 750,
+      "sha256": "ff20308ecabd635a2dc1dd5834a86c462cca20efba1d5d3ddab1f8aea3455cb2",
+      "lock_checksum_match": true,
+      "links": "z",
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/rustversion@1.0.23",
+      "name": "rustversion",
+      "version": "1.0.23",
+      "phase": "fetch",
+      "ledger_seq": 754,
+      "sha256": "cf54715a573b99ac80df0bc206da022bcd442c974952c7b9720069370852e21f",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": true
+    },
+    {
+      "purl": "pkg:cargo/memchr@2.8.3",
+      "name": "memchr",
+      "version": "2.8.3",
+      "phase": "fetch",
+      "ledger_seq": 759,
+      "sha256": "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/cc@1.10.0",
+      "name": "cc",
+      "version": "1.10.0",
+      "phase": "fetch",
+      "ledger_seq": 763,
+      "sha256": "86e055fa6e3e40ad6187ba25b6855eeb635d5271f8e0f0e1e9a5826b8d75bea0",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/toml_edit@0.25.17%2Bspec-1.1.0",
+      "name": "toml_edit",
+      "version": "0.25.17+spec-1.1.0",
+      "phase": "fetch",
+      "ledger_seq": 766,
+      "sha256": "e3641d5bbb5349a79e1020a242d251efbc546ad8048d133958323ce9c40a9c9c",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/shlex@2.0.1",
+      "name": "shlex",
+      "version": "2.0.1",
+      "phase": "fetch",
+      "ledger_seq": 771,
+      "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/hashbrown@0.17.1",
+      "name": "hashbrown",
+      "version": "0.17.1",
+      "phase": "fetch",
+      "ledger_seq": 774,
+      "sha256": "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/unicode-ident@1.0.27",
+      "name": "unicode-ident",
+      "version": "1.0.27",
+      "phase": "fetch",
+      "ledger_seq": 778,
+      "sha256": "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": false
+    },
+    {
+      "purl": "pkg:cargo/serde_derive@1.0.229",
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "phase": "fetch",
+      "ledger_seq": 783,
+      "sha256": "e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348",
+      "lock_checksum_match": true,
+      "links": null,
+      "has_build_script": null
+    }
+  ],
+  "traffic": {
+    "setup": {
+      "os-packages": {
+        "requests": 136,
+        "bytes": 163358318,
+        "hosts": [
+          "deb.debian.org"
+        ]
+      }
+    },
+    "fetch": {
+      "crates-registry": {
+        "requests": 56,
+        "bytes": 10929051,
+        "hosts": [
+          "index.crates.io",
+          "static.crates.io"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "ledger_valid": true,
+    "ledger_records": 847,
+    "environment_type": "oci-image/v1",
+    "environment_digest": "sha256:4cd829461bd5c4d511c32e269da9cb8929223b666519d8004e35fc8d1d771ab7",
+    "artifacts_verified": true
+  },
+  "anomalies": [],
+  "expect": [
+    "B",
+    "C",
+    "D"
+  ],
+  "matches_expectation": true
+}

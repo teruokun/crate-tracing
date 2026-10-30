@@ -1,0 +1,4 @@
+openssl-sys-c4e95151ccad446b	dylib	ssl	/usr/lib/aarch64-linux-gnu/libssl.so	libssl-dev	/usr/lib/aarch64-linux-gnu/libssl.so.3	libssl3t64
+openssl-sys-c4e95151ccad446b	dylib	crypto	/usr/lib/aarch64-linux-gnu/libcrypto.so	libssl-dev	/usr/lib/aarch64-linux-gnu/libcrypto.so.3	libssl3t64
+ort-sys-7d29108f0c4ef010	dylib	stdc++				
+ort-sys-7d29108f0c4ef010	static	onnxruntime	/root/.cache/ort.pyke.io/dfbin/aarch64-unknown-linux-gnu/380c1b63eedf5671e7b39e4aa0f6c377ecc351c3a7b01ae708a707e73fb54709/libonnxruntime.a		/root/.cache/ort.pyke.io/dfbin/aarch64-unknown-linux-gnu/380c1b63eedf5671e7b39e4aa0f6c377ecc351c3a7b01ae708a707e73fb54709/libonnxruntime.a	

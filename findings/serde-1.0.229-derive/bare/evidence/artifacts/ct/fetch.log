@@ -1,0 +1,10 @@
+    Updating crates.io index
+     Locking 7 packages to latest compatible versions
+ Downloading crates ...
+  Downloaded serde v1.0.229
+  Downloaded serde_derive v1.0.229
+  Downloaded syn v3.0.9
+  Downloaded proc-macro2 v1.0.107
+  Downloaded quote v1.0.47
+  Downloaded unicode-ident v1.0.27
+  Downloaded serde_core v1.0.229
